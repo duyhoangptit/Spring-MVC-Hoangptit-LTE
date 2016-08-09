@@ -28,38 +28,38 @@ import java.util.Set;
 @RequestMapping(value = "user")
 public class UserController {
 
-//    @Autowired
-//    private UserDAO userDAO;
-//    @Autowired
-//    private RoleDAO roleDAO;
+    @Autowired
+    private UserDAO userDAO;
+    @Autowired
+    private RoleDAO roleDAO;
 
     /**
      * Check login form
      * Result redirect:/page/
-     * */
+     */
     @RequestMapping(value = "checkLogin", method = RequestMethod.POST)
-    public String checkLogin(@ModelAttribute(value = "user") User user, ModelMap modelMap,HttpSession session) {
+    public String checkLogin(@ModelAttribute(value = "user") User user, ModelMap modelMap, HttpSession session) {
         String url = "redirect:/home/login.html";
         String msg = "Username Or Password is Validate";
         user.setImage("user_hoang.jpg");
 //        if (user.getUsername().equalsIgnoreCase("admin") && user.getPassword().equalsIgnoreCase("admin")) {
         if (true) {
-            session.setAttribute("isLogin",user);
+            session.setAttribute("isLogin", user);
             url = "redirect:/home/index.html";
             System.out.println("login success");
         }
-        session.setAttribute("msg","");
-        session.setAttribute("page","index");
+        session.setAttribute("msg", "");
+        session.setAttribute("page", "index");
         return url;
     }
 
     /**
      * Log out user
      * Remove session and cookie
-     * */
+     */
 
     @RequestMapping(value = "logout", method = RequestMethod.GET)
-    public String logout(HttpSession session, ModelMap modelMap){
+    public String logout(HttpSession session, ModelMap modelMap) {
         session.removeAttribute("isLogin");
         session.removeAttribute("msg");
         return "redirect:/home/login.html";
@@ -71,10 +71,10 @@ public class UserController {
      */
 
     @RequestMapping(value = "profileUser", method = RequestMethod.GET)
-    public String profileUser(HttpSession session, ModelMap modelMap){
+    public String profileUser(HttpSession session, ModelMap modelMap) {
         User user = (User) session.getAttribute("isLogin");
-        modelMap.addAttribute("user",user);
-        session.setAttribute("page","profile");
+        modelMap.addAttribute("user", user);
+        session.setAttribute("page", "profile");
         return "profile_user";
     }
 
@@ -84,7 +84,7 @@ public class UserController {
      */
 
     @RequestMapping(value = "deleteUser/username", method = RequestMethod.GET)
-    public String deleteUser(@PathVariable(value = "username")String username, ModelMap modelMap){
+    public String deleteUser(@PathVariable(value = "username") String username, ModelMap modelMap) {
         //deleteUserByUsername
         return "redirect:/home/dataTable.html";
     }
@@ -95,13 +95,13 @@ public class UserController {
      */
 
     @RequestMapping(value = "updateUser/{username}", method = RequestMethod.GET)
-    public String updateUser(@PathVariable(value = "username")String username,HttpSession session, ModelMap modelMap){
+    public String updateUser(@PathVariable(value = "username") String username, HttpSession session, ModelMap modelMap) {
         // findByUsername
         return "redirect:/home/dataTable.html";
     }
 
     @RequestMapping(value = "register", method = RequestMethod.POST)
-    public String register(@ModelAttribute(value = "user")User user, HttpSession session, ModelMap modelMap){
+    public String register(@ModelAttribute(value = "user") User user, HttpSession session, ModelMap modelMap) {
         //Role User
 //        Role roleUser = new Role();
 //        roleUser.setName(ConfigUntil.ROLE_USER);
@@ -123,7 +123,7 @@ public class UserController {
 //        roles.add(roleEpl);
 //        userAdmin.setRoles(roles);
 //        userDAO.saveUser(userAdmin);
-        return  "";
+        return "";
     }
     /**
      * Check if user is login by remember me cookie, refer
@@ -142,9 +142,9 @@ public class UserController {
     /**
      * save targetURL in session
      */
-    private void setRememberMeTargetUrlToSession(HttpServletRequest request){
+    private void setRememberMeTargetUrlToSession(HttpServletRequest request) {
         HttpSession session = request.getSession(false);
-        if(session!=null){
+        if (session != null) {
             session.setAttribute("targetUrl", "/admin/update");
         }
     }
@@ -152,16 +152,15 @@ public class UserController {
     /**
      * get targetURL from session
      */
-    private String getRememberMeTargetUrlFromSession(HttpServletRequest request){
+    private String getRememberMeTargetUrlFromSession(HttpServletRequest request) {
         String targetUrl = "";
         HttpSession session = request.getSession(false);
-        if(session!=null){
-            targetUrl = session.getAttribute("targetUrl")==null?""
-                    :session.getAttribute("targetUrl").toString();
+        if (session != null) {
+            targetUrl = session.getAttribute("targetUrl") == null ? ""
+                    : session.getAttribute("targetUrl").toString();
         }
         return targetUrl;
     }
-
 
 
 }

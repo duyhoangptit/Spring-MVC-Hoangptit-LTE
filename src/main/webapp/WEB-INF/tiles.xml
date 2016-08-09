@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <!-- Base Define -->
+    <definition name="base.definition"
+                template="/WEB-INF/layouts/classic.jsp">
+        <put-attribute name="title" value="ADMIN LTE"/>
+        <put-attribute name="header" value="/WEB-INF/include/header.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/include/menu.jsp"/>
+        <put-attribute name="body" value=""/>
+        <put-attribute name="footer" value="/WEB-INF/include/footer.jsp"/>
+        <put-attribute name="aside" value="/WEB-INF/include/aside.jsp"/>
+    </definition>
+
+    <!-- Home -->
+    <definition name="index" extends="base.definition">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="body" value="/WEB-INF/pages/content.jsp"/>
+        <put-attribute name="current" value="index" />
+    </definition>
+
+    <!-- DATA TABLE -->
+    <definition name="datatable" extends="base.definition">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="body" value="/WEB-INF/pages/datatable.jsp"/>
+        <put-attribute name="current" value="datatable" />
+    </definition>
+
+    <!-- NOTIFY -->
+    <definition name="popup_notify" extends="base.definition">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="body" value="/WEB-INF/pages/popup_notify.jsp"/>
+        <put-attribute name="current" value="popup_notify" />
+    </definition>
+
+    <!-- LAZY LOAD -->
+    <definition name="lazy_load" extends="base.definition">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="body" value="/WEB-INF/pages/lazy_load.jsp"/>
+        <put-attribute name="current" value="lazy_load" />
+    </definition>
+
+
+    <!-- Profile User -->
+    <definition name="profile_user" extends="base.definition">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="body" value="/WEB-INF/pages/profile_user.jsp"/>
+        <put-attribute name="current" value="profile_user" />
+    </definition>
+
+    <!-- Base Define -->
+    <definition name="base.loginpage"
+                template="/WEB-INF/pages/login.jsp">
+        <put-attribute name="title" value="ADMIN | LTE"/>
+        <put-attribute name="body" value=""/>
+    </definition>
+
+    <definition name="login" extends="base.loginpage">
+        <put-attribute name="title" value="Login | LTE"/>
+        <put-attribute name="body" value=""/>
+        <put-attribute name="current" value="login" />
+    </definition>
+
+</tiles-definitions>

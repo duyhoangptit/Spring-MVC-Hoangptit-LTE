@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Dialect-->
+        <property name="hibernate.dialect">
+            <!--eg.--> org.hibernate.dialect.MySQL5Dialect
+        </property>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+        <!-- List Class Mapping -->
+
+        <mapping class="com.springlte.entities.Blog"/>
+        <mapping class="com.springlte.entities.Item"/>
+        <mapping class="com.springlte.entities.User"/>
+        <mapping class="com.springlte.entities.Role"/>
+
+        <!-- List of XML mapping files -->
+    </session-factory>
+</hibernate-configuration>

@@ -24,7 +24,7 @@ public class Blog {
     @JoinColumn(name = "username")
     private User user;
 
-    @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "blog", cascade = CascadeType.REMOVE, fetch = FetchType.LAZY)
     private List<Item> items;
 
     public Blog() {

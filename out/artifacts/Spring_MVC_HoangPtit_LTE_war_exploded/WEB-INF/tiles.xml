@@ -4,7 +4,7 @@
         "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
 
-    <!-- Base Define -->
+    <!-- Config page include index -->
     <definition name="base.definition"
                 template="/WEB-INF/layouts/classic.jsp">
         <put-attribute name="title" value="ADMIN LTE"/>
@@ -51,17 +51,33 @@
         <put-attribute name="current" value="profile_user" />
     </definition>
 
-    <!-- Base Define -->
-    <definition name="base.loginpage"
-                template="/WEB-INF/pages/login.jsp">
+    <!-- Profile User -->
+    <definition name="404" extends="base.definition">
+        <put-attribute name="title" value="Error: 404"/>
+        <put-attribute name="body" value="/WEB-INF/pages/404.jsp"/>
+    </definition>
+
+    <!-- Profile User -->
+    <definition name="504" extends="base.definition">
+        <put-attribute name="title" value="Error: 504"/>
+        <put-attribute name="body" value="/WEB-INF/pages/504.jsp"/>
+    </definition>
+
+    <!-- Config include page register and login-->
+    <definition name="base.pageicl"
+                template="/WEB-INF/layouts/pageicl.jsp">
         <put-attribute name="title" value="ADMIN | LTE"/>
         <put-attribute name="body" value=""/>
     </definition>
 
-    <definition name="login" extends="base.loginpage">
+    <definition name="login" extends="base.pageicl">
         <put-attribute name="title" value="Login | LTE"/>
-        <put-attribute name="body" value=""/>
-        <put-attribute name="current" value="login" />
+        <put-attribute name="body" value="/WEB-INF/pages/login.jsp"/>
+    </definition>
+
+    <definition name="register" extends="base.pageicl">
+        <put-attribute name="title" value="Register | LTE"/>
+        <put-attribute name="body" value="/WEB-INF/pages/register.jsp"/>
     </definition>
 
 </tiles-definitions>

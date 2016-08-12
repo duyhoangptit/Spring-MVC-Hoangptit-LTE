@@ -6,10 +6,8 @@ package com.springlte.until;
  */
 public class ConfigUntil {
 
-    public final static String ADMIN = "admin";
-
-    public final static  String ROLE_USER = "ROLE_USER";
-    public final static  String ROLE_ADMIN = "ROLE_ADMIN";
-    public final static  String ROLE_EMPLOYEE = "ROLE_EMPLOYEE";
+    public final static  String ROLE_USER = "USER";
+    public final static  String ROLE_ADMIN = "ADMIN";
+    public final static  String ROLE_EMPLOYEE = "EMPLOYEE";
 
 }

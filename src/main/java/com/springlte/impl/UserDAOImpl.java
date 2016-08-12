@@ -65,12 +65,32 @@ public class UserDAOImpl implements UserDAO {
     @Override
     public User saveUser(User user) {
         openSession();
-        user.setEnabled(true);
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        user.setPassword(encoder.encode(user.getPassword()));
+        Set<Role> roles = new HashSet<>();
+        Role role = roleDAO.findByName(ConfigUntil.ROLE_USER);
+        roles.add(role);
+        user.setRoles(roles);
+        session.save(user);
+        return user;
+    }
 
-        Set<Role> roles  = new HashSet<>();
-        roles.add(roleDAO.findByName("ROLE_USER"));
+    @Override
+    public User saveUserAdmin(User user) {
+        openSession();
+        Set<Role> roles = new HashSet<>();
+        Role role = roleDAO.findByName(ConfigUntil.ROLE_ADMIN);
+        System.out.println(role.getRoleId());
+        roles.add(role);
+        user.setRoles(roles);
+        session.save(user);
+        return user;
+    }
+
+    @Override
+    public User saveUserEmpl(User user) {
+        openSession();
+        Set<Role> roles = new HashSet<>();
+        Role role = roleDAO.findByName(ConfigUntil.ROLE_EMPLOYEE);
+        roles.add(role);
         user.setRoles(roles);
         session.save(user);
         return user;

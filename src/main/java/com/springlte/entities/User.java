@@ -12,7 +12,6 @@ import java.util.Set;
  */
 
 @Entity
-@Table
 public class User implements Serializable {
 
     @Id
@@ -40,6 +39,14 @@ public class User implements Serializable {
     public User(String username, String password, boolean enabled) {
         this.username = username;
         this.password = password;
+        this.enabled = enabled;
+    }
+
+    public User(String username, String password, String fullName, String image, boolean enabled) {
+        this.username = username;
+        this.password = password;
+        this.fullName = fullName;
+        this.image = image;
         this.enabled = enabled;
     }
 

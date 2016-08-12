@@ -6,15 +6,15 @@ import com.springlte.entities.Role;
 import com.springlte.entities.User;
 import com.springlte.until.ConfigUntil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -32,26 +32,6 @@ public class UserController {
     private UserDAO userDAO;
     @Autowired
     private RoleDAO roleDAO;
-
-    /**
-     * Check login form
-     * Result redirect:/page/
-     */
-    @RequestMapping(value = "checkLogin", method = RequestMethod.POST)
-    public String checkLogin(@ModelAttribute(value = "user") User user, ModelMap modelMap, HttpSession session) {
-        String url = "redirect:/home/login.html";
-        String msg = "Username Or Password is Validate";
-        user.setImage("user_hoang.jpg");
-//        if (user.getUsername().equalsIgnoreCase("admin") && user.getPassword().equalsIgnoreCase("admin")) {
-        if (true) {
-            session.setAttribute("isLogin", user);
-            url = "redirect:/home/index.html";
-            System.out.println("login success");
-        }
-        session.setAttribute("msg", "");
-        session.setAttribute("page", "index");
-        return url;
-    }
 
     /**
      * Log out user
@@ -100,31 +80,37 @@ public class UserController {
         return "redirect:/home/dataTable.html";
     }
 
-    @RequestMapping(value = "register", method = RequestMethod.POST)
-    public String register(@ModelAttribute(value = "user") User user, HttpSession session, ModelMap modelMap) {
-        //Role User
-//        Role roleUser = new Role();
-//        roleUser.setName(ConfigUntil.ROLE_USER);
-//        roleDAO.saveRole(roleUser);
-//        //Role Admin
-//        Role roleAdmin = new Role();
-//        roleAdmin.setName(ConfigUntil.ROLE_ADMIN);
-//        roleDAO.saveRole(roleAdmin);
-//        //Role
-//        Role roleEpl = new Role();
-//        roleEpl.setName(ConfigUntil.ROLE_EMPLOYEE);
-//        roleDAO.saveRole(roleEpl);
-//
-//        User userAdmin = new User();
-//        userAdmin.setUsername("admin");
-//        Set<Role> roles = new HashSet<>();
-//        roles.add(roleUser);
-//        roles.add(roleAdmin);
-//        roles.add(roleEpl);
-//        userAdmin.setRoles(roles);
-//        userDAO.saveUser(userAdmin);
-        return "";
+
+    /**
+     * Begin login page
+     * Form login
+     */
+    @RequestMapping(value = {"/login", "/"}, method = RequestMethod.GET)
+    public String login(@RequestParam(value = "error", required = false) String erro,
+                        @RequestParam(value = "logout", required = false) String logou, ModelMap modelMap) {
+        String error = "";
+        String logout = "";
+        if (erro != null) {
+            error = "Invalid username and password!";
+        }
+        if (logou != null) {
+            logout = "You've been logged out successfully.";
+        }
+        modelMap.addAttribute("error", error);
+        modelMap.addAttribute("logout", logout);
+        return "login";
     }
+
+
+    @RequestMapping(method = RequestMethod.POST)
+    public String doRegister(@Valid @ModelAttribute("user") User user, BindingResult result) {
+        if (result.hasErrors()) {
+            return "user-register";
+        }
+        userDAO.saveUserAdmin(user);
+        return "redirect:/register.html?success=true";
+    }
+
     /**
      * Check if user is login by remember me cookie, refer
      * org.springframework.security.authentication.AuthenticationTrustResolverImpl
@@ -136,7 +122,10 @@ public class UserController {
 //            return false;
 //        }
 //
+
+
 //        return RememberMeAuthenticationToken.class.isAssignableFrom(authentication.getClass());
+
 //    }
 
     /**
@@ -149,6 +138,7 @@ public class UserController {
         }
     }
 
+
     /**
      * get targetURL from session
      */
@@ -160,6 +150,37 @@ public class UserController {
                     : session.getAttribute("targetUrl").toString();
         }
         return targetUrl;
+    }
+
+    /**
+     * Check Username Register Ajax blur
+     */
+    @RequestMapping(value = "checkUsername", method = RequestMethod.GET)
+    @ResponseBody
+    public String checkUsername(HttpServletRequest request) {
+        String username = request.getParameter("username");
+        User user = userDAO.findByUsername(username);
+        if (user != null) {
+            System.out.print(user.getPassword());
+            return "error";
+        }
+        return "success";
+    }
+
+
+    /**
+     * Register User Ajax
+     */
+    @RequestMapping(value = "registerUser", method = RequestMethod.POST)
+    @ResponseBody
+    public String register(HttpServletRequest request) {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        String fullname = request.getParameter("fullname");
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        User user = new User(username, encoder.encode(password), fullname, "", true);
+        userDAO.saveUserAdmin(user);
+        return "success";
     }
 
 

@@ -14,4 +14,6 @@ public interface BlogDAO {
     Blog saveBlog(Blog blog);
 
     List<Blog> findByUser(User user);
+
+    void findByRole(String name);
 }

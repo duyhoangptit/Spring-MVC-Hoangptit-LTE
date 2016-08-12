@@ -8,6 +8,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="_csrf" content="${_csrf.token}"/>
+    <meta name="_csrf_header" content="${_csrf.headerName}"/>
     <title>${title}</title>
     <%--icon title--%>
     <link rel="shortcut icon" type="images/x-icon" href="/images/icon_title.png"/>
@@ -16,9 +18,9 @@
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Ionicons -->
-    <link rel="stylesheet" href="/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- DataTables -->
     <link rel="stylesheet" href="/plugins/datatables/dataTables.bootstrap.css">
     <!-- Css data center -->
@@ -49,11 +51,12 @@
 <body class="hold-transition skin-blue sidebar-mini">
 
 <%--check isLogin empty?index:login--%>
-<c:if test="${empty isLogin}">
+<c:if test="${empty pageContext.request.userPrincipal.name}">
     <%
         response.sendRedirect("/home/login.html");
     %>
 </c:if>
+<%--end check isLogin--%>
 <div class="wrapper">
     <%--header--%>
     <tiles:insertAttribute name="header"/>

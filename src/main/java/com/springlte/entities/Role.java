@@ -18,15 +18,14 @@ public class Role {
 
     private String name;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "roles")
     private List<User> users;
 
     public Role() {
     }
 
-    public Role(String name, List<User> users) {
+    public Role(String name) {
         this.name = name;
-        this.users = users;
     }
 
     public Integer getRoleId() {

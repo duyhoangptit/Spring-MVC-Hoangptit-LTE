@@ -6,6 +6,7 @@ import com.springlte.entities.Role;
 import com.springlte.entities.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -38,5 +39,15 @@ public class BlogDAOImpl implements BlogDAO {
     @Override
     public List<Blog> findByUser(User user) {
         return null;
+    }
+
+    @Override
+    public void findByRole(String name) {
+        openSession();
+
+        String hql = "From Role Where name=:name";
+        Query query = session.createQuery(hql);
+        query.setParameter("name",name);
+
     }
 }

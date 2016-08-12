@@ -6,6 +6,7 @@ import com.springlte.entities.Role;
 import com.springlte.entities.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -39,7 +40,10 @@ public class RoleDAOImpl implements RoleDAO {
     @Override
     public Role findByName(String name) {
         openSession();
-        Role role = (Role)session.createQuery("from Role where name='"+name+"'").uniqueResult();
+        String hql = "FROM Role WHERE name=:name";
+        Query query = session.createQuery(hql);
+        query.setParameter("name", name);
+        Role role = (Role)query.list();
         return role;
     }
 }

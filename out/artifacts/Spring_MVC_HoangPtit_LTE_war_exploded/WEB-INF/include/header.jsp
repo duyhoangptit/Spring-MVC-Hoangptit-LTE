@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <header class="main-header " style="position: fixed;width: 100%">
     <!-- Logo -->
     <a href="/home/index.html" class="logo">
@@ -215,14 +216,14 @@
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="/dist/img/${isLogin.image}" class="user-image" alt="User Image">
-                        <span class="hidden-xs">${isLogin.username}</span>
+                        <span class="hidden-xs">${isLogin.fullName}</span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
                             <img src="/dist/img/${isLogin.image}" class="img-circle" alt="User Image">
                             <p>
-                                ${isLogin.username} - Developer
+                                ${isLogin.fullName} - Developer
                                 <small>Convert Web 2016</small>
                             </p>
                         </li>
@@ -243,8 +244,21 @@
                             <div class="pull-left">
                                 <a href="/user/profileUser.html" class="btn btn-default btn-flat">Profile</a>
                             </div>
+
                             <div class="pull-right">
-                                <a href="/user/logout.html" class="btn btn-default btn-flat">Log out</a>
+                                <%--<a href="/user/logout" class="btn btn-default btn-flat">Log out</a>--%>
+                                <form action="/user/logout" method="post" id="logoutForm">
+                                    <input type="hidden" name="${_csrf.parameterName}"
+                                           value="${_csrf.token}" />
+                                </form>
+                                <script>
+                                    function formSubmit() {
+                                        document.getElementById("logoutForm").submit();
+                                    }
+                                </script>
+                                <c:if test="${pageContext.request.userPrincipal.name != null}">
+                                    <a href="javascript:formSubmit()" class="btn btn-default btn-flat"> Logout</a>
+                                </c:if>
                             </div>
                         </li>
                     </ul>

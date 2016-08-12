@@ -16,6 +16,10 @@ public interface UserDAO {
 
     User saveUser(User user);
 
+    User saveUserAdmin(User user);
+
+    User saveUserEmpl(User user);
+
     List<User> findAll();
 
     User findOneWithBlogs(String username);

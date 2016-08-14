@@ -110,13 +110,23 @@ function registerUser(username, password, full_name, token, header) {
             xhr.setRequestHeader(header, token);
         },
         success: function (data) {
-            $('#waiting').hide();
-            swal('Đăng ký thành công!!!', 'Click closed Ok', data);
-            var username = $('#username').val('');
-            var password = $('#password').val('');
-            var full_name = $('#full_name').val('');
-            var password_again = $('#password_again').val('');
-            $('#success').hide();
+            if(data=='success'){
+                $('#waiting').hide();
+                swal('Đăng ký thành công!!!', 'Click closed Ok', data);
+                var username = $('#username').val('');
+                var password = $('#password').val('');
+                var full_name = $('#full_name').val('');
+                var password_again = $('#password_again').val('');
+                $('#success').hide();
+            }else{
+                $('#waiting').hide();
+                var username = $('#username').val('');
+                var password = $('#password').val('');
+                var full_name = $('#full_name').val('');
+                var password_again = $('#password_again').val('');
+                $('#error').html('Đăng ký không thành công');
+                $('#error').show();
+            }
         }, error: function (e) {
             console.log(e);
         }

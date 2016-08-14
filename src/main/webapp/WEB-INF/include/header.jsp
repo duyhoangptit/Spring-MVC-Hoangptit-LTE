@@ -247,10 +247,9 @@
 
                             <div class="pull-right">
                                 <%--<a href="/user/logout" class="btn btn-default btn-flat">Log out</a>--%>
-                                <form action="/user/logout" method="post" id="logoutForm">
+                                <form action="/user/logout.html" method="post" id="logoutForm">
                                     <input type="hidden" name="${_csrf.parameterName}"
                                            value="${_csrf.token}" />
-                                </form>
                                 <script>
                                     function formSubmit() {
                                         document.getElementById("logoutForm").submit();
@@ -259,6 +258,7 @@
                                 <c:if test="${pageContext.request.userPrincipal.name != null}">
                                     <a href="javascript:formSubmit()" class="btn btn-default btn-flat"> Logout</a>
                                 </c:if>
+                                </form>
                             </div>
                         </li>
                     </ul>

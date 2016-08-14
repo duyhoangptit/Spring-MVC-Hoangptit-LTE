@@ -9,7 +9,7 @@
         <p class="login-box-msg">Login AdminLTE</p>
         <form class="form-signin" action="<c:url value='/auth/login_check?targetUrl=${targetUrl}' />" method="POST">
             <div class="form-group has-feedback">
-                <input  type = "text" name="username" class="form-control" placeholder="Name"/>
+                <input type="text" name="username" class="form-control" placeholder="Name"/>
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
@@ -20,7 +20,9 @@
                 <div class="col-xs-8">
                     <div class="checkbox icheck">
                         <label>
-                            <input type="checkbox" name="remember-me"> Remember Me
+                            <c:if test="${empty loginUpdate}">
+                                <input type="checkbox" name="remember-me"> Remember Me
+                            </c:if>
                         </label>
                     </div>
                 </div><!-- /.col -->
@@ -29,18 +31,18 @@
                 </div><!-- /.col -->
             </div>
             <input type="hidden" name="${_csrf.parameterName}"
-                   value="${_csrf.token}" />
+                   value="${_csrf.token}"/>
         </form>
 
 
         <div class="social-auth-links text-center">
             <p>
                 <c:if test="${not empty error}">
-                    <div class="error">${error}</div>
-                </c:if>
-                <c:if test="${not empty logout}">
-                    <div class="success">${logout}</div>
-                </c:if>
+            <div class="error">${error}</div>
+            </c:if>
+            <c:if test="${not empty logout}">
+                <div class="success">${logout}</div>
+            </c:if>
             </p>
             <p>- OR -</p>
             <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in

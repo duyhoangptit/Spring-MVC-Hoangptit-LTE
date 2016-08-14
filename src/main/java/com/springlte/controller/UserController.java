@@ -5,12 +5,17 @@ import com.springlte.dao.AccountDAO;
 import com.springlte.entities.Account;
 import com.springlte.until.ConfigUntil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.RememberMeAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 /**
  * author Hoangptit
@@ -26,7 +31,7 @@ public class UserController {
     @Autowired
     private RoleDAO roleDAO;
 
-    @RequestMapping(value = "logout", method = RequestMethod.GET)
+    @RequestMapping(value = "logout", method = RequestMethod.POST)
     public String logout(HttpSession session, ModelMap modelMap) {
         session.removeAttribute("isLogin");
         session.removeAttribute("msg");
@@ -74,51 +79,6 @@ public class UserController {
         return "login";
     }
 
-
-//    @RequestMapping(method = RequestMethod.POST)
-//    public String doRegister(@Valid @ModelAttribute("user") User user, BindingResult result) {
-//        if (result.hasErrors()) {
-//            return "user-register";
-//        }
-//        userDAO.saveUserAdmin(user);
-//        return "redirect:/register.html?success=true";
-//    }
-
-    /**
-     * Check if user is login by remember me cookie, refer
-     * org.springframework.security.authentication.AuthenticationTrustResolverImpl
-     */
-//    private boolean isRememberMeAuthenticated() {
-//        Authentication authentication =
-//                SecurityContextHolder.getContext().getAuthentication();
-//        if (authentication == null) {
-//            return false;
-//        }
-//
-
-
-//        return RememberMeAuthenticationToken.class.isAssignableFrom(authentication.getClass());
-
-//    }
-
-    private void setRememberMeTargetUrlToSession(HttpServletRequest request) {
-        HttpSession session = request.getSession(false);
-        if (session != null) {
-            session.setAttribute("targetUrl", "/admin/update");
-        }
-    }
-
-
-    private String getRememberMeTargetUrlFromSession(HttpServletRequest request) {
-        String targetUrl = "";
-        HttpSession session = request.getSession(false);
-        if (session != null) {
-            targetUrl = session.getAttribute("targetUrl") == null ? ""
-                    : session.getAttribute("targetUrl").toString();
-        }
-        return targetUrl;
-    }
-
     @RequestMapping(value = "checkUsername", method = RequestMethod.GET)
     @ResponseBody
     public String checkUsername(HttpServletRequest request) {
@@ -147,11 +107,66 @@ public class UserController {
         try {
             account = accountDAO.saveUser(account, ConfigUntil.ROLE_ADMIN);
             System.out.println(account.getPassword());
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e);
+            return "error";
         }
         return "success";
     }
+
+    /**
+     * This update page is for user login with password only
+     * If user is login via remember me cookie, send login to ask for password again
+     * To avoid stolen remember me cookie to updateinfo
+     * */
+    @RequestMapping(value = "/admin/update**", method = RequestMethod.GET)
+    public String updatePage(HttpServletRequest request, ModelMap modelMap){
+        if(isRememberMeAuthenticated()){
+            // send login for update
+            setRememberMeTargetUrlToSession(request);
+            modelMap.addAttribute("loginUpdate",true);
+            return "login";
+        }
+        return "index";
+    }
+
+
+    /**
+     * Check if user is login by remember me cookie, refer
+     * org.springframework.security.authentication.AuthenticationTrustResolverImpl
+     */
+    private boolean isRememberMeAuthenticated() {
+        Authentication authentication =
+                SecurityContextHolder.getContext().getAuthentication();
+        if (authentication == null) {
+            return false;
+        }
+
+        return RememberMeAuthenticationToken.class.isAssignableFrom(authentication.getClass());
+
+    }
+
+    private void setRememberMeTargetUrlToSession(HttpServletRequest request) {
+        HttpSession session = request.getSession(false);
+        if (session != null) {
+            session.setAttribute("targetUrl", "/admin/update");
+        }
+    }
+
+
+    private String getRememberMeTargetUrlFromSession(HttpServletRequest request) {
+        String targetUrl = "";
+        HttpSession session = request.getSession(false);
+        if (session != null) {
+            targetUrl = session.getAttribute("targetUrl") == null ? ""
+                    : session.getAttribute("targetUrl").toString();
+        }
+        return targetUrl;
+    }
+
+    /*end remember user*/
+
+
 
 
 }

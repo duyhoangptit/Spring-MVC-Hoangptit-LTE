@@ -8,54 +8,43 @@ import java.util.Set;
 
 /**
  * author Hoangptit
- * Date 7/20/2016
+ * Date 8/13/2016
  */
-
 @Entity
-public class User implements Serializable {
+@Table
+public class Account implements Serializable {
 
     @Id
-    @Column(name = "username", unique = true)
+    @Column(unique = true)
     private String username;
-    @Column(name = "password", nullable = false, length = 60)
+    @Column(nullable = false, length = 60)
     private String password;
-    @Column(name = "fullname", nullable = false, length = 60)
+    @Column( length = 60)
     private String fullName;
-    @Column(name = "image", length = 60)
+    @Column(length = 60)
     private String image;
-    @Column(name = "enabled", nullable = false)
+    @Column(nullable = false)
     private boolean enabled;
+
     @ManyToMany
     @JoinTable
-    private Set<Role> roles;
+    private Set<Role> roles = new HashSet<>();
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "account", cascade = CascadeType.REMOVE)
     private List<Blog> blogs;
 
 
-    public User() {
+    public Account() {
     }
 
-    public User(String username, String password, boolean enabled) {
-        this.username = username;
-        this.password = password;
-        this.enabled = enabled;
-    }
-
-    public User(String username, String password, String fullName, String image, boolean enabled) {
+    public Account(String username, String password, String fullName, String image, boolean enabled, Set<Role> roles, List<Blog> blogs) {
         this.username = username;
         this.password = password;
         this.fullName = fullName;
         this.image = image;
         this.enabled = enabled;
-    }
-
-    public User(String username, String password,
-                boolean enabled, Set<Role> roles) {
-        this.username = username;
-        this.password = password;
-        this.enabled = enabled;
         this.roles = roles;
+        this.blogs = blogs;
     }
 
     public String getUsername() {

@@ -1,9 +1,8 @@
 package com.springlte.impl;
 
 import com.springlte.dao.RoleDAO;
-import com.springlte.dao.UserDAO;
 import com.springlte.entities.Role;
-import com.springlte.entities.User;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -21,12 +20,12 @@ public class RoleDAOImpl implements RoleDAO {
     private Session session;
     private SessionFactory sessionFactory;
 
-    private RoleDAOImpl(SessionFactory sessionFactory) {
+    public RoleDAOImpl(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
 
     private void openSession() {
-        session = sessionFactory.getCurrentSession();
+        this.session = this.sessionFactory.getCurrentSession();
     }
 
 
@@ -37,13 +36,23 @@ public class RoleDAOImpl implements RoleDAO {
         return role;
     }
 
+    /**
+     * Không ép kiểu list về object được
+     * */
     @Override
     public Role findByName(String name) {
         openSession();
-        String hql = "FROM Role WHERE name=:name";
+        String hql = "FROM Role role WHERE role.nameRole=:name";
         Query query = session.createQuery(hql);
-        query.setParameter("name", name);
-        Role role = (Role)query.list();
-        return role;
+        query.setParameter("name",name);
+        List<Role> roles = (List<Role>)query.list();
+        return roles.get(0);
+    }
+
+    @Override
+    public List<Role> findAll() {
+        openSession();
+        List<Role> roles = session.createQuery("from Role").list();
+        return roles;
     }
 }

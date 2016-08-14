@@ -1,9 +1,9 @@
 package com.springlte.impl;
 
 import com.springlte.dao.BlogDAO;
+import com.springlte.entities.Account;
 import com.springlte.entities.Blog;
 import com.springlte.entities.Role;
-import com.springlte.entities.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -21,7 +21,7 @@ public class BlogDAOImpl implements BlogDAO {
     private Session session;
     private SessionFactory sessionFactory;
 
-    private BlogDAOImpl(SessionFactory sessionFactory) {
+    public BlogDAOImpl(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
 
@@ -37,7 +37,7 @@ public class BlogDAOImpl implements BlogDAO {
     }
 
     @Override
-    public List<Blog> findByUser(User user) {
+    public List<Blog> findByUser(Account account) {
         return null;
     }
 
@@ -45,7 +45,7 @@ public class BlogDAOImpl implements BlogDAO {
     public void findByRole(String name) {
         openSession();
 
-        String hql = "From Role Where name=:name";
+        String hql = "From Role Where nameRole=:name";
         Query query = session.createQuery(hql);
         query.setParameter("name",name);
 

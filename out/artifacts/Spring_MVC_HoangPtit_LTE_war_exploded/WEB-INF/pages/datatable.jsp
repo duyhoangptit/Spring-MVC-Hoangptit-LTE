@@ -35,18 +35,18 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <c:forEach var="user" items="${userData}" varStatus="i">
+                            <c:forEach var="account" items="${accounts}" varStatus="i">
                                 <tr>
                                     <td class="data-view">${i.index + 1}</td>
-                                    <td class="data-view">${user.username}</td>
-                                    <td class="data-view">${user.password}</td>
-                                    <td class="data-view">${user.enabled}</td>
+                                    <td class="data-view">${account.username}</td>
+                                    <td class="data-view">${account.password}</td>
+                                    <td class="data-view">${account.image}</td>
                                     <td class="data-view">
-                                        <a href="/user/updateUser.html?userId=${user.username}"><img
+                                        <a href="/user/updateUser.html?userId=${account.username}"><img
                                                 src="/images/details-icon.png" class="size-img"></a>
-                                        <a href="/user/updateUser.html?userId=${user.username}"><img
+                                        <a href="/user/updateUser.html?userId=${account.username}"><img
                                                 src="/images/delete-icon.png" class="size-img"></a>
-                                        <a href="/user/deleteUser.html?userId=${user.username}"><img
+                                        <a href="/user/deleteUser.html?userId=${account.username}"><img
                                                 src="/images/edit-icon.png" class="size-img"></a>
                                     </td>
                                 </tr>

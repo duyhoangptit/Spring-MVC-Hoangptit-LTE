@@ -14,7 +14,7 @@
 
         <mapping class="com.springlte.entities.Blog"/>
         <mapping class="com.springlte.entities.Item"/>
-        <mapping class="com.springlte.entities.User"/>
+        <mapping class="com.springlte.entities.Account"/>
         <mapping class="com.springlte.entities.Role"/>
 
         <!-- List of XML mapping files -->

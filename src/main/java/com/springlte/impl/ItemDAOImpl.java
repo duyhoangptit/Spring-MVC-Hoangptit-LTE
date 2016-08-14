@@ -22,7 +22,7 @@ public class ItemDAOImpl implements ItemDAO {
     private Session session;
     private SessionFactory sessionFactory;
 
-    private ItemDAOImpl(SessionFactory sessionFactory) {
+    public ItemDAOImpl(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
 

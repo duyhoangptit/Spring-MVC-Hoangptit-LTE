@@ -39,7 +39,7 @@
                     <div class="error">${error}</div>
                 </c:if>
                 <c:if test="${not empty logout}">
-                    <div class="logout">${logout}</div>
+                    <div class="success">${logout}</div>
                 </c:if>
             </p>
             <p>- OR -</p>

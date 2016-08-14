@@ -28,7 +28,7 @@
     <!--Spring aop-->
     <tx:annotation-driven transaction-manager="transactionManager"/>
     <!--Bean DAO-->
-    <bean id="userDAO" class="com.springlte.impl.UserDAOImpl">
+    <bean id="accountDAO" class="com.springlte.impl.AccountDAOImpl">
         <constructor-arg>
             <ref bean="sessionFactory"/>
         </constructor-arg>

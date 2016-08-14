@@ -1,24 +1,16 @@
 package com.springlte.controller;
 
 import com.springlte.dao.RoleDAO;
-import com.springlte.dao.UserDAO;
-import com.springlte.entities.Role;
-import com.springlte.entities.User;
+import com.springlte.dao.AccountDAO;
+import com.springlte.entities.Account;
 import com.springlte.until.ConfigUntil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import javax.validation.Valid;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 /**
  * author Hoangptit
@@ -29,14 +21,10 @@ import java.util.Set;
 public class UserController {
 
     @Autowired
-    private UserDAO userDAO;
+    private AccountDAO accountDAO;
+
     @Autowired
     private RoleDAO roleDAO;
-
-    /**
-     * Log out user
-     * Remove session and cookie
-     */
 
     @RequestMapping(value = "logout", method = RequestMethod.GET)
     public String logout(HttpSession session, ModelMap modelMap) {
@@ -45,23 +33,13 @@ public class UserController {
         return "redirect:/home/login.html";
     }
 
-    /**
-     * Profile User Page
-     * User Detail
-     */
-
     @RequestMapping(value = "profileUser", method = RequestMethod.GET)
     public String profileUser(HttpSession session, ModelMap modelMap) {
-        User user = (User) session.getAttribute("isLogin");
-        modelMap.addAttribute("user", user);
+        Account account = (Account) session.getAttribute("isLogin");
+        modelMap.addAttribute("user", account);
         session.setAttribute("page", "profile");
         return "profile_user";
     }
-
-    /**
-     * deleteUser
-     * Delete User Where userId
-     */
 
     @RequestMapping(value = "deleteUser/username", method = RequestMethod.GET)
     public String deleteUser(@PathVariable(value = "username") String username, ModelMap modelMap) {
@@ -80,11 +58,6 @@ public class UserController {
         return "redirect:/home/dataTable.html";
     }
 
-
-    /**
-     * Begin login page
-     * Form login
-     */
     @RequestMapping(value = {"/login", "/"}, method = RequestMethod.GET)
     public String login(@RequestParam(value = "error", required = false) String erro,
                         @RequestParam(value = "logout", required = false) String logou, ModelMap modelMap) {
@@ -102,14 +75,14 @@ public class UserController {
     }
 
 
-    @RequestMapping(method = RequestMethod.POST)
-    public String doRegister(@Valid @ModelAttribute("user") User user, BindingResult result) {
-        if (result.hasErrors()) {
-            return "user-register";
-        }
-        userDAO.saveUserAdmin(user);
-        return "redirect:/register.html?success=true";
-    }
+//    @RequestMapping(method = RequestMethod.POST)
+//    public String doRegister(@Valid @ModelAttribute("user") User user, BindingResult result) {
+//        if (result.hasErrors()) {
+//            return "user-register";
+//        }
+//        userDAO.saveUserAdmin(user);
+//        return "redirect:/register.html?success=true";
+//    }
 
     /**
      * Check if user is login by remember me cookie, refer
@@ -128,9 +101,6 @@ public class UserController {
 
 //    }
 
-    /**
-     * save targetURL in session
-     */
     private void setRememberMeTargetUrlToSession(HttpServletRequest request) {
         HttpSession session = request.getSession(false);
         if (session != null) {
@@ -139,9 +109,6 @@ public class UserController {
     }
 
 
-    /**
-     * get targetURL from session
-     */
     private String getRememberMeTargetUrlFromSession(HttpServletRequest request) {
         String targetUrl = "";
         HttpSession session = request.getSession(false);
@@ -152,34 +119,37 @@ public class UserController {
         return targetUrl;
     }
 
-    /**
-     * Check Username Register Ajax blur
-     */
     @RequestMapping(value = "checkUsername", method = RequestMethod.GET)
     @ResponseBody
     public String checkUsername(HttpServletRequest request) {
         String username = request.getParameter("username");
-        User user = userDAO.findByUsername(username);
-        if (user != null) {
-            System.out.print(user.getPassword());
+        Account account = accountDAO.findByUsername(username);
+        if (account != null) {
+            System.out.println(account.getPassword());
             return "error";
         }
         return "success";
     }
 
-
-    /**
-     * Register User Ajax
-     */
     @RequestMapping(value = "registerUser", method = RequestMethod.POST)
     @ResponseBody
     public String register(HttpServletRequest request) {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String fullname = request.getParameter("fullname");
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        User user = new User(username, encoder.encode(password), fullname, "", true);
-        userDAO.saveUserAdmin(user);
+
+        Account account = new Account();
+        account.setUsername(username);
+        account.setPassword(password);
+        account.setFullName(fullname);
+        account.setImage("user_hoang.jpg");
+        account.setEnabled(true);
+        try {
+            account = accountDAO.saveUser(account, ConfigUntil.ROLE_ADMIN);
+            System.out.println(account.getPassword());
+        }catch (Exception e){
+            System.out.println(e);
+        }
         return "success";
     }
 

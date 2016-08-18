@@ -60,13 +60,15 @@ public class AccountDAOImpl implements AccountDAO {
     @Override
     public Account saveUser(Account account, String roleUser) {
         openSession();
+
         Set<Role> roles = new HashSet<>();
         Role role = roleDAO.findByName(roleUser);
         roles.add(role);
+
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         account.setPassword(encoder.encode(account.getPassword()));
         account.setRoles(roles);
-        System.out.println(account.getPassword());
+
         session.save(account);
         return account;
     }

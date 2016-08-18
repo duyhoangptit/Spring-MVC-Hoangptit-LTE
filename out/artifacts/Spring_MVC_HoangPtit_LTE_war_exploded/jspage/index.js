@@ -10,4 +10,6 @@ $(document).ready(function () {
             tmp = true;
         }
     });
+    $('.progressBar').hide();
+
 });

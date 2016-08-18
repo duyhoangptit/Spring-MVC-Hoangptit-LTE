@@ -15,12 +15,14 @@ import java.util.Set;
 public class Account implements Serializable {
 
     @Id
-    @Column(unique = true)
+    @Column(unique = true, nullable = false)
     private String username;
     @Column(nullable = false, length = 60)
     private String password;
-    @Column( length = 60)
+    @Column(length = 60)
     private String fullName;
+    @Column(length = 60, nullable = false)
+    private String email;
     @Column(length = 60)
     private String image;
     @Column(nullable = false)
@@ -37,10 +39,11 @@ public class Account implements Serializable {
     public Account() {
     }
 
-    public Account(String username, String password, String fullName, String image, boolean enabled, Set<Role> roles, List<Blog> blogs) {
+    public Account(String username, String password, String fullName, String email, String image, boolean enabled, Set<Role> roles, List<Blog> blogs) {
         this.username = username;
         this.password = password;
         this.fullName = fullName;
+        this.email = email;
         this.image = image;
         this.enabled = enabled;
         this.roles = roles;
@@ -93,6 +96,14 @@ public class Account implements Serializable {
 
     public void setFullName(String fullName) {
         this.fullName = fullName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public List<Blog> getBlogs() {

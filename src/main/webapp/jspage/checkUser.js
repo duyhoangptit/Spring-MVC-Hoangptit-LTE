@@ -21,10 +21,16 @@ $(document).ready(function () {
         }
         $.get("/user/checkUsername.html", {username: username}, function (data) {
             if (data == 'success') {
+                $('#divUser').addClass('has-success');
+                $('#spUser').addClass('glyphicon-ok');
+                $('#spUser').removeClass('glyphicon-user');
                 $('#success').html('Bạn có thể sử dụng tài khoản này.');
                 $('#error').hide();
                 $('#success').show();
-            }else{
+            } else {
+                $('#divUser').removeClass('has-success');
+                $('#spUser ').removeClass('glyphicon-ok');
+                $('#spUser').addClass('glyphicon-user');
                 $('#error').html('Tài khoản này đã được sử dụng.');
                 $('#error').show();
                 $('#success').hide();
@@ -110,7 +116,7 @@ function registerUser(username, password, full_name, token, header) {
             xhr.setRequestHeader(header, token);
         },
         success: function (data) {
-            if(data=='success'){
+            if (data == 'success') {
                 $('#waiting').hide();
                 swal('Đăng ký thành công!!!', 'Click closed Ok', data);
                 var username = $('#username').val('');
@@ -118,7 +124,7 @@ function registerUser(username, password, full_name, token, header) {
                 var full_name = $('#full_name').val('');
                 var password_again = $('#password_again').val('');
                 $('#success').hide();
-            }else{
+            } else {
                 $('#waiting').hide();
                 var username = $('#username').val('');
                 var password = $('#password').val('');

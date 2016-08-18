@@ -8,9 +8,9 @@
     <div class="register-box-body">
         <p class="login-box-msg">Đăng ký tài khoản</p>
         <form class="form-signin">
-            <div class="form-group has-feedback">
+            <div class="form-group has-feedback" id = "divUser">
                 <input type="text" class="form-control" placeholder="Username" id="username"/>
-                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                <span class="glyphicon glyphicon-user form-control-feedback" id = "spUser"></span>
             </div>
             <div class="form-group has-feedback">
                 <input type="text" class="form-control" placeholder="Full name" id="full_name"/>

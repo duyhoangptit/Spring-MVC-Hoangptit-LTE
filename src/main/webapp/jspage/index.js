@@ -10,4 +10,20 @@ $(document).ready(function () {
             tmp = true;
         }
     });
+    $('.progressBar').hide();
+    
+    
+
 });
+
+
+function notifyMessa() {
+    setTimeout(function() {
+        $('#notifyMessa').load("/user/notifyMessa.html",{data: 1},function (responseTxt, result, xhr) {
+            if(result == "success")
+                $('#notifyMessa').html();
+            if(result == "error")
+                alert("Error: " + xhr.status + ": " + xhr.statusText);
+        });
+    }, 2000);
+}

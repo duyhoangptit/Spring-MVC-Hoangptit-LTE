@@ -265,7 +265,7 @@
                 </li>
                 <!-- Control Sidebar Toggle Button -->
                 <li>
-                    <a href="#" data-toggle="control-sidebar"></a>
+                    <p data-toggle="control-sidebar"></p>
                 </li>
             </ul>
         </div>

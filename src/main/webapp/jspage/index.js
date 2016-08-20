@@ -11,9 +11,11 @@ $(document).ready(function () {
         }
     });
     $('.progressBar').hide();
-    
-    
 
+    $(window).load(function() {
+        // Animate loader off screen
+        $("#loading").fadeOut("slow");;
+    });
 });
 
 

@@ -10,12 +10,10 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import javax.validation.Valid;
 
 /**
  * author Hoangptit
@@ -85,7 +83,6 @@ public class UserController {
         String username = request.getParameter("username");
         Account account = accountDAO.findByUsername(username);
         if (account != null) {
-            System.out.println(account.getPassword());
             return "error";
         }
         return "success";
@@ -106,7 +103,6 @@ public class UserController {
         account.setEnabled(true);
         try {
             account = accountDAO.saveUser(account, ConfigUntil.ROLE_ADMIN);
-            System.out.println(account.getPassword());
         } catch (Exception e) {
             System.out.println(e);
             return "error";

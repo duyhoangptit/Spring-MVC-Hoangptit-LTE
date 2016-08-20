@@ -46,6 +46,27 @@
     <link rel="stylesheet" href="/css/docs.css">
     <link rel="stylesheet" href="/css/sweetalert.css">
     <!-- Lazy load-->
+    <style>
+        #loading {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: fixed;
+            display: block;
+            opacity: 0.7;
+            background-color: #fff;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        #loading-image {
+            position: absolute;
+            top:200px;
+            text-align: center;
+            z-index: 10000;
+        }
+    </style>
 
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -56,8 +77,13 @@
         response.sendRedirect("/home/login.html");
     %>
 </c:if>
+
 <%--end check isLogin--%>
 <div class="wrapper">
+    <%--Load page waitting--%>
+    <div id="loading">
+        <img id="loading-image" src="/images/watting_index.gif" alt="Loading..." />
+    </div>
     <%--header--%>
     <tiles:insertAttribute name="header"/>
     <%--menu--%>
@@ -72,6 +98,8 @@
 </div><!-- ./wrapper -->
 <!-- jQuery 2.1.4 -->
 <script src="/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<!-- modernizr -->
+<script src="/js/modernizr.js"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->

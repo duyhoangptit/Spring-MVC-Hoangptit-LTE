@@ -32,10 +32,12 @@ public class HomeController {
 
     @RequestMapping(value = "/admin**", method = RequestMethod.GET)
     public String adminPage(ModelMap modelMap) {
-        modelMap.addAttribute("title", "Spring Security Password Encoder");
+        // Cấu hình đường dẫn admin
+        modelMap.addAttribute("title", "Spring Security Page Admin");
         modelMap.addAttribute("message", "This page is for ROLE_ADMIN only!");
-        return "index";
+        return "admin";
     }
+
 
     @RequestMapping(value = {"/login", "/"}, method = RequestMethod.GET)
     public String login(ModelMap modelMap) {
@@ -112,7 +114,7 @@ public class HomeController {
         return users;
     }
 
-    @RequestMapping(value = "/403", method = RequestMethod.GET)
+    @RequestMapping(value = "403", method = RequestMethod.GET)
     public String accesssDenied(ModelMap modelMap) {
         //check if user is login
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();

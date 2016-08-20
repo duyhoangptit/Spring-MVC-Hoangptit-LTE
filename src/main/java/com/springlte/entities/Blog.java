@@ -20,11 +20,11 @@ public class Blog {
     private String url;
     private String name;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "username")
-    private User user;
+    private Account account;
 
-    @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "blog", cascade = CascadeType.REMOVE, fetch = FetchType.LAZY)
     private List<Item> items;
 
     public Blog() {
@@ -35,10 +35,10 @@ public class Blog {
         this.name = name;
     }
 
-    public Blog(String url, String name, User user, List<Item> items) {
+    public Blog(String url, String name, Account account, List<Item> items) {
         this.url = url;
         this.name = name;
-        this.user = user;
+        this.account = account;
         this.items = items;
     }
 
@@ -66,12 +66,12 @@ public class Blog {
         this.name = name;
     }
 
-    public User getUser() {
-        return user;
+    public Account getAccount() {
+        return account;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setAccount(Account account) {
+        this.account = account;
     }
 
     public List<Item> getItems() {

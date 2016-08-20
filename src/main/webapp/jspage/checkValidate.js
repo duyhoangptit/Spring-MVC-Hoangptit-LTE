@@ -36,10 +36,10 @@ function checkInput(id, message) {
     return true;
 }
 
-function  checkFileName(fileName) {
+function checkFileName(fileName) {
     if (fileName === "jpg" ||
-            fileName === "gif" ||
-            fileName === "png") {
+        fileName === "gif" ||
+        fileName === "png") {
         return true;
     }
     return false;

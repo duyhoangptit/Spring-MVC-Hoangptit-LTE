@@ -1,7 +1,7 @@
 package com.springlte.dao;
 
+import com.springlte.entities.Account;
 import com.springlte.entities.Blog;
-import com.springlte.entities.User;
 
 import java.util.List;
 
@@ -13,5 +13,7 @@ public interface BlogDAO {
 
     Blog saveBlog(Blog blog);
 
-    List<Blog> findByUser(User user);
+    List<Blog> findByUser(Account account);
+
+    void findByRole(String name);
 }

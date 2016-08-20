@@ -29,6 +29,14 @@
             </list>
         </property>
     </bean>
+
+    <!-- Config Properties file -->
+    <bean id="appProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="locations">
+            <list><value>classpath:configdatabase.properties</value></list>
+        </property>
+    </bean>
+
     <!-- config folder js/css/img-->
     <mvc:resources mapping="/js/**" location="/js/"/>
     <mvc:resources mapping="/jspage/**" location="/jspage/"/>
@@ -55,7 +63,6 @@
     </bean>
 
     <!--import file config xml spring database and spring security-->
-
     <import resource="spring-database.xml"/>
     <import resource="spring-security.xml"/>
 </beans>

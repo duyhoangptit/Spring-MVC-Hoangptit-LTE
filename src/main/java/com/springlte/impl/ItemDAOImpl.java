@@ -10,6 +10,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.awt.print.Pageable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,7 +23,7 @@ public class ItemDAOImpl implements ItemDAO {
     private Session session;
     private SessionFactory sessionFactory;
 
-    private ItemDAOImpl(SessionFactory sessionFactory) {
+    public ItemDAOImpl(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
 
@@ -39,7 +40,8 @@ public class ItemDAOImpl implements ItemDAO {
 
     @Override
     public List<Item> findByBlog(Blog blog, Pageable pageable) {
-        return null;
+        List<Item> items = new ArrayList<>();
+        return items;
     }
 
     @Override

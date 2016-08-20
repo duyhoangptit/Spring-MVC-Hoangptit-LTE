@@ -80,6 +80,7 @@
 
 <%--end check isLogin--%>
 <div class="wrapper">
+    <%--Load page waitting--%>
     <div id="loading">
         <img id="loading-image" src="/images/watting_index.gif" alt="Loading..." />
     </div>

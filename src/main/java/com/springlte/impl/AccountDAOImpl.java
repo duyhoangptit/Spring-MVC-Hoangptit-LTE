@@ -1,7 +1,6 @@
 package com.springlte.impl;
 
 import com.springlte.dao.BlogDAO;
-import com.springlte.dao.ItemDAO;
 import com.springlte.dao.RoleDAO;
 import com.springlte.dao.AccountDAO;
 import com.springlte.entities.Account;
@@ -26,8 +25,6 @@ public class AccountDAOImpl implements AccountDAO {
 
     @Autowired
     private BlogDAO blogDAO;
-    @Autowired
-    private ItemDAO itemDAO;
     @Autowired
     private RoleDAO roleDAO;
 

@@ -30,7 +30,7 @@ public class UserController {
     private RoleDAO roleDAO;
 
     @RequestMapping(value = "logout", method = RequestMethod.POST)
-    public String logout(HttpSession session, ModelMap modelMap) {
+    public String logout(HttpSession session) {
         session.removeAttribute("isLogin");
         session.removeAttribute("msg");
         return "redirect:/home/login.html";

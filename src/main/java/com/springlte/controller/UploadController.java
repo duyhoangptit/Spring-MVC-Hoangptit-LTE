@@ -15,31 +15,19 @@ import java.io.FileOutputStream;
 
 /**
  * author Hoangptit
- * Date 8/18/2016
+ * Date 8/21/2016
  */
 @Controller
-public class UploadFileController {
-    // đường dẫn tới folder
-
-    @RequestMapping(value = "uploadOneFile", method = RequestMethod.GET)
-    public String singleUpload() {
-        return "uploadOneFile";
-    }
-
-    @RequestMapping(value = "uploadMultiFile", method = RequestMethod.GET)
-    public String singleMultiFile() {
-        return "uploadMultiFile";
-    }
+@RequestMapping(value = "upload")
+public class UploadController {
 
     /**
      * Upload one file
      */
     @RequestMapping(value = "singleSave", method = RequestMethod.POST)
     @ResponseBody
-    public String singleSave(@RequestParam("file") MultipartFile file, HttpServletRequest request) {
+    public String singleSave(@RequestParam("file") MultipartFile file,HttpServletRequest request) {
         // 2 cách lấy data
-        String description = request.getParameter("desc");
-        System.out.println(description);
         String fileName = null;
         if (!file.isEmpty()) {
             try {
@@ -58,12 +46,6 @@ public class UploadFileController {
         }
     }
 
-
-    @RequestMapping(value = "multipleUpload")
-    public String multiUpload() {
-        return "multipleUpload";
-    }
-
     /**
      * Upload many file
      */
@@ -80,6 +62,7 @@ public class UploadFileController {
                     byte[] bytes = files[i].getBytes();
                     BufferedOutputStream buffStream =
                             new BufferedOutputStream(new FileOutputStream(new File(ConfigUntil.PATH_URL + fileName)));
+                    System.out.println(ConfigUntil.PATH_URL + fileName);
                     buffStream.write(bytes);
                     buffStream.close();
                     msg += "You have successfully uploaded " + fileName + "<br/>";

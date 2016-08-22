@@ -32,9 +32,10 @@
                     <i class="fa fa-dashboard"></i> <span>MENU</span> <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li id = "datatable-page" class="${page=='datatable'?'active':''}"><a href="/home/dataTable.html"><i class="fa fa-circle-o"></i> Data Table</a></li>
-                    <li id = "popup-page" class="${page=='popup_notify'?'active':''}"><a href="/home/popup.html"><i class="fa fa-circle-o"></i> Popup Notify</a></li>
-                    <li id = "lazyload-page" class="${page=='lazy_load'?'active':''}"><a href="/home/lazyLoad.html"><i class="fa fa-circle-o"></i> Lazy Load Data</a></li>
+                    <li  class="${page=='datatable'?'active':''}"><a href="/home/dataTable.html"><i class="fa fa-circle-o"></i> Data Table</a></li>
+                    <li  class="${page=='popup_notify'?'active':''}"><a href="/home/popup.html"><i class="fa fa-circle-o"></i> Popup Notify</a></li>
+                    <li  class="${page=='lazy_load'?'active':''}"><a href="/home/lazyLoad.html"><i class="fa fa-circle-o"></i> Lazy Load Data</a></li>
+                    <li  class="${page=='uploadFile'?'active':''}"><a href="/home/uploadFile.html"><i class="fa fa-circle-o"></i> Drag And Drop File</a></li>
                 </ul>
             </li>
 

@@ -1,0 +1,7 @@
+DAMCIO
++ Design
++ Application
++ Memory
++ Contention
++ I/O
++ Optimum

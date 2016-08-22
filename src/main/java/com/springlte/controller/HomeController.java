@@ -39,7 +39,7 @@ public class HomeController {
     }
 
 
-    @RequestMapping(value = {"/login", "/"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"login", "/"}, method = RequestMethod.GET)
     public String login(ModelMap modelMap) {
         modelMap.put("title", "Login | LTE");
         modelMap.put("user", new Account());
@@ -82,6 +82,13 @@ public class HomeController {
         return "lazy_load";
     }
 
+    @RequestMapping(value = "uploadFile", method = RequestMethod.GET)
+    public String uploadFile(ModelMap modelMap, HttpSession session) {
+        modelMap.put("title", "Upload Drag And Drop");
+        session.setAttribute("page", "uploadFile");
+        return "uploadFile";
+    }
+
     @RequestMapping(value = "dataTable", method = RequestMethod.GET)
     public String dataTable(ModelMap modelMap, HttpSession session) {
         session.setAttribute("page", "datatable");
@@ -99,6 +106,17 @@ public class HomeController {
         return "datatable";
     }
 
+    @RequestMapping(value = "403", method = RequestMethod.GET)
+    public String accesssDenied(ModelMap modelMap) {
+        //check if user is login
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        if (!(auth instanceof AnonymousAuthenticationToken)) {
+            UserDetails userDetail = (UserDetails) auth.getPrincipal();
+            modelMap.addAttribute("username", userDetail.getUsername());
+        }
+        return "404";
+    }
+
     @RequestMapping(value = "findData", method = RequestMethod.GET)
     @ResponseBody
     public List<Account> findData() {
@@ -114,16 +132,7 @@ public class HomeController {
         return users;
     }
 
-    @RequestMapping(value = "403", method = RequestMethod.GET)
-    public String accesssDenied(ModelMap modelMap) {
-        //check if user is login
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (!(auth instanceof AnonymousAuthenticationToken)) {
-            UserDetails userDetail = (UserDetails) auth.getPrincipal();
-            modelMap.addAttribute("username", userDetail.getUsername());
-        }
-        return "404";
-    }
+
 
 
 }

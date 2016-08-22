@@ -45,6 +45,8 @@
     <!-- sweetalert aleart -->
     <link rel="stylesheet" href="/css/docs.css">
     <link rel="stylesheet" href="/css/sweetalert.css">
+    <link rel="stylesheet" type="text/css" href="/css/dropzone.css"/>
+
     <!-- Lazy load-->
     <style>
         #loading {
@@ -72,7 +74,7 @@
 <body class="hold-transition skin-blue sidebar-mini">
 
 <%--check isLogin empty?index:login--%>
-<c:if test="${empty pageContext.request.userPrincipal.name}">
+<c:if test="${empty isLogin}">
     <%
         response.sendRedirect("/home/login.html");
     %>
@@ -151,5 +153,6 @@
 <script src="/dist/js/app.min.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="/dist/js/pages/dashboard.js"></script>
+<script type="text/javascript" src="/js/dropzone.js"></script>
 </body>
 </html>

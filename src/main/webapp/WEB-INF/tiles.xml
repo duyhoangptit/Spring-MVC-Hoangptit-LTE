@@ -51,6 +51,13 @@
         <put-attribute name="current" value="profile_user" />
     </definition>
 
+    <!-- Upload file User -->
+    <definition name="uploadFile" extends="base.definition">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="body" value="/WEB-INF/pages/uploadFile.jsp"/>
+        <put-attribute name="current" value="uploadFile" />
+    </definition>
+
     <!-- Profile User -->
     <definition name="404" extends="base.definition">
         <put-attribute name="title" value="Error: 404"/>
@@ -79,5 +86,6 @@
         <put-attribute name="title" value="Register | LTE"/>
         <put-attribute name="body" value="/WEB-INF/pages/register.jsp"/>
     </definition>
+
 
 </tiles-definitions>

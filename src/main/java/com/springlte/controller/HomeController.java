@@ -53,7 +53,14 @@ public class HomeController {
     }
 
     @RequestMapping(value = "index", method = RequestMethod.GET)
-    public String index(ModelMap modelMap, HttpSession session, Principal principal) {
+    public String index(ModelMap modelMap, HttpSession session) {
+        session.setAttribute("page", "index");
+        modelMap.put("title", "Home | LTE");
+        return "index";
+    }
+
+    @RequestMapping(value = "checkLogin", method = RequestMethod.GET)
+    public String checkLogin(ModelMap modelMap,HttpSession session, Principal principal){
         String username = "";
         try {
             username = principal.getName();
@@ -63,8 +70,6 @@ public class HomeController {
         }
         Account account = userDAO.findByUsername(username);
         session.setAttribute("isLogin", account);
-        session.setAttribute("page", "index");
-        modelMap.put("title", "Home | LTE");
         return "index";
     }
 
@@ -93,15 +98,7 @@ public class HomeController {
     public String dataTable(ModelMap modelMap, HttpSession session) {
         session.setAttribute("page", "datatable");
         modelMap.put("title", "Data Table | LTE");
-        List<Account> accounts = new ArrayList<>();
-        for (int i = 0; i < 20; i++) {
-            Account account = new Account();
-            account.setUsername(i + "");
-            account.setPassword(i + "");
-            account.setImage(i + "");
-            account.setFullName(i + "");
-            accounts.add(account);
-        }
+        List<Account> accounts = userDAO.findAll();
         modelMap.put("accounts", accounts);
         return "datatable";
     }
@@ -120,16 +117,8 @@ public class HomeController {
     @RequestMapping(value = "findData", method = RequestMethod.GET)
     @ResponseBody
     public List<Account> findData() {
-        List<Account> users = new ArrayList<>();
-        for (int i = 0; i < 20; i++) {
-            Account account = new Account();
-            account.setUsername(i + "");
-            account.setPassword(i + "");
-            account.setImage(i + "");
-            account.setFullName(i + "");
-            users.add(account);
-        }
-        return users;
+        List<Account> accounts = userDAO.findAll();
+        return accounts;
     }
 
 

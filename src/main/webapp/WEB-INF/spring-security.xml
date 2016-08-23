@@ -14,14 +14,15 @@
         <!-- access denied page -->
         <access-denied-handler error-page="/home/404.html"/>
         <form-login login-page="/home/login.html"
-                    default-target-url="/home/index.html"
+                    default-target-url="/home/checkLogin.html"
                     authentication-failure-url="/user/login.html?error"
                     username-parameter="username"
                     password-parameter="password"
                     login-processing-url="/auth/login_check"
         />
 
-        <logout logout-url="/user/logout" logout-success-url="/user/login.html?logout" delete-cookies="JSESSIONID"/>
+        <logout logout-url="/user/logout" logout-success-url="/user/login.html?logout"
+                delete-cookies="JSESSIONID"  invalidate-session="true"/>
         <csrf/>
 
         <!-- enable remember me -->

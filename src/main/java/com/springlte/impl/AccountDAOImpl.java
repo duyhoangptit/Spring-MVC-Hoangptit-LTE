@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -94,6 +95,19 @@ public class AccountDAOImpl implements AccountDAO {
         openSession();
         Account account = (Account)session.get(Account.class, userId);
         session.delete(account);
+    }
+
+    public List<Account> finAllTable(){
+        List<Account> accounts = new ArrayList<>();
+        for (int i = 0; i < 20; i++) {
+            Account account = new Account();
+            account.setUsername(i + "");
+            account.setPassword(i + "");
+            account.setImage(i + "");
+            account.setFullName(i + "");
+            accounts.add(account);
+        }
+        return accounts;
     }
 
 }

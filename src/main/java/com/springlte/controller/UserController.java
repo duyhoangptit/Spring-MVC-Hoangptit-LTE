@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.security.Principal;
 
 /**
  * author Hoangptit
@@ -30,9 +31,10 @@ public class UserController {
     private RoleDAO roleDAO;
 
     @RequestMapping(value = "logout", method = RequestMethod.POST)
-    public String logout(HttpSession session) {
+    public String logout(HttpSession session, Principal principal) {
         session.removeAttribute("isLogin");
         session.removeAttribute("msg");
+        SecurityContextHolder.clearContext();
         return "redirect:/home/login.html";
     }
 

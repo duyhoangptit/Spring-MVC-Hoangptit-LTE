@@ -34,7 +34,7 @@ public class UserController {
     public String logout(HttpSession session, Principal principal) {
         session.removeAttribute("isLogin");
         session.removeAttribute("msg");
-        SecurityContextHolder.clearContext();
+        SecurityContextHolder.clearContext();// Remove data security
         return "redirect:/home/login.html";
     }
 

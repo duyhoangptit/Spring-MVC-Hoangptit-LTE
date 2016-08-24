@@ -34,8 +34,8 @@
                 <ul class="treeview-menu">
                     <li  class="${page=='datatable'?'active':''}"><a href="/home/dataTable.html"><i class="fa fa-circle-o"></i> Data Table</a></li>
                     <li  class="${page=='popup_notify'?'active':''}"><a href="/home/popup.html"><i class="fa fa-circle-o"></i> Popup Notify</a></li>
-                    <li  class="${page=='lazy_load'?'active':''}"><a href="/home/lazyLoad.html"><i class="fa fa-circle-o"></i> Lazy Load Data</a></li>
-                    <li  class="${page=='uploadFile'?'active':''}"><a href="/home/uploadFile.html"><i class="fa fa-circle-o"></i> Drag And Drop File</a></li>
+                    <li  class="${page=='lazy_load'?'active':''}"><a href="/home/lazyLoad.html"><i class="fa fa-circle-o"></i> Lazy Load </a></li>
+                    <li  class="${page=='uploadFile'?'active':''}"><a href="/home/uploadFile.html"><i class="fa fa-circle-o"></i> Upload file </a></li>
                 </ul>
             </li>
 

@@ -27,7 +27,14 @@ public class UploadController {
     @RequestMapping(value = "singleSave", method = RequestMethod.POST)
     @ResponseBody
     public String singleSave(@RequestParam("file") MultipartFile file,HttpServletRequest request) {
+        String description = "";
         // 2 cách lấy data
+        try {
+            description = request.getParameter("desc");
+            System.out.println(description);
+        }catch (Exception e){
+
+        }
         String fileName = null;
         if (!file.isEmpty()) {
             try {

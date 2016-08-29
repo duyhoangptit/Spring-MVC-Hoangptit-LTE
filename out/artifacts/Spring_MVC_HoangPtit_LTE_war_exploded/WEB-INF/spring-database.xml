@@ -8,7 +8,7 @@
        http://www.springframework.org/schema/tx/spring-tx.xsd
        http://www.springframework.org/schema/aop
        http://www.springframework.org/schema/aop/spring-aop.xsd">
-
+    <!--Spring MVC DI and IOC-->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
         <property name="url" value="jdbc:mysql://localhost:3306/dbadminlte?characterEncoding=utf-8"/>
@@ -27,56 +27,17 @@
 
     <!--Spring aop-->
     <tx:annotation-driven transaction-manager="transactionManager"/>
-    <!--Bean DAO-->
-    <bean id="accountDAO" class="com.springlte.impl.AccountDAOImpl">
+
+    <!--Bean DAO DI-->
+    <bean id="accountDAO" class="vn.hoangptit.learningframework.dao.AccountDAOImpl">
         <constructor-arg>
             <ref bean="sessionFactory"/>
         </constructor-arg>
     </bean>
-    <bean id="blogDAO" class="com.springlte.impl.BlogDAOImpl">
+    <bean id="roleDAO" class="vn.hoangptit.learningframework.dao.RoleDAOImpl">
         <constructor-arg>
             <ref bean="sessionFactory"/>
         </constructor-arg>
     </bean>
-    <bean id="itemDAO" class="com.springlte.impl.ItemDAOImpl">
-        <constructor-arg>
-            <ref bean="sessionFactory"/>
-        </constructor-arg>
-    </bean>
-    <bean id="roleDAO" class="com.springlte.impl.RoleDAOImpl">
-        <constructor-arg>
-            <ref bean="sessionFactory"/>
-        </constructor-arg>
-    </bean>
-
-    <!--   <bean id="savedRequestAwareAuthenticationSuccessHandler"
-             class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
-           <property name="targetUrlParameter" value="targetUrl"/>
-       </bean>-->
-
-    <!-- Bean Service Spring Security-->
-    <!--
-    <bean id="myUserDetailsService" class="com.demo.service.MyUserDetailsService">
-        <property name="userDAO" ref="userDAO"/>
-    </bean>
-    -->
-
-    <!-- Spring AOP -->
-    <!--
-    <tx:advice id="txAdvice" transaction-manager="transactionManager">
-        <tx:attributes>
-            <tx:method name="get*" read-only="true"/>
-            <tx:method name="find*" read-only="true"/>
-            <tx:method name="*"/>
-        </tx:attributes>
-    </tx:advice>
-
-    <aop:config>
-        <aop:pointcut id="userServicePointCut"
-                      expression="execution(* com.demo.service.*Service.*(..))"/>
-        <aop:advisor advice-ref="txAdvice" pointcut-ref="userServicePointCut"/>
-    </aop:config>
-    -->
-
 
 </beans>

@@ -1,9 +1,4 @@
 
-1: Objective(Mục tiêu dài hạn sau 10 năm)
-2: Plan(Kế hoạch học và làm gì trong 5 năm)
-3: Target(Mục tiêu ngắn hạn: đặt ra các mục tiêu riêng cho mình như master 1 lĩnh vực gì đó, 
-học được những phần gì, giúp đỡ được ai, kiếm được bao nhiêu tiền)
-
 I. Công nghệ
 
 Những công nghệ mới áp dụng demo

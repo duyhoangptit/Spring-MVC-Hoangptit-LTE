@@ -6,6 +6,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import vn.hoangptit.learningframework.dao.AccountDAO;
 import vn.hoangptit.learningframework.dao.RoleDAO;
@@ -92,7 +93,10 @@ public class UserController {
 
     @RequestMapping(value = "registerUser", method = RequestMethod.POST)
     @ResponseBody
-    public String register(HttpServletRequest request) {
+    public String register(HttpServletRequest request, BindingResult result) {
+        if (result.hasErrors()) {
+            return "register";
+        }
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String fullname = request.getParameter("fullname");
@@ -116,13 +120,13 @@ public class UserController {
      * This update page is for user login with password only
      * If user is login via remember me cookie, send login to ask for password again
      * To avoid stolen remember me cookie to updateinfo
-     * */
+     */
     @RequestMapping(value = "/admin/update**", method = RequestMethod.GET)
-    public String updatePage(HttpServletRequest request, ModelMap modelMap){
-        if(isRememberMeAuthenticated()){
+    public String updatePage(HttpServletRequest request, ModelMap modelMap) {
+        if (isRememberMeAuthenticated()) {
             // send login for update
             setRememberMeTargetUrlToSession(request);
-            modelMap.addAttribute("loginUpdate",true);
+            modelMap.addAttribute("loginUpdate", true);
             return "login";
         }
         return "index";

@@ -1,6 +1,10 @@
 package vn.hoangptit.learningframework.entities;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -15,16 +19,23 @@ public class Account implements Serializable {
 
     @Id
     @Column(unique = true, nullable = false)
+    @NotEmpty
+    @Size(min = 8, max = 20)
     private String username;
     @Column(nullable = false, length = 60)
+    @NotEmpty
+    @Size(min = 8, max = 20)
     private String password;
     @Column(length = 60)
+    @NotEmpty
+    @Size(min = 15, max = 30)
     private String fullName;
     @Column(length = 60)
     private String email;
     @Column(length = 60)
     private String image;
     @Column(nullable = false)
+    @Min(2)
     private boolean enabled;
 
     @ManyToMany

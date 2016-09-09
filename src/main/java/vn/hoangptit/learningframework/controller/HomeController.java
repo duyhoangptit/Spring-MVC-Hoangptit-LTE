@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import vn.hoangptit.learningframework.dao.AccountDAO;
 import vn.hoangptit.learningframework.entities.Account;
+import vn.hoangptit.learningframework.service.AccountService;
 
 import javax.servlet.http.HttpSession;
 import java.security.Principal;
@@ -27,7 +28,7 @@ import java.util.List;
 public class HomeController {
 
     @Autowired
-    private AccountDAO userDAO;
+    private AccountService accountService;
 
     @RequestMapping(value = "/admin**", method = RequestMethod.GET)
     public String adminPage(ModelMap modelMap) {
@@ -67,7 +68,7 @@ public class HomeController {
             modelMap.put("title", "Login | LTE");
             return "login";
         }
-        Account account = userDAO.findByUsername(username);
+        Account account = accountService.findByUsername(username);
         session.setAttribute("isLogin", account);
         return "index";
     }
@@ -97,7 +98,7 @@ public class HomeController {
     public String dataTable(ModelMap modelMap, HttpSession session) {
         session.setAttribute("page", "datatable");
         modelMap.put("title", "Data Table | LTE");
-        List<Account> accounts = userDAO.findAll();
+        List<Account> accounts = accountService.findAll();
         modelMap.put("accounts", accounts);
         return "datatable";
     }
@@ -116,7 +117,7 @@ public class HomeController {
     @RequestMapping(value = "findData", method = RequestMethod.GET)
     @ResponseBody
     public List<Account> findData() {
-        List<Account> accounts = userDAO.findAll();
+        List<Account> accounts = accountService.findAll();
         return accounts;
     }
 

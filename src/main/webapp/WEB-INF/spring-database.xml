@@ -19,6 +19,12 @@
     <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="configLocation" value="hibernate.cfg.xml"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.connection.url">jdbc:mysql://localhost:3306/adminlte</prop>
+                <prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>
+            </props>
+        </property>
     </bean>
 
     <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
@@ -38,6 +44,8 @@
         <constructor-arg>
             <ref bean="sessionFactory"/>
         </constructor-arg>
+    </bean>
+    <bean id="accountService" class="vn.hoangptit.learningframework.service.AccountServiceImpl">
     </bean>
 
 </beans>

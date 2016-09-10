@@ -1,9 +1,6 @@
 package vn.hoangptit.learningframework.dto;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * author Hoangptit
@@ -65,5 +62,16 @@ public class Image {
         result = 31 * result + (link != null ? link.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);
         return result;
+    }
+
+    private Plan plan;
+
+    @ManyToOne
+    public Plan getPlan() {
+        return plan;
+    }
+
+    public void setPlan(Plan plan) {
+        this.plan = plan;
     }
 }

@@ -1,9 +1,6 @@
 package vn.hoangptit.learningframework.dto;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Date;
 
 /**
@@ -82,5 +79,16 @@ public class Plan {
         temp = Double.doubleToLongBits(price);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
+    }
+
+    private Entertain entertain;
+
+    @ManyToOne
+    public Entertain getEntertain() {
+        return entertain;
+    }
+
+    public void setEntertain(Entertain entertain) {
+        this.entertain = entertain;
     }
 }

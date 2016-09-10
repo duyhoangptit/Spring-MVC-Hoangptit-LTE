@@ -1,9 +1,6 @@
 package vn.hoangptit.learningframework.dto;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Date;
 
 /**
@@ -95,5 +92,16 @@ public class Job {
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         result = 31 * result + (timeJob != null ? timeJob.hashCode() : 0);
         return result;
+    }
+
+    private Target target;
+
+    @ManyToOne
+    public Target getTarget() {
+        return target;
+    }
+
+    public void setTarget(Target target) {
+        this.target = target;
     }
 }

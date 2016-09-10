@@ -1,10 +1,7 @@
 package vn.hoangptit.learningframework.dto;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import java.sql.Timestamp;
+import javax.persistence.*;
+import java.sql.Date;
 
 /**
  * author Hoangptit
@@ -15,7 +12,7 @@ public class Learning {
     private int id;
     private String name;
     private String description;
-    private Timestamp dateLearn;
+    private Date dateLearn;
 
     @Id
     @Column(name = "ID")
@@ -49,11 +46,11 @@ public class Learning {
 
     @Basic
     @Column(name = "DateLearn")
-    public Timestamp getDateLearn() {
+    public Date getDateLearn() {
         return dateLearn;
     }
 
-    public void setDateLearn(Timestamp dateLearn) {
+    public void setDateLearn(Date dateLearn) {
         this.dateLearn = dateLearn;
     }
 
@@ -80,5 +77,16 @@ public class Learning {
         result = 31 * result + (description != null ? description.hashCode() : 0);
         result = 31 * result + (dateLearn != null ? dateLearn.hashCode() : 0);
         return result;
+    }
+
+    private Customer customer;
+
+    @ManyToOne
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 }

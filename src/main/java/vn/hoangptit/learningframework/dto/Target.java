@@ -1,9 +1,6 @@
 package vn.hoangptit.learningframework.dto;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Date;
 
 /**
@@ -108,5 +105,16 @@ public class Target {
         temp = Double.doubleToLongBits(sumTarg);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
+    }
+
+    private Objective objective;
+
+    @ManyToOne
+    public Objective getObjective() {
+        return objective;
+    }
+
+    public void setObjective(Objective objective) {
+        this.objective = objective;
     }
 }

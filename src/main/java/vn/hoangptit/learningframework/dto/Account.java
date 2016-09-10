@@ -1,9 +1,11 @@
 package vn.hoangptit.learningframework.dto;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import vn.hoangptit.learningframework.entities.*;
+import vn.hoangptit.learningframework.entities.Role;
+
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * author Hoangptit
@@ -14,7 +16,10 @@ public class Account {
     private int id;
     private String username;
     private String password;
-    private String enable;
+    private byte enable;
+    @ManyToMany
+    @JoinTable
+    private Set<Role> roles = new HashSet<>();
 
     @Id
     @Column(name = "ID")
@@ -48,12 +53,20 @@ public class Account {
 
     @Basic
     @Column(name = "Enable")
-    public String getEnable() {
+    public byte getEnable() {
         return enable;
     }
 
-    public void setEnable(String enable) {
+    public void setEnable(byte enable) {
         this.enable = enable;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 
     @Override
@@ -64,9 +77,9 @@ public class Account {
         Account account = (Account) o;
 
         if (id != account.id) return false;
+        if (enable != account.enable) return false;
         if (username != null ? !username.equals(account.username) : account.username != null) return false;
         if (password != null ? !password.equals(account.password) : account.password != null) return false;
-        if (enable != null ? !enable.equals(account.enable) : account.enable != null) return false;
 
         return true;
     }
@@ -76,7 +89,8 @@ public class Account {
         int result = id;
         result = 31 * result + (username != null ? username.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
-        result = 31 * result + (enable != null ? enable.hashCode() : 0);
+        result = 31 * result + (int) enable;
         return result;
     }
+
 }

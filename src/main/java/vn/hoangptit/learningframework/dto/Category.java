@@ -1,9 +1,6 @@
 package vn.hoangptit.learningframework.dto;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * author Hoangptit
@@ -66,5 +63,16 @@ public class Category {
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);
         return result;
+    }
+
+    private Learning learning;
+
+    @ManyToOne
+    public Learning getLearning() {
+        return learning;
+    }
+
+    public void setLearning(Learning learning) {
+        this.learning = learning;
     }
 }

@@ -1,9 +1,10 @@
 package vn.hoangptit.learningframework.dto;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import vn.hoangptit.learningframework.entities.*;
+import vn.hoangptit.learningframework.entities.Account;
+
+import javax.persistence.*;
+import java.util.List;
 
 /**
  * author Hoangptit
@@ -13,6 +14,8 @@ import javax.persistence.Id;
 public class Role {
     private int id;
     private String role;
+    @ManyToMany(mappedBy = "roles")
+    private List<Account> accounts;
 
     @Id
     @Column(name = "ID")
@@ -34,6 +37,14 @@ public class Role {
         this.role = role;
     }
 
+    public List<Account> getAccounts() {
+        return accounts;
+    }
+
+    public void setAccounts(List<Account> accounts) {
+        this.accounts = accounts;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -53,4 +64,5 @@ public class Role {
         result = 31 * result + (role != null ? role.hashCode() : 0);
         return result;
     }
+
 }

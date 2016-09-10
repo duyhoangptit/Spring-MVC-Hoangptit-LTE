@@ -45,7 +45,14 @@
             <ref bean="sessionFactory"/>
         </constructor-arg>
     </bean>
+
+    <bean id="customerDAO" class="vn.hoangptit.learningframework.dao.CustomerDAOImpl">
+        <constructor-arg>
+            <ref bean="sessionFactory"/>
+        </constructor-arg>
+    </bean>
     <bean id="accountService" class="vn.hoangptit.learningframework.service.AccountServiceImpl">
     </bean>
+    <bean id="customerService" class="vn.hoangptit.learningframework.service.CustomerServiceImpl"></bean>
 
 </beans>

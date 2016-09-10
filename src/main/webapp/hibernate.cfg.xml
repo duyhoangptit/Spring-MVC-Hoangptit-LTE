@@ -12,8 +12,19 @@
         <property name="show_sql">true</property>
         <!-- List Class Mapping -->
 
-        <mapping class="vn.hoangptit.learningframework.entities.Account"/>
-        <mapping class="vn.hoangptit.learningframework.entities.Role"/>
+        <mapping class="vn.hoangptit.learningframework.dto.Account"/>
+        <mapping class="vn.hoangptit.learningframework.dto.Role"/>
+        <mapping class="vn.hoangptit.learningframework.dto.Category"/>
+        <mapping class="vn.hoangptit.learningframework.dto.Customer"/>
+        <mapping class="vn.hoangptit.learningframework.dto.Entertain"/>
+        <mapping class="vn.hoangptit.learningframework.dto.Image"/>
+        <mapping class="vn.hoangptit.learningframework.dto.Job"/>
+        <mapping class="vn.hoangptit.learningframework.dto.Learning"/>
+        <mapping class="vn.hoangptit.learningframework.dto.Objective"/>
+        <mapping class="vn.hoangptit.learningframework.dto.Plan"/>
+        <mapping class="vn.hoangptit.learningframework.dto.Target"/>
+        <mapping class="vn.hoangptit.learningframework.dto.Tutorial"/>
+
 
         <!-- List of XML mapping files -->
     </session-factory>

@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <header class="main-header " style="position: fixed;width: 100%">
     <!-- Logo -->
     <a href="/home/index.html" class="logo">
@@ -224,19 +225,20 @@
                             <img src="/dist/img/${isLogin.image}" class="img-circle" alt="User Image">
                             <p>
                                 ${isLogin.fullName} - Developer
+
                                 <small>Convert Web 2016</small>
                             </p>
                         </li>
                         <!-- Menu Body -->
                         <li class="user-body">
                             <div class="col-xs-4 text-center">
-                                <a href="#">Followers</a>
+                                <a href="?language=vi"><spring:message code="body.vietnam"/></a>
                             </div>
                             <div class="col-xs-4 text-center">
-                                <a href="#">Sales</a>
+                                <a href="?language=en"><spring:message code="body.english"/></a>
                             </div>
                             <div class="col-xs-4 text-center">
-                                <a href="#">Friends</a>
+                                <a href="#"><spring:message code="body.friend"/></a>
                             </div>
                         </li>
                         <!-- Menu Footer-->

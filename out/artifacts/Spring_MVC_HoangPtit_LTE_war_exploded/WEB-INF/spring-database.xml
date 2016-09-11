@@ -8,6 +8,15 @@
        http://www.springframework.org/schema/tx/spring-tx.xsd
        http://www.springframework.org/schema/aop
        http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- Config Properties file -->
+    <bean id="appProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="locations">
+            <list>
+                <value>classpath:configdatabase.properties</value>
+            </list>
+        </property>
+    </bean>
     <!--Spring MVC DI and IOC-->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
@@ -45,7 +54,14 @@
             <ref bean="sessionFactory"/>
         </constructor-arg>
     </bean>
+
+    <bean id="customerDAO" class="vn.hoangptit.learningframework.dao.CustomerDAOImpl">
+        <constructor-arg>
+            <ref bean="sessionFactory"/>
+        </constructor-arg>
+    </bean>
     <bean id="accountService" class="vn.hoangptit.learningframework.service.AccountServiceImpl">
     </bean>
+    <bean id="customerService" class="vn.hoangptit.learningframework.service.CustomerServiceImpl"></bean>
 
 </beans>

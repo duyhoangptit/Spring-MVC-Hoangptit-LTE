@@ -31,13 +31,6 @@
         </property>
     </bean>
 
-    <!-- Config Properties file -->
-    <bean id="appProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
-        <property name="locations">
-            <list><value>classpath:configdatabase.properties</value></list>
-        </property>
-    </bean>
-
     <!-- config folder js/css/img-->
     <mvc:resources mapping="/js/**" location="/js/"/>
     <mvc:resources mapping="/jspage/**" location="/jspage/"/>
@@ -48,7 +41,6 @@
     <mvc:resources mapping="/plugins/**" location="/plugins/"/>
     <mvc:resources mapping="/notify/**" location="/notify/"/>
     <mvc:resources mapping="/upload/**" location="/upload/"/>
-
     <mvc:annotation-driven content-negotiation-manager="contentNegotiationManager"/>
 
     <!--config json-->
@@ -62,14 +54,50 @@
             </value>
         </property>
     </bean>
-	
-	<!--config file upload-->
-	<bean id="multipartResolver"
-		  class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-		<!-- Maximum file size: 10MB -->
-		<!-- 10MB = 1250000 Byte -->
-		<property name="maxUploadSize" value="1250000" />
+
+    <!--config file upload-->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- Maximum file size: 10MB -->
+        <!-- 10MB = 1250000 Byte -->
+        <property name="maxUploadSize" value="1250000"/>
     </bean>
+
+    <!-- Start i18n -->
+    <!-- Mặc định ban đầu là en -->
+    <bean id="localeResolver"
+          class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+        <property name="defaultLocale" value="en"/>
+    </bean>
+
+    <bean id="localeChangeInterceptor"
+          class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+        <property name="paramName" value="language"/>
+    </bean>
+
+    <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping">
+        <property name="interceptors">
+            <list>
+                <ref bean="localeChangeInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <!-- Register the welcome.properties -->
+    <bean id="messageSource"
+          class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename" value="messages"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+    </bean>
+
+    <mvc:interceptors>
+        <!-- config locale -->
+        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+            <property name="paramName" value="locale"/>
+        </bean>
+        <bean parent="localeChangeInterceptor"/>
+    </mvc:interceptors>
+    <!-- End i18n -->
 
     <!--import file config xml spring database and spring security-->
     <import resource="spring-database.xml"/>

@@ -32,7 +32,7 @@ public class UserController {
     private RoleDAO roleDAO;
 
     @RequestMapping(value = "logout", method = RequestMethod.POST)
-    public String logout(HttpSession session, Principal principal) {
+    public String logout(HttpSession session) {
         session.removeAttribute("isLogin");
         session.removeAttribute("msg");
         SecurityContextHolder.clearContext();// Remove data security

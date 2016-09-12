@@ -2,25 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03699166-c417-4e8f-a728-03bf5ea3d68a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/RoleAccount.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/RoleAccountPK.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Spring MVC HoangPtit LTE.iml" afterPath="$PROJECT_DIR$/Spring MVC HoangPtit LTE.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Account.java" afterPath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Account.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Category.java" afterPath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Category.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Customer.java" afterPath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Customer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Entertain.java" afterPath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Entertain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Friend.java" afterPath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Friend.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Image.java" afterPath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Image.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Job.java" afterPath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Job.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Learning.java" afterPath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Learning.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Objective.java" afterPath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Objective.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Plan.java" afterPath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Plan.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Role.java" afterPath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Role.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Target.java" afterPath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Target.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Tutorial.java" afterPath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Tutorial.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Spring_MVC_HoangPtit_LTE_war_exploded/WEB-INF/classes/messages_en.properties" afterPath="$PROJECT_DIR$/out/artifacts/Spring_MVC_HoangPtit_LTE_war_exploded/WEB-INF/classes/messages_en.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Spring_MVC_HoangPtit_LTE_war_exploded/WEB-INF/classes/messages_vi.properties" afterPath="$PROJECT_DIR$/out/artifacts/Spring_MVC_HoangPtit_LTE_war_exploded/WEB-INF/classes/messages_vi.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Spring_MVC_HoangPtit_LTE_war_exploded/WEB-INF/include/header.jsp" afterPath="$PROJECT_DIR$/out/artifacts/Spring_MVC_HoangPtit_LTE_war_exploded/WEB-INF/include/header.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/messages_en.properties" afterPath="$PROJECT_DIR$/src/main/resources/messages_en.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/messages_vi.properties" afterPath="$PROJECT_DIR$/src/main/resources/messages_vi.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/include/header.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/include/header.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/messages_en.properties" afterPath="$PROJECT_DIR$/target/classes/messages_en.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/messages_vi.properties" afterPath="$PROJECT_DIR$/target/classes/messages_vi.properties" />
     </list>
     <ignored path="Spring MVC HoangPtit LTE.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,6 +27,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -43,27 +37,6 @@
     <option name="SORT_POSITIONED" value="false" />
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - dbadminlte@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - adminlte@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -74,184 +47,19 @@
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
+            <state relative-caret-position="2948">
               <caret line="149" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DATABASE/2fab8312-02ab-4c94-b813-11498329ff1b.TABLE:adminlte.account" pinned="false" current-in-tab="false">
-        <entry file="uml://DATABASE/2fab8312-02ab-4c94-b813-11498329ff1b.TABLE:adminlte.account">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>DATABASE</ID>
-              <OriginalElement>2fab8312-02ab-4c94-b813-11498329ff1b.TABLE:adminlte.account</OriginalElement>
-              <nodes>
-                <node x="0.0" y="502.0">2fab8312-02ab-4c94-b813-11498329ff1b.TABLE:adminlte.plan</node>
-                <node x="230.0" y="502.0">2fab8312-02ab-4c94-b813-11498329ff1b.TABLE:adminlte.learning</node>
-                <node x="690.0" y="502.0">2fab8312-02ab-4c94-b813-11498329ff1b.TABLE:adminlte.entertain</node>
-                <node x="310.0" y="0.0">2fab8312-02ab-4c94-b813-11498329ff1b.TABLE:adminlte.objective</node>
-                <node x="460.0" y="502.0">2fab8312-02ab-4c94-b813-11498329ff1b.TABLE:adminlte.account</node>
-                <node x="270.0" y="273.0">2fab8312-02ab-4c94-b813-11498329ff1b.TABLE:adminlte.job</node>
-                <node x="580.0" y="0.0">2fab8312-02ab-4c94-b813-11498329ff1b.TABLE:adminlte.tutorial</node>
-                <node x="0.0" y="273.0">2fab8312-02ab-4c94-b813-11498329ff1b.TABLE:adminlte.target</node>
-                <node x="615.0" y="687.0">2fab8312-02ab-4c94-b813-11498329ff1b.TABLE:adminlte.role</node>
-                <node x="520.0" y="273.0">2fab8312-02ab-4c94-b813-11498329ff1b.TABLE:adminlte.customer</node>
-                <node x="0.0" y="687.0">2fab8312-02ab-4c94-b813-11498329ff1b.TABLE:adminlte.category</node>
-                <node x="0.0" y="0.0">2fab8312-02ab-4c94-b813-11498329ff1b.TABLE:adminlte.friend</node>
-                <node x="420.0" y="687.0">2fab8312-02ab-4c94-b813-11498329ff1b.TABLE:adminlte.role_account</node>
-                <node x="210.0" y="687.0">2fab8312-02ab-4c94-b813-11498329ff1b.TABLE:adminlte.image</node>
-              </nodes>
-              <notes />
-              <edges />
-              <settings layout="Hierarchic Group" zoom="0.9" x="-52.190476190475636" y="223.31746031746047" />
-              <SelectedNodes />
-              <Categories>
-                <Category>Key columns</Category>
-                <Category>Columns</Category>
-              </Categories>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DATABASE/97c05bcf-239a-4644-b066-2eba3e696cbd.TABLE:dbadminlte.account" pinned="false" current-in-tab="false">
-        <entry file="uml://DATABASE/97c05bcf-239a-4644-b066-2eba3e696cbd.TABLE:dbadminlte.account">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>DATABASE</ID>
-              <OriginalElement>97c05bcf-239a-4644-b066-2eba3e696cbd.TABLE:dbadminlte.account</OriginalElement>
-              <nodes>
-                <node x="228.0" y="235.5">97c05bcf-239a-4644-b066-2eba3e696cbd.TABLE:dbadminlte.account_role</node>
-                <node x="0.0" y="382.0">97c05bcf-239a-4644-b066-2eba3e696cbd.TABLE:dbadminlte.item</node>
-                <node x="344.5" y="44.0">97c05bcf-239a-4644-b066-2eba3e696cbd.TABLE:dbadminlte.role</node>
-                <node x="21.0" y="213.0">97c05bcf-239a-4644-b066-2eba3e696cbd.TABLE:dbadminlte.blog</node>
-                <node x="534.5" y="0.0">97c05bcf-239a-4644-b066-2eba3e696cbd.TABLE:dbadminlte.hibernate_sequence</node>
-                <node x="45.0" y="0.0">97c05bcf-239a-4644-b066-2eba3e696cbd.TABLE:dbadminlte.account</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="97c05bcf-239a-4644-b066-2eba3e696cbd.TABLE:dbadminlte.account_role" target="97c05bcf-239a-4644-b066-2eba3e696cbd.TABLE:dbadminlte.role">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="97c05bcf-239a-4644-b066-2eba3e696cbd.TABLE:dbadminlte.account_role" target="97c05bcf-239a-4644-b066-2eba3e696cbd.TABLE:dbadminlte.account">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="97c05bcf-239a-4644-b066-2eba3e696cbd.TABLE:dbadminlte.item" target="97c05bcf-239a-4644-b066-2eba3e696cbd.TABLE:dbadminlte.blog">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="97c05bcf-239a-4644-b066-2eba3e696cbd.TABLE:dbadminlte.blog" target="97c05bcf-239a-4644-b066-2eba3e696cbd.TABLE:dbadminlte.account">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="-42.5" y="87.0" />
-              <SelectedNodes />
-              <Categories>
-                <Category>Key columns</Category>
-                <Category>Columns</Category>
-              </Categories>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d06b41ca-9fca-4fed-804f-17522370774a/console.sql">
+      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="484">
+              <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DATABASE/d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.account" pinned="false" current-in-tab="false">
-        <entry file="uml://DATABASE/d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.account">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>DATABASE</ID>
-              <OriginalElement>d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.account</OriginalElement>
-              <nodes>
-                <node x="1187.5" y="729.5">d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.plan</node>
-                <node x="1047.5" y="267.5">d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.objective</node>
-                <node x="125.0" y="3.0">d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.role_account</node>
-                <node x="347.5" y="729.5">d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.learning</node>
-                <node x="-12.5" y="245.5">d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.friend</node>
-                <node x="347.5" y="-30.5">d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.account</node>
-                <node x="137.5" y="122.5">d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.role</node>
-                <node x="917.5" y="740.5">d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.entertain</node>
-                <node x="1047.5" y="-12.5">d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.target</node>
-                <node x="607.5" y="467.5">d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.tutorial</node>
-                <node x="1197.5" y="540.5">d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.image</node>
-                <node x="337.5" y="278.5">d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.customer</node>
-                <node x="777.5" y="-1.5">d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.job</node>
-                <node x="637.5" y="740.5">d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.category</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.job" target="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.target">
-                  <point x="102.5" y="-0.0" />
-                  <point x="-112.5" y="-0.0" />
-                </edge>
-                <edge source="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.learning" target="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.customer">
-                  <point x="0.0" y="-70.5" />
-                  <point x="0.0" y="81.5" />
-                </edge>
-                <edge source="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.friend" target="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.customer">
-                  <point x="132.5" y="-0.0" />
-                  <point x="-102.5" y="-0.0" />
-                </edge>
-                <edge source="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.entertain" target="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.customer">
-                  <point x="0.0" y="-59.5" />
-                  <point x="1000.0" y="400.0" />
-                  <point x="102.5" y="40.0" />
-                </edge>
-                <edge source="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.tutorial" target="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.category">
-                  <point x="0.0" y="92.5" />
-                  <point x="0.0" y="-59.5" />
-                </edge>
-                <edge source="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.category" target="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.learning">
-                  <point x="-82.5" y="-0.0" />
-                  <point x="92.5" y="-0.0" />
-                </edge>
-                <edge source="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.role_account" target="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.account">
-                  <point x="75.0" y="-0.0" />
-                  <point x="-92.5" y="-0.0" />
-                </edge>
-                <edge source="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.account" target="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.customer">
-                  <point x="0.0" y="70.5" />
-                  <point x="0.0" y="-81.5" />
-                </edge>
-                <edge source="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.target" target="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.objective">
-                  <point x="0.0" y="92.5" />
-                  <point x="0.0" y="-92.5" />
-                </edge>
-                <edge source="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.plan" target="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.entertain">
-                  <point x="-92.5" y="-0.0" />
-                  <point x="82.5" y="-0.0" />
-                </edge>
-                <edge source="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.role_account" target="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.role">
-                  <point x="0.0" y="37.0" />
-                  <point x="0.0" y="-37.5" />
-                </edge>
-                <edge source="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.image" target="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.plan">
-                  <point x="0.0" y="59.5" />
-                  <point x="0.0" y="-70.5" />
-                </edge>
-                <edge source="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.objective" target="d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.customer">
-                  <point x="-112.5" y="-0.0" />
-                  <point x="102.5" y="-0.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="0.9130901287553648" x="215.8437132784959" y="312.8437132784959" />
-              <SelectedNodes />
-              <Categories>
-                <Category>Key columns</Category>
-                <Category>Columns</Category>
-              </Categories>
             </state>
           </provider>
         </entry>
@@ -259,18 +67,74 @@
       <file leaf-file-name="RoleAccount.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/RoleAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-13">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="66">
+              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tutorial.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="header.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/include/header.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="259" column="95" selection-start-line="259" selection-start-column="95" selection-end-line="259" selection-end-column="95" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="messages_vi.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/messages_vi.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="ResourceBundle">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="messages_en.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/messages_en.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="ResourceBundle">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Role.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Role.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-396">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tutorial.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Tutorial.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="617">
-              <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+            <state relative-caret-position="431">
+              <caret line="125" column="23" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Category.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Category.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -352,22 +216,21 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-database.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/include/page-header.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/content.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/messages_en.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts/homeicl.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/include/header.jsp" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/messages_vi.properties" />
         <option value="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/messages_en.properties" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/include/header.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/messages_vi.properties" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -389,10 +252,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2" />
-    <option name="y" value="2" />
-    <option name="width" value="1918" />
-    <option name="height" value="1038" />
+    <option name="x" value="-8" />
+    <option name="width" value="1606" />
+    <option name="height" value="860" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -444,8 +306,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -461,6 +324,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Spring-MVC-Hoangptit-LTE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Spring-MVC-Hoangptit-LTE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Spring-MVC-Hoangptit-LTE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -738,7 +615,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -891,13 +767,8 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="GAPID_DISABLE_PCS" value="false" />
-      </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method />
@@ -916,13 +787,8 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="GAPID_DISABLE_PCS" value="false" />
-      </Profilers>
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -1167,31 +1033,6 @@
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Spring MVC HoangPtit LTE" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -1507,6 +1348,7 @@
       <workItem from="1473560703255" duration="568000" />
       <workItem from="1473600556218" duration="3744000" />
       <workItem from="1473678245239" duration="2253000" />
+      <workItem from="1473687418656" duration="1402000" />
     </task>
     <task id="LOCAL-00001" summary="commit lazy loading data">
       <created>1470042482798</created>
@@ -1531,10 +1373,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="339500000" />
+    <option name="totallyTimeSpent" value="340902000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2" y="2" width="1918" height="1038" extended-state="0" />
+    <frame x="-8" y="0" width="1606" height="860" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1544,21 +1386,22 @@
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11410119" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.113842174" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07310345" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6924138" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.034216337" sideWeight="0.49741268" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.033103447" sideWeight="0.49741268" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20990312" sideWeight="0.40838853" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20990312" sideWeight="0.5916115" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20982143" sideWeight="0.40838853" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20957309" sideWeight="0.5916115" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24665391" sideWeight="0.11034483" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="JavaEE:App" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20990312" sideWeight="0.40838853" order="8" side_tool="true" content_ui="tabs" />
@@ -1567,7 +1410,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30068967" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46068966" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1634,27 +1476,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dao/CustomerDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dao/FriendDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dao/EntertainDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dao/CategoryDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -1885,34 +1706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/include/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/messages_vi.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/messages_en.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="44" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/error.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -1937,16 +1730,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
+        <state relative-caret-position="2948">
           <caret line="149" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1974,12 +1759,13 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="0.9" x="-52.190476190475636" y="223.31746031746047" />
+          <settings layout="Hierarchic Group" zoom="0.9" x="-52.0" y="223.0" />
           <SelectedNodes />
           <Categories>
-            <Category>Key columns</Category>
             <Category>Columns</Category>
+            <Category>Key columns</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -2015,23 +1801,17 @@
               <point x="0.0" y="0.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-42.5" y="87.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-42.0" y="87.0" />
           <SelectedNodes />
           <Categories>
-            <Category>Key columns</Category>
             <Category>Columns</Category>
+            <Category>Key columns</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d06b41ca-9fca-4fed-804f-17522370774a/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d06b41ca-9fca-4fed-804f-17522370774a/console.sql" />
     <entry file="uml://DATABASE/d06b41ca-9fca-4fed-804f-17522370774a.TABLE:adminlte.account">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -2109,29 +1889,92 @@
               <point x="102.5" y="-0.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.9130901287553648" x="215.8437132784959" y="312.8437132784959" />
+          <settings layout="Hierarchic Group" zoom="0.9130901287553648" x="216.0" y="313.0" />
           <SelectedNodes />
           <Categories>
-            <Category>Key columns</Category>
             <Category>Columns</Category>
+            <Category>Key columns</Category>
           </Categories>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/RoleAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Tutorial.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+        <state relative-caret-position="431">
+          <caret line="125" column="23" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="23" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-396">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/RoleAccountPK.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/RoleAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/include/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="259" column="95" selection-start-line="259" selection-start-column="95" selection-end-line="259" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/messages_en.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/messages_vi.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
       </provider>
     </entry>
   </component>

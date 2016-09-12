@@ -258,7 +258,7 @@
                                     }
                                 </script>
                                 <c:if test="${pageContext.request.userPrincipal.name != null}">
-                                    <a href="javascript:formSubmit()" class="btn btn-default btn-flat"> Logout</a>
+                                    <a href="javascript:formSubmit()" class="btn btn-default btn-flat"> <spring:message code="body.btnLogout"/></a>
                                 </c:if>
                                 </form>
                             </div>

@@ -2,11 +2,11 @@ package vn.hoangptit.learningframework.dto;
 
 import javax.persistence.*;
 import java.sql.Date;
-import java.util.List;
+import java.util.Collection;
 
 /**
- * author Hoangptit
- * Date 9/10/2016
+ * @author Hoangptit
+ *         12/09/2016
  */
 @Entity
 public class Customer {
@@ -16,8 +16,11 @@ public class Customer {
     private Date birthday;
     private byte sex;
     private String description;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "customer")
-    private List<Learning> learnings;
+    private Collection<Account> accountsById;
+    private Collection<Entertain> entertainsById;
+    private Collection<Friend> friendsById;
+    private Collection<Learning> learningsById;
+    private Collection<Objective> objectivesById;
 
     @Id
     @Column(name = "ID")
@@ -79,14 +82,6 @@ public class Customer {
         this.description = description;
     }
 
-    public List<Learning> getLearnings() {
-        return learnings;
-    }
-
-    public void setLearnings(List<Learning> learnings) {
-        this.learnings = learnings;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -116,14 +111,48 @@ public class Customer {
         return result;
     }
 
-    private Account account;
-
-    @OneToOne
-    public Account getAccount() {
-        return account;
+    @OneToMany(mappedBy = "customerByCustomerId")
+    public Collection<Account> getAccountsById() {
+        return accountsById;
     }
 
-    public void setAccount(Account account) {
-        this.account = account;
+    public void setAccountsById(Collection<Account> accountsById) {
+        this.accountsById = accountsById;
+    }
+
+    @OneToMany(mappedBy = "customerByCustomerId")
+    public Collection<Entertain> getEntertainsById() {
+        return entertainsById;
+    }
+
+    public void setEntertainsById(Collection<Entertain> entertainsById) {
+        this.entertainsById = entertainsById;
+    }
+
+    @OneToMany(mappedBy = "customerByCustomerId")
+    public Collection<Friend> getFriendsById() {
+        return friendsById;
+    }
+
+    public void setFriendsById(Collection<Friend> friendsById) {
+        this.friendsById = friendsById;
+    }
+
+    @OneToMany(mappedBy = "customerByCustomerId")
+    public Collection<Learning> getLearningsById() {
+        return learningsById;
+    }
+
+    public void setLearningsById(Collection<Learning> learningsById) {
+        this.learningsById = learningsById;
+    }
+
+    @OneToMany(mappedBy = "customerByCustomerId")
+    public Collection<Objective> getObjectivesById() {
+        return objectivesById;
+    }
+
+    public void setObjectivesById(Collection<Objective> objectivesById) {
+        this.objectivesById = objectivesById;
     }
 }

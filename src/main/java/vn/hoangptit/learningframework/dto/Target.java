@@ -2,19 +2,23 @@ package vn.hoangptit.learningframework.dto;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.Collection;
 
 /**
- * author Hoangptit
- * Date 9/10/2016
+ * @author Hoangptit
+ *         12/09/2016
  */
 @Entity
 public class Target {
     private int id;
+    private int objectiveId;
     private String title;
     private Date timeTarget;
     private String mission;
     private String comment;
     private double sumTarg;
+    private Collection<Job> jobsById;
+    private Objective objectiveByObjectiveId;
 
     @Id
     @Column(name = "ID")
@@ -24,6 +28,16 @@ public class Target {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Basic
+    @Column(name = "ObjectiveID")
+    public int getObjectiveId() {
+        return objectiveId;
+    }
+
+    public void setObjectiveId(int objectiveId) {
+        this.objectiveId = objectiveId;
     }
 
     @Basic
@@ -84,6 +98,7 @@ public class Target {
         Target target = (Target) o;
 
         if (id != target.id) return false;
+        if (objectiveId != target.objectiveId) return false;
         if (Double.compare(target.sumTarg, sumTarg) != 0) return false;
         if (title != null ? !title.equals(target.title) : target.title != null) return false;
         if (timeTarget != null ? !timeTarget.equals(target.timeTarget) : target.timeTarget != null) return false;
@@ -98,6 +113,7 @@ public class Target {
         int result;
         long temp;
         result = id;
+        result = 31 * result + objectiveId;
         result = 31 * result + (title != null ? title.hashCode() : 0);
         result = 31 * result + (timeTarget != null ? timeTarget.hashCode() : 0);
         result = 31 * result + (mission != null ? mission.hashCode() : 0);
@@ -107,14 +123,22 @@ public class Target {
         return result;
     }
 
-    private Objective objective;
-
-    @ManyToOne
-    public Objective getObjective() {
-        return objective;
+    @OneToMany(mappedBy = "targetByTargetId")
+    public Collection<Job> getJobsById() {
+        return jobsById;
     }
 
-    public void setObjective(Objective objective) {
-        this.objective = objective;
+    public void setJobsById(Collection<Job> jobsById) {
+        this.jobsById = jobsById;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "ObjectiveID", referencedColumnName = "ID", nullable = false)
+    public Objective getObjectiveByObjectiveId() {
+        return objectiveByObjectiveId;
+    }
+
+    public void setObjectiveByObjectiveId(Objective objectiveByObjectiveId) {
+        this.objectiveByObjectiveId = objectiveByObjectiveId;
     }
 }

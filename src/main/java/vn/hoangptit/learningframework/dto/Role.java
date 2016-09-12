@@ -1,21 +1,17 @@
 package vn.hoangptit.learningframework.dto;
 
-import vn.hoangptit.learningframework.entities.*;
-import vn.hoangptit.learningframework.entities.Account;
-
 import javax.persistence.*;
-import java.util.List;
+import java.util.Collection;
 
 /**
- * author Hoangptit
- * Date 9/10/2016
+ * @author Hoangptit
+ *         12/09/2016
  */
 @Entity
 public class Role {
     private int id;
     private String role;
-    @ManyToMany(mappedBy = "roles")
-    private List<Account> accounts;
+    private Collection<RoleAccount> roleAccountsById;
 
     @Id
     @Column(name = "ID")
@@ -35,14 +31,6 @@ public class Role {
 
     public void setRole(String role) {
         this.role = role;
-    }
-
-    public List<Account> getAccounts() {
-        return accounts;
-    }
-
-    public void setAccounts(List<Account> accounts) {
-        this.accounts = accounts;
     }
 
     @Override
@@ -65,4 +53,12 @@ public class Role {
         return result;
     }
 
+    @OneToMany(mappedBy = "roleByRoleId")
+    public Collection<RoleAccount> getRoleAccountsById() {
+        return roleAccountsById;
+    }
+
+    public void setRoleAccountsById(Collection<RoleAccount> roleAccountsById) {
+        this.roleAccountsById = roleAccountsById;
+    }
 }

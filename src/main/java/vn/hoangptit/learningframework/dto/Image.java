@@ -3,14 +3,16 @@ package vn.hoangptit.learningframework.dto;
 import javax.persistence.*;
 
 /**
- * author Hoangptit
- * Date 9/10/2016
+ * @author Hoangptit
+ *         12/09/2016
  */
 @Entity
 public class Image {
     private int id;
+    private int planId;
     private String link;
     private String description;
+    private Plan planByPlanId;
 
     @Id
     @Column(name = "ID")
@@ -20,6 +22,16 @@ public class Image {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Basic
+    @Column(name = "PlanID")
+    public int getPlanId() {
+        return planId;
+    }
+
+    public void setPlanId(int planId) {
+        this.planId = planId;
     }
 
     @Basic
@@ -50,6 +62,7 @@ public class Image {
         Image image = (Image) o;
 
         if (id != image.id) return false;
+        if (planId != image.planId) return false;
         if (link != null ? !link.equals(image.link) : image.link != null) return false;
         if (description != null ? !description.equals(image.description) : image.description != null) return false;
 
@@ -59,19 +72,19 @@ public class Image {
     @Override
     public int hashCode() {
         int result = id;
+        result = 31 * result + planId;
         result = 31 * result + (link != null ? link.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);
         return result;
     }
 
-    private Plan plan;
-
     @ManyToOne
-    public Plan getPlan() {
-        return plan;
+    @JoinColumn(name = "PlanID", referencedColumnName = "ID", nullable = false)
+    public Plan getPlanByPlanId() {
+        return planByPlanId;
     }
 
-    public void setPlan(Plan plan) {
-        this.plan = plan;
+    public void setPlanByPlanId(Plan planByPlanId) {
+        this.planByPlanId = planByPlanId;
     }
 }

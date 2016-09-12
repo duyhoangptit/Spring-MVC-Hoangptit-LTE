@@ -1,16 +1,20 @@
 package vn.hoangptit.learningframework.dto;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 /**
- * author Hoangptit
- * Date 9/10/2016
+ * @author Hoangptit
+ *         12/09/2016
  */
 @Entity
 public class Entertain {
     private int id;
+    private int customerId;
     private String name;
     private String description;
+    private Customer customerByCustomerId;
+    private Collection<Plan> plenById;
 
     @Id
     @Column(name = "ID")
@@ -20,6 +24,16 @@ public class Entertain {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Basic
+    @Column(name = "CustomerID")
+    public int getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
     @Basic
@@ -50,6 +64,7 @@ public class Entertain {
         Entertain entertain = (Entertain) o;
 
         if (id != entertain.id) return false;
+        if (customerId != entertain.customerId) return false;
         if (name != null ? !name.equals(entertain.name) : entertain.name != null) return false;
         if (description != null ? !description.equals(entertain.description) : entertain.description != null)
             return false;
@@ -60,20 +75,28 @@ public class Entertain {
     @Override
     public int hashCode() {
         int result = id;
+        result = 31 * result + customerId;
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);
         return result;
     }
 
-
-    private Customer customer;
-
     @ManyToOne
-    public Customer getCustomer() {
-        return customer;
+    @JoinColumn(name = "CustomerID", referencedColumnName = "ID", nullable = false)
+    public Customer getCustomerByCustomerId() {
+        return customerByCustomerId;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setCustomerByCustomerId(Customer customerByCustomerId) {
+        this.customerByCustomerId = customerByCustomerId;
+    }
+
+    @OneToMany(mappedBy = "entertainByEntertainId")
+    public Collection<Plan> getPlenById() {
+        return plenById;
+    }
+
+    public void setPlenById(Collection<Plan> plenById) {
+        this.plenById = plenById;
     }
 }

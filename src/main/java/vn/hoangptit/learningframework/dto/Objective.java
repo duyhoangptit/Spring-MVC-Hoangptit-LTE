@@ -2,19 +2,23 @@ package vn.hoangptit.learningframework.dto;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.Collection;
 
 /**
- * author Hoangptit
- * Date 9/10/2016
+ * @author Hoangptit
+ *         12/09/2016
  */
 @Entity
 public class Objective {
     private int id;
+    private int customerId;
     private String title;
     private Date timeObj;
     private String description;
     private String comment;
     private double sumObj;
+    private Customer customerByCustomerId;
+    private Collection<Target> targetsById;
 
     @Id
     @Column(name = "ID")
@@ -24,6 +28,16 @@ public class Objective {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Basic
+    @Column(name = "CustomerID")
+    public int getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
     @Basic
@@ -84,6 +98,7 @@ public class Objective {
         Objective objective = (Objective) o;
 
         if (id != objective.id) return false;
+        if (customerId != objective.customerId) return false;
         if (Double.compare(objective.sumObj, sumObj) != 0) return false;
         if (title != null ? !title.equals(objective.title) : objective.title != null) return false;
         if (timeObj != null ? !timeObj.equals(objective.timeObj) : objective.timeObj != null) return false;
@@ -99,6 +114,7 @@ public class Objective {
         int result;
         long temp;
         result = id;
+        result = 31 * result + customerId;
         result = 31 * result + (title != null ? title.hashCode() : 0);
         result = 31 * result + (timeObj != null ? timeObj.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);
@@ -108,14 +124,22 @@ public class Objective {
         return result;
     }
 
-    private Customer customer;
-
     @ManyToOne
-    public Customer getCustomer() {
-        return customer;
+    @JoinColumn(name = "CustomerID", referencedColumnName = "ID", nullable = false)
+    public Customer getCustomerByCustomerId() {
+        return customerByCustomerId;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setCustomerByCustomerId(Customer customerByCustomerId) {
+        this.customerByCustomerId = customerByCustomerId;
+    }
+
+    @OneToMany(mappedBy = "objectiveByObjectiveId")
+    public Collection<Target> getTargetsById() {
+        return targetsById;
+    }
+
+    public void setTargetsById(Collection<Target> targetsById) {
+        this.targetsById = targetsById;
     }
 }

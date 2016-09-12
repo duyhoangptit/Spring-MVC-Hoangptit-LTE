@@ -4,12 +4,13 @@ import javax.persistence.*;
 import java.sql.Date;
 
 /**
- * author Hoangptit
- * Date 9/10/2016
+ * @author Hoangptit
+ *         12/09/2016
  */
 @Entity
 public class Friend {
     private int id;
+    private int customerId;
     private String fullName;
     private String phone;
     private String sdt;
@@ -17,6 +18,7 @@ public class Friend {
     private String skyper;
     private Date birthday;
     private String description;
+    private Customer customerByCustomerId;
 
     @Id
     @Column(name = "ID")
@@ -26,6 +28,16 @@ public class Friend {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Basic
+    @Column(name = "CustomerID")
+    public int getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
     @Basic
@@ -106,6 +118,7 @@ public class Friend {
         Friend friend = (Friend) o;
 
         if (id != friend.id) return false;
+        if (customerId != friend.customerId) return false;
         if (fullName != null ? !fullName.equals(friend.fullName) : friend.fullName != null) return false;
         if (phone != null ? !phone.equals(friend.phone) : friend.phone != null) return false;
         if (sdt != null ? !sdt.equals(friend.sdt) : friend.sdt != null) return false;
@@ -120,6 +133,7 @@ public class Friend {
     @Override
     public int hashCode() {
         int result = id;
+        result = 31 * result + customerId;
         result = 31 * result + (fullName != null ? fullName.hashCode() : 0);
         result = 31 * result + (phone != null ? phone.hashCode() : 0);
         result = 31 * result + (sdt != null ? sdt.hashCode() : 0);
@@ -130,14 +144,13 @@ public class Friend {
         return result;
     }
 
-    private Customer customer;
-
     @ManyToOne
-    public Customer getCustomer() {
-        return customer;
+    @JoinColumn(name = "CustomerID", referencedColumnName = "ID", nullable = false)
+    public Customer getCustomerByCustomerId() {
+        return customerByCustomerId;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setCustomerByCustomerId(Customer customerByCustomerId) {
+        this.customerByCustomerId = customerByCustomerId;
     }
 }

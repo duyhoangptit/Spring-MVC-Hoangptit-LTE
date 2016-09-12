@@ -2,17 +2,21 @@ package vn.hoangptit.learningframework.dto;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.Collection;
 
 /**
- * author Hoangptit
- * Date 9/10/2016
+ * @author Hoangptit
+ *         12/09/2016
  */
 @Entity
 public class Plan {
     private int id;
+    private int entertainId;
     private Date timePlan;
     private String address;
     private double price;
+    private Collection<Image> imagesById;
+    private Entertain entertainByEntertainId;
 
     @Id
     @Column(name = "ID")
@@ -22,6 +26,16 @@ public class Plan {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Basic
+    @Column(name = "EntertainID")
+    public int getEntertainId() {
+        return entertainId;
+    }
+
+    public void setEntertainId(int entertainId) {
+        this.entertainId = entertainId;
     }
 
     @Basic
@@ -62,6 +76,7 @@ public class Plan {
         Plan plan = (Plan) o;
 
         if (id != plan.id) return false;
+        if (entertainId != plan.entertainId) return false;
         if (Double.compare(plan.price, price) != 0) return false;
         if (timePlan != null ? !timePlan.equals(plan.timePlan) : plan.timePlan != null) return false;
         if (address != null ? !address.equals(plan.address) : plan.address != null) return false;
@@ -74,6 +89,7 @@ public class Plan {
         int result;
         long temp;
         result = id;
+        result = 31 * result + entertainId;
         result = 31 * result + (timePlan != null ? timePlan.hashCode() : 0);
         result = 31 * result + (address != null ? address.hashCode() : 0);
         temp = Double.doubleToLongBits(price);
@@ -81,14 +97,22 @@ public class Plan {
         return result;
     }
 
-    private Entertain entertain;
-
-    @ManyToOne
-    public Entertain getEntertain() {
-        return entertain;
+    @OneToMany(mappedBy = "planByPlanId")
+    public Collection<Image> getImagesById() {
+        return imagesById;
     }
 
-    public void setEntertain(Entertain entertain) {
-        this.entertain = entertain;
+    public void setImagesById(Collection<Image> imagesById) {
+        this.imagesById = imagesById;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "EntertainID", referencedColumnName = "ID", nullable = false)
+    public Entertain getEntertainByEntertainId() {
+        return entertainByEntertainId;
+    }
+
+    public void setEntertainByEntertainId(Entertain entertainByEntertainId) {
+        this.entertainByEntertainId = entertainByEntertainId;
     }
 }

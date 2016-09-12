@@ -1,15 +1,11 @@
 package vn.hoangptit.learningframework.dto;
 
-import vn.hoangptit.learningframework.entities.*;
-import vn.hoangptit.learningframework.entities.Role;
-
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Collection;
 
 /**
- * author Hoangptit
- * Date 9/10/2016
+ * @author Hoangptit
+ *         12/09/2016
  */
 @Entity
 public class Account {
@@ -17,9 +13,9 @@ public class Account {
     private String username;
     private String password;
     private byte enable;
-    @ManyToMany
-    @JoinTable
-    private Set<Role> roles = new HashSet<>();
+    private int customerId;
+    private Customer customerByCustomerId;
+    private Collection<RoleAccount> roleAccountsById;
 
     @Id
     @Column(name = "ID")
@@ -61,12 +57,14 @@ public class Account {
         this.enable = enable;
     }
 
-    public Set<Role> getRoles() {
-        return roles;
+    @Basic
+    @Column(name = "CustomerID")
+    public int getCustomerId() {
+        return customerId;
     }
 
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
     @Override
@@ -78,6 +76,7 @@ public class Account {
 
         if (id != account.id) return false;
         if (enable != account.enable) return false;
+        if (customerId != account.customerId) return false;
         if (username != null ? !username.equals(account.username) : account.username != null) return false;
         if (password != null ? !password.equals(account.password) : account.password != null) return false;
 
@@ -90,7 +89,26 @@ public class Account {
         result = 31 * result + (username != null ? username.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
         result = 31 * result + (int) enable;
+        result = 31 * result + customerId;
         return result;
     }
 
+    @ManyToOne
+    @JoinColumn(name = "CustomerID", referencedColumnName = "ID", nullable = false)
+    public Customer getCustomerByCustomerId() {
+        return customerByCustomerId;
+    }
+
+    public void setCustomerByCustomerId(Customer customerByCustomerId) {
+        this.customerByCustomerId = customerByCustomerId;
+    }
+
+    @OneToMany(mappedBy = "accountByAccountId")
+    public Collection<RoleAccount> getRoleAccountsById() {
+        return roleAccountsById;
+    }
+
+    public void setRoleAccountsById(Collection<RoleAccount> roleAccountsById) {
+        this.roleAccountsById = roleAccountsById;
+    }
 }

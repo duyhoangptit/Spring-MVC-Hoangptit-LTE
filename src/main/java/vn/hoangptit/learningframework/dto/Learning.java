@@ -2,17 +2,21 @@ package vn.hoangptit.learningframework.dto;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.Collection;
 
 /**
- * author Hoangptit
- * Date 9/10/2016
+ * @author Hoangptit
+ *         12/09/2016
  */
 @Entity
 public class Learning {
     private int id;
+    private int customerId;
     private String name;
     private String description;
     private Date dateLearn;
+    private Collection<Category> categoriesById;
+    private Customer customerByCustomerId;
 
     @Id
     @Column(name = "ID")
@@ -22,6 +26,16 @@ public class Learning {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Basic
+    @Column(name = "CustomerID")
+    public int getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
     @Basic
@@ -62,6 +76,7 @@ public class Learning {
         Learning learning = (Learning) o;
 
         if (id != learning.id) return false;
+        if (customerId != learning.customerId) return false;
         if (name != null ? !name.equals(learning.name) : learning.name != null) return false;
         if (description != null ? !description.equals(learning.description) : learning.description != null)
             return false;
@@ -73,20 +88,29 @@ public class Learning {
     @Override
     public int hashCode() {
         int result = id;
+        result = 31 * result + customerId;
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);
         result = 31 * result + (dateLearn != null ? dateLearn.hashCode() : 0);
         return result;
     }
 
-    private Customer customer;
-
-    @ManyToOne
-    public Customer getCustomer() {
-        return customer;
+    @OneToMany(mappedBy = "learningByLearningId")
+    public Collection<Category> getCategoriesById() {
+        return categoriesById;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setCategoriesById(Collection<Category> categoriesById) {
+        this.categoriesById = categoriesById;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "CustomerID", referencedColumnName = "ID", nullable = false)
+    public Customer getCustomerByCustomerId() {
+        return customerByCustomerId;
+    }
+
+    public void setCustomerByCustomerId(Customer customerByCustomerId) {
+        this.customerByCustomerId = customerByCustomerId;
     }
 }

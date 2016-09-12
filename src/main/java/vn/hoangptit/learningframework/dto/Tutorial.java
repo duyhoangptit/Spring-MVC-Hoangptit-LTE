@@ -4,17 +4,19 @@ import javax.persistence.*;
 import java.sql.Date;
 
 /**
- * author Hoangptit
- * Date 9/10/2016
+ * @author Hoangptit
+ *         12/09/2016
  */
 @Entity
 public class Tutorial {
     private int id;
+    private int categoryId;
     private String name;
     private String note;
     private String description;
     private String author;
     private Date tutorialDate;
+    private Category categoryByCategoryId;
 
     @Id
     @Column(name = "ID")
@@ -24,6 +26,16 @@ public class Tutorial {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Basic
+    @Column(name = "CategoryID")
+    public int getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
     }
 
     @Basic
@@ -84,6 +96,7 @@ public class Tutorial {
         Tutorial tutorial = (Tutorial) o;
 
         if (id != tutorial.id) return false;
+        if (categoryId != tutorial.categoryId) return false;
         if (name != null ? !name.equals(tutorial.name) : tutorial.name != null) return false;
         if (note != null ? !note.equals(tutorial.note) : tutorial.note != null) return false;
         if (description != null ? !description.equals(tutorial.description) : tutorial.description != null)
@@ -98,6 +111,7 @@ public class Tutorial {
     @Override
     public int hashCode() {
         int result = id;
+        result = 31 * result + categoryId;
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (note != null ? note.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);
@@ -106,14 +120,13 @@ public class Tutorial {
         return result;
     }
 
-    private Category category;
-
     @ManyToOne
-    public Category getCategory() {
-        return category;
+    @JoinColumn(name = "CategoryID", referencedColumnName = "ID", nullable = false)
+    public Category getCategoryByCategoryId() {
+        return categoryByCategoryId;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setCategoryByCategoryId(Category categoryByCategoryId) {
+        this.categoryByCategoryId = categoryByCategoryId;
     }
 }

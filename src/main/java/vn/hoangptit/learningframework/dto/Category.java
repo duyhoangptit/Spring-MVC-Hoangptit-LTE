@@ -1,16 +1,20 @@
 package vn.hoangptit.learningframework.dto;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 /**
- * author Hoangptit
- * Date 9/10/2016
+ * @author Hoangptit
+ *         12/09/2016
  */
 @Entity
 public class Category {
     private int id;
+    private int learningId;
     private String name;
     private String description;
+    private Learning learningByLearningId;
+    private Collection<Tutorial> tutorialsById;
 
     @Id
     @Column(name = "ID")
@@ -20,6 +24,16 @@ public class Category {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Basic
+    @Column(name = "LearningID")
+    public int getLearningId() {
+        return learningId;
+    }
+
+    public void setLearningId(int learningId) {
+        this.learningId = learningId;
     }
 
     @Basic
@@ -50,6 +64,7 @@ public class Category {
         Category category = (Category) o;
 
         if (id != category.id) return false;
+        if (learningId != category.learningId) return false;
         if (name != null ? !name.equals(category.name) : category.name != null) return false;
         if (description != null ? !description.equals(category.description) : category.description != null)
             return false;
@@ -60,19 +75,28 @@ public class Category {
     @Override
     public int hashCode() {
         int result = id;
+        result = 31 * result + learningId;
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);
         return result;
     }
 
-    private Learning learning;
-
     @ManyToOne
-    public Learning getLearning() {
-        return learning;
+    @JoinColumn(name = "LearningID", referencedColumnName = "ID", nullable = false)
+    public Learning getLearningByLearningId() {
+        return learningByLearningId;
     }
 
-    public void setLearning(Learning learning) {
-        this.learning = learning;
+    public void setLearningByLearningId(Learning learningByLearningId) {
+        this.learningByLearningId = learningByLearningId;
+    }
+
+    @OneToMany(mappedBy = "categoryByCategoryId")
+    public Collection<Tutorial> getTutorialsById() {
+        return tutorialsById;
+    }
+
+    public void setTutorialsById(Collection<Tutorial> tutorialsById) {
+        this.tutorialsById = tutorialsById;
     }
 }

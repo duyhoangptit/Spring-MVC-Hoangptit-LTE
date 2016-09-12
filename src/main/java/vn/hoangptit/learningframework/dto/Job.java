@@ -4,16 +4,18 @@ import javax.persistence.*;
 import java.sql.Date;
 
 /**
- * author Hoangptit
- * Date 9/10/2016
+ * @author Hoangptit
+ *         12/09/2016
  */
 @Entity
 public class Job {
     private int id;
+    private int targetId;
     private String name;
     private String description;
     private double sumJob;
     private Date timeJob;
+    private Target targetByTargetId;
 
     @Id
     @Column(name = "ID")
@@ -23,6 +25,16 @@ public class Job {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Basic
+    @Column(name = "TargetID")
+    public int getTargetId() {
+        return targetId;
+    }
+
+    public void setTargetId(int targetId) {
+        this.targetId = targetId;
     }
 
     @Basic
@@ -73,6 +85,7 @@ public class Job {
         Job job = (Job) o;
 
         if (id != job.id) return false;
+        if (targetId != job.targetId) return false;
         if (Double.compare(job.sumJob, sumJob) != 0) return false;
         if (name != null ? !name.equals(job.name) : job.name != null) return false;
         if (description != null ? !description.equals(job.description) : job.description != null) return false;
@@ -86,6 +99,7 @@ public class Job {
         int result;
         long temp;
         result = id;
+        result = 31 * result + targetId;
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);
         temp = Double.doubleToLongBits(sumJob);
@@ -94,14 +108,13 @@ public class Job {
         return result;
     }
 
-    private Target target;
-
     @ManyToOne
-    public Target getTarget() {
-        return target;
+    @JoinColumn(name = "TargetID", referencedColumnName = "ID", nullable = false)
+    public Target getTargetByTargetId() {
+        return targetByTargetId;
     }
 
-    public void setTarget(Target target) {
-        this.target = target;
+    public void setTargetByTargetId(Target targetByTargetId) {
+        this.targetByTargetId = targetByTargetId;
     }
 }

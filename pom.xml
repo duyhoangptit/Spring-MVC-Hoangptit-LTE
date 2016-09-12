@@ -18,6 +18,8 @@
         <spring.security.version>4.1.0.RELEASE</spring.security.version>
         <mysql.connector.version>5.1.38</mysql.connector.version>
         <hibernate.version>5.2.2.Final</hibernate.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
     <dependencies>
@@ -195,6 +197,97 @@
         </dependency>
         <!--End Lib Upload file-->
 
+
+        <!--spring social-->
+        <!-- http://mvnrepository.com/artifact/org.springframework.social/spring-social-config -->
+        <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-config</artifactId>
+            <version>1.1.4.RELEASE</version>
+        </dependency>
+
+        <!-- http://mvnrepository.com/artifact/org.springframework.social/spring-social-core -->
+        <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-core</artifactId>
+            <version>1.1.4.RELEASE</version>
+        </dependency>
+
+        <!-- http://mvnrepository.com/artifact/org.springframework.social/spring-social-security -->
+        <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-security</artifactId>
+            <version>1.1.4.RELEASE</version>
+        </dependency>
+
+        <!-- http://mvnrepository.com/artifact/org.springframework.social/spring-social-web -->
+        <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-web</artifactId>
+            <version>1.1.4.RELEASE</version>
+        </dependency>
+
+        <!-- http://mvnrepository.com/artifact/org.springframework.social/spring-social-facebook -->
+        <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-facebook</artifactId>
+            <version>2.0.3.RELEASE</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-social-core</artifactId>
+                    <groupId>org.springframework.social</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spring-social-config</artifactId>
+                    <groupId>org.springframework.social</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- http://mvnrepository.com/artifact/org.springframework.social/spring-social-google -->
+        <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-google</artifactId>
+            <version>1.0.0.RELEASE</version>
+        </dependency>
+
+
+        <!-- http://mvnrepository.com/artifact/org.springframework.social/spring-social-twitter -->
+        <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-twitter</artifactId>
+            <version>1.1.2.RELEASE</version>
+        </dependency>
+
+        <!-- http://mvnrepository.com/artifact/org.springframework.social/spring-social-linkedin -->
+        <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-linkedin</artifactId>
+            <version>1.0.2.RELEASE</version>
+        </dependency>
+
+        <!-- Email validator,... -->
+        <!-- http://mvnrepository.com/artifact/commons-validator/commons-validator -->
+        <dependency>
+            <groupId>commons-validator</groupId>
+            <artifactId>commons-validator</artifactId>
+            <version>1.5.0</version>
+        </dependency>
+
+        <!-- Pdf library -->
+        <dependency>
+            <groupId>com.lowagie</groupId>
+            <artifactId>itext</artifactId>
+            <version>2.1.7</version>
+        </dependency>
+
+        <!-- Excel library -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.6</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -207,6 +300,7 @@
                 <configuration>
                     <source>${jdk.version}</source>
                     <target>${jdk.version}</target>
+                    <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
         </plugins>

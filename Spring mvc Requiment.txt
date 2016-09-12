@@ -1,0 +1,17 @@
+
+I. Công nghệ
+
+Những công nghệ mới áp dụng demo
+
+II. Học tập
++ Những bài tutorial learning để traning các ngôn ngữ cũng như framework mới
++ Thành viên học, nhiệm vụ từng ngày, tháng, năm
+
+III: Quản trị
+
++ Thông tin bạn bè, facebook, sdt, skyper, imageAvatar, dataOfBirth
+1: Objective(Mục tiêu dài hạn sau 10 năm)
+2: Plan(Kế hoạch học và làm gì trong 5 năm)
+3: Target(Mục tiêu ngắn hạn: đặt ra các mục tiêu riêng cho mình như master 1 lĩnh vực gì đó, 
+học được những phần gì, giúp đỡ được ai, kiếm được bao nhiêu tiền)
++ Các ngày nghỉ lễ và dự tính

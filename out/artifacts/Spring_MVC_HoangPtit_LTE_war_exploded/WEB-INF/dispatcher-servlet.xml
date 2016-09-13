@@ -83,7 +83,6 @@
         </property>
     </bean>
 
-    <!-- Register the welcome.properties -->
     <bean id="messageSource"
           class="org.springframework.context.support.ResourceBundleMessageSource">
         <property name="basename" value="messages"/>
@@ -98,6 +97,13 @@
         <bean parent="localeChangeInterceptor"/>
     </mvc:interceptors>
     <!-- End i18n -->
+    <!---->
+    <bean class="org.springframework.web.servlet.view.XmlViewResolver">
+        <property name="location">
+            <value>/WEB-INF/spring-pdf-views.xml</value>
+        </property>
+        <property name="order" value="0" />
+    </bean>
 
     <!--import file config xml spring database and spring security-->
     <import resource="spring-database.xml"/>

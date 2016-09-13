@@ -2,26 +2,22 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/tx
        http://www.springframework.org/schema/tx/spring-tx.xsd
        http://www.springframework.org/schema/aop
-       http://www.springframework.org/schema/aop/spring-aop.xsd">
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- Config Properties file -->
-    <bean id="appProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
-        <property name="locations">
-            <list>
-                <value>classpath:configdatabase.properties</value>
-            </list>
-        </property>
-    </bean>
+    <context:property-placeholder location="classpath:configdatabase.properties" />
     <!--Spring MVC DI and IOC-->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/dbadminlte?characterEncoding=utf-8"/>
-        <property name="username" value="root"/>
+        <property name="driverClassName" value="${db.driver}"/>
+        <property name="url" value="${db.url}"/>
+        <property name="username" value="${db.username}"/>
         <property name="password" value=""/>
     </bean>
 
@@ -31,7 +27,7 @@
         <property name="hibernateProperties">
             <props>
                 <prop key="hibernate.connection.url">jdbc:mysql://localhost:3306/adminlte</prop>
-                <prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>
+                <prop key="hibernate.connection.driver_class">${db.driver}</prop>
             </props>
         </property>
     </bean>
@@ -60,6 +56,7 @@
             <ref bean="sessionFactory"/>
         </constructor-arg>
     </bean>
+    <!--Bean Serice Contructor-->
     <bean id="accountService" class="vn.hoangptit.learningframework.service.AccountServiceImpl">
     </bean>
     <bean id="customerService" class="vn.hoangptit.learningframework.service.CustomerServiceImpl"></bean>

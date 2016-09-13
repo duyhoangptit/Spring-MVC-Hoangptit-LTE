@@ -31,7 +31,6 @@ public class UploadController {
         // 2 cách lấy data
         try {
             description = request.getParameter("desc");
-            System.out.println(description);
         }catch (Exception e){
 
         }

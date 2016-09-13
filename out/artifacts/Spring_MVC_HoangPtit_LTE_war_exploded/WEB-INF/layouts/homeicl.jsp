@@ -8,6 +8,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- default header name is X-CSRF-TOKEN, Ajax and Json Request-->
     <meta name="_csrf" content="${_csrf.token}"/>
     <meta name="_csrf_header" content="${_csrf.headerName}"/>
     <title>${title}</title>
@@ -45,6 +46,7 @@
     <!-- sweetalert aleart -->
     <link rel="stylesheet" href="/css/docs.css">
     <link rel="stylesheet" href="/css/sweetalert.css">
+    <!-- Lib upload file drag and drop -->
     <link rel="stylesheet" type="text/css" href="/css/dropzone.css"/>
 
     <!-- Lazy load-->
@@ -153,6 +155,7 @@
 <script src="/dist/js/app.min.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="/dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE drag and drop Upload file -->
 <script type="text/javascript" src="/js/dropzone.js"></script>
 </body>
 </html>

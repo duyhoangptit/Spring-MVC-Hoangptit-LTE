@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="exploded-ear" name="Spring MVC HoangPtit LTE:ear exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/Spring_MVC_HoangPtit_LTE_ear_exploded</output-path>
-    <root id="root">
-      <element id="javaee-facet-resources" facet="Spring MVC HoangPtit LTE/javaeeApplication/javaEEApplication" />
-    </root>
-  </artifact>
-</component>

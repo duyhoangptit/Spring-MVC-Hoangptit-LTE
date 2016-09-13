@@ -20,6 +20,7 @@ import java.util.Map;
 public class RevenueReportController extends AbstractController {
 
     @Override
+    @RequestMapping(value = "exportPDF", method = RequestMethod.GET)
     protected ModelAndView handleRequestInternal(HttpServletRequest request,
                                                  HttpServletResponse response) throws Exception {
         String output =

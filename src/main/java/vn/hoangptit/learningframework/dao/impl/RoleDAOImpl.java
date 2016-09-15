@@ -1,9 +1,10 @@
-package vn.hoangptit.learningframework.dao;
+package vn.hoangptit.learningframework.dao.impl;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.transaction.annotation.Transactional;
+import vn.hoangptit.learningframework.dao.RoleDAO;
 import vn.hoangptit.learningframework.entities.Role;
 
 import java.util.List;

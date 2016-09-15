@@ -1,4 +1,4 @@
-package vn.hoangptit.learningframework.dao;
+package vn.hoangptit.learningframework.dao.impl;
 
 /**
  * author Hoangptit

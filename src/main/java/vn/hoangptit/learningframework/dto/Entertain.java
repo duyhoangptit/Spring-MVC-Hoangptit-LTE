@@ -1,5 +1,8 @@
 package vn.hoangptit.learningframework.dto;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Collection;
 
@@ -83,6 +86,8 @@ public class Entertain {
 
     @ManyToOne
     @JoinColumn(name = "CustomerID", referencedColumnName = "ID", nullable = false)
+    // khi đứng ở customer lấy ra list entertain thì k cần lấy customer ra nữa
+    @JsonIgnore
     public Customer getCustomerByCustomerId() {
         return customerByCustomerId;
     }

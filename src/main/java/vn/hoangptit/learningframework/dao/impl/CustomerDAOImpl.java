@@ -1,9 +1,10 @@
-package vn.hoangptit.learningframework.dao;
+package vn.hoangptit.learningframework.dao.impl;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+import vn.hoangptit.learningframework.dao.CustomerDAO;
 import vn.hoangptit.learningframework.dto.Customer;
 
 /**

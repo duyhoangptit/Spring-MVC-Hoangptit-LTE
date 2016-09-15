@@ -8,7 +8,6 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "role_account", schema = "adminlte", catalog = "")
-@IdClass(RoleAccountPK.class)
 public class RoleAccount {
     private int roleId;
     private int accountId;

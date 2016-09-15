@@ -40,25 +40,26 @@
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
     <!--Bean DAO DI-->
-    <bean id="accountDAO" class="vn.hoangptit.learningframework.dao.AccountDAOImpl">
+
+    <bean id="accountDAO" class="vn.hoangptit.learningframework.dao.impl.AccountDAOImpl">
         <constructor-arg>
             <ref bean="sessionFactory"/>
         </constructor-arg>
     </bean>
-    <bean id="roleDAO" class="vn.hoangptit.learningframework.dao.RoleDAOImpl">
+    <bean id="roleDAO" class="vn.hoangptit.learningframework.dao.impl.RoleDAOImpl">
         <constructor-arg>
             <ref bean="sessionFactory"/>
         </constructor-arg>
     </bean>
 
-    <bean id="customerDAO" class="vn.hoangptit.learningframework.dao.CustomerDAOImpl">
+    <bean id="customerDAO" class="vn.hoangptit.learningframework.dao.impl.CustomerDAOImpl">
         <constructor-arg>
             <ref bean="sessionFactory"/>
         </constructor-arg>
     </bean>
     <!--Bean Serice Contructor-->
-    <bean id="accountService" class="vn.hoangptit.learningframework.service.AccountServiceImpl">
+    <bean id="accountService" class="vn.hoangptit.learningframework.service.impl.AccountServiceImpl">
     </bean>
-    <bean id="customerService" class="vn.hoangptit.learningframework.service.CustomerServiceImpl"></bean>
+    <bean id="customerService" class="vn.hoangptit.learningframework.service.impl.CustomerServiceImpl"></bean>
 
 </beans>

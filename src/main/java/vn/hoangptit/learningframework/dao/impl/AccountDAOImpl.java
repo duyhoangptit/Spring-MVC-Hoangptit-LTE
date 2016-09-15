@@ -1,10 +1,12 @@
-package vn.hoangptit.learningframework.dao;
+package vn.hoangptit.learningframework.dao.impl;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.transaction.annotation.Transactional;
+import vn.hoangptit.learningframework.dao.AccountDAO;
+import vn.hoangptit.learningframework.dao.RoleDAO;
 import vn.hoangptit.learningframework.entities.Account;
 import vn.hoangptit.learningframework.entities.Role;
 
@@ -18,7 +20,7 @@ import java.util.Set;
  * Date 7/28/2016
  */
 @Transactional
-public class AccountDAOImpl implements AccountDAO {
+public class AccountDAOImpl extends CrudDAOImpl<Account> implements AccountDAO {
 
     @Autowired
     private RoleDAO roleDAO;
@@ -27,6 +29,7 @@ public class AccountDAOImpl implements AccountDAO {
     private SessionFactory sessionFactory;
 
     public AccountDAOImpl(SessionFactory sessionFactory) {
+        super(sessionFactory, Account.class);
         this.sessionFactory = sessionFactory;
     }
 
@@ -88,7 +91,7 @@ public class AccountDAOImpl implements AccountDAO {
     @Override
     public void delete(int userId) {
         openSession();
-        Account account = (Account)session.get(Account.class, userId);
+        Account account = (Account) session.get(Account.class, userId);
         session.delete(account);
     }
 

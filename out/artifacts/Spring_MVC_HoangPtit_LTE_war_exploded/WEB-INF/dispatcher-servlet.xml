@@ -97,10 +97,11 @@
         <bean parent="localeChangeInterceptor"/>
     </mvc:interceptors>
     <!-- End i18n -->
-    <!---->
+
+    <!--Export file-->
     <bean class="org.springframework.web.servlet.view.XmlViewResolver">
         <property name="location">
-            <value>/WEB-INF/spring-pdf-views.xml</value>
+            <value>/WEB-INF/spring-export-file.xml</value>
         </property>
         <property name="order" value="0" />
     </bean>

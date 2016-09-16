@@ -3,7 +3,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <header class="main-header" id ="header" style="width: 100%;">
     <!-- Logo -->
-    <a href="/home/index.html" class="logo" id="alt">
+    <a href="/home/index.html" class="logo" id="alt" style="top: 0;">
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini" ><b>A</b>LT</span>
         <!-- logo for regular state and mobile devices -->

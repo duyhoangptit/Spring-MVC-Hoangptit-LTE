@@ -31,7 +31,7 @@ $(document).ready(function () {
 
     $.event.add(window, "scroll", function() {
         var p = $(window).scrollTop();
-        $(alt).css('position',((p)>startAlt) ? 'fixed' : 'static');
+        $(alt).css('position',((p)>startAlt) ? 'static' : 'static');
         $(alt).css('top',((p)>startAlt) ? '0px' : '');
     });
 });

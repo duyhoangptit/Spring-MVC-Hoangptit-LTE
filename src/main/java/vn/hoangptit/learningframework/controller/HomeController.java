@@ -59,7 +59,7 @@ public class HomeController {
         return "index";
     }
 
-    @RequestMapping(value = "checkLogin", method = RequestMethod.GET)
+    @RequestMapping(value = "homePage", method = RequestMethod.GET)
     public String checkLogin(ModelMap modelMap,HttpSession session, Principal principal){
         String username = "";
         try {

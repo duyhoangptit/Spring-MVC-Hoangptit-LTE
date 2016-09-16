@@ -39,6 +39,12 @@
     <![endif]-->
 </head>
 <body class="hold-transition login-page">
+<%--check isLogin empty?index:login--%>
+<c:if test="${not empty isLogin}">
+    <%
+        response.sendRedirect("index.html");
+    %>
+</c:if>
 <%--include file body--%>
     <tiles:insertAttribute name="body"/>
 <!-- jQuery 2.1.4 -->

@@ -83,12 +83,6 @@ public class AccountDAOImpl extends CrudDAOImpl<Account> implements AccountDAO {
     }
 
     @Override
-    public Account findOneWithBlogs(String username) {
-        Account account = findByUsername(username);
-        return account;
-    }
-
-    @Override
     public void delete(int userId) {
         openSession();
         Account account = (Account) session.get(Account.class, userId);

@@ -21,8 +21,6 @@ public interface AccountDAO extends CrudDAO<Account> {
 
     List<Account> findAll();
 
-    Account findOneWithBlogs(String username);
-
     void delete(int id);
 
 }

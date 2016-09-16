@@ -1,11 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<header class="main-header " style="position: fixed;width: 100%">
+<header class="main-header" id ="header" style="width: 100%;">
     <!-- Logo -->
-    <a href="/home/index.html" class="logo">
+    <a href="/home/index.html" class="logo" id="alt">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>A</b>LT</span>
+        <span class="logo-mini" ><b>A</b>LT</span>
         <!-- logo for regular state and mobile devices -->
         <span class="logo-lg"><b>Admin</b>LTE</span>
     </a>

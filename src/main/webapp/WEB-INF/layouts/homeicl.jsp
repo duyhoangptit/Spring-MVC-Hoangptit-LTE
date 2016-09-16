@@ -102,6 +102,7 @@
 </div><!-- ./wrapper -->
 <!-- jQuery 2.1.4 -->
 <script src="/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <!-- modernizr -->
 <script src="/js/modernizr.js"></script>
 <!-- jQuery UI 1.11.4 -->

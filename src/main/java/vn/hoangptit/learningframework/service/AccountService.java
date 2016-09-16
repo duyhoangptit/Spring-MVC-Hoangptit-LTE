@@ -13,7 +13,15 @@ import java.util.List;
  * Date 8/23/2016
  */
 
-public interface AccountService extends AccountDAO {
+public interface AccountService {
 
+    Account findByUsername(String username);
 
+    Account saveUser(Account account, String role);
+
+    Account updateUser(Account account);
+
+    List<Account> findAll();
+
+    Account findOneWithBlogs(String username);
 }

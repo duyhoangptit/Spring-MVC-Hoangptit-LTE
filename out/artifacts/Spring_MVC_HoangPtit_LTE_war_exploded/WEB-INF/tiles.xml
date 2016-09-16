@@ -58,6 +58,20 @@
         <put-attribute name="current" value="uploadFile" />
     </definition>
 
+    <!-- Upload file User -->
+    <definition name="exportPDF" extends="base.definition">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="body" value="/WEB-INF/pages/exportPDF.jsp"/>
+        <put-attribute name="current" value="uploadFile" />
+    </definition>
+
+    <!-- Upload file User -->
+    <definition name="exportExcel" extends="base.definition">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="body" value="/WEB-INF/pages/exportExcel.jsp"/>
+        <put-attribute name="current" value="uploadFile" />
+    </definition>
+
     <!-- Profile User -->
     <definition name="404" extends="base.definition">
         <put-attribute name="title" value="Error: 404"/>

@@ -36,6 +36,8 @@
                     <li  class="${page=='popup_notify'?'active':''}"><a href="/home/popup.html"><i class="fa fa-circle-o"></i> Popup Notify</a></li>
                     <li  class="${page=='lazy_load'?'active':''}"><a href="/home/lazyLoad.html"><i class="fa fa-circle-o"></i> Lazy Load </a></li>
                     <li  class="${page=='uploadFile'?'active':''}"><a href="/home/uploadFile.html"><i class="fa fa-circle-o"></i> Upload file </a></li>
+                    <li  class="${page=='exportPDF'?'active':''}"><a href="/exportFile.html?output=pdf"><i class="fa fa-circle-o"></i> Export PDF </a></li>
+                    <li  class="${page=='exportExcel'?'active':''}"><a href="/exportFile.html?output=excel"><i class="fa fa-circle-o"></i> Export Excel </a></li>
                 </ul>
             </li>
 

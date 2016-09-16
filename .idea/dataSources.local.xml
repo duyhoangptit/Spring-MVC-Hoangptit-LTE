@@ -7,6 +7,11 @@
       <schema-pattern>dbadminlte.*</schema-pattern>
       <default-schemas>dbadminlte.*</default-schemas>
     </data-source>
-    <data-source name="MySQL - adminlte@localhost" uuid="d06b41ca-9fca-4fed-804f-17522370774a" />
+    <data-source name="MySQL - adminlte@localhost" uuid="bbc53b37-1191-432d-bc90-624d5d547278">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>adminlte.*</schema-pattern>
+      <default-schemas>adminlte.*</default-schemas>
+    </data-source>
   </component>
 </project>

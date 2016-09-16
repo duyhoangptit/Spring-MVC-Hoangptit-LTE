@@ -34,6 +34,7 @@ $(document).ready(function () {
                 $('#error').html('Tài khoản này đã được sử dụng.');
                 $('#error').show();
                 $('#success').hide();
+                $('#username').focus();
             }
         });
     });
@@ -99,7 +100,7 @@ function checkValidate(username, password, password_again, full_name) {
 
 /*register form HoangPtit   11/8*/
 function registerUser(username, password, full_name, token, header) {
-
+    // Check validate true then register
     $.ajax({
         type: 'POST',
         data: {
@@ -112,7 +113,7 @@ function registerUser(username, password, full_name, token, header) {
         beforeSend: function (xhr) {// send data post spring
             // trong thời gian chờ đợi có thể hiện dialog waiting
             $('#waiting').show();
-            // here it is
+            // check tocken header
             xhr.setRequestHeader(header, token);
         },
         success: function (data) {

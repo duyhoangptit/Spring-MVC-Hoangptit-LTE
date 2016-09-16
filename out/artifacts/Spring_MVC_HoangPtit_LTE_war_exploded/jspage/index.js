@@ -10,11 +10,29 @@ $(document).ready(function () {
             tmp = true;
         }
     });
-    $('.progressBar').hide();
 
     $(window).load(function() {
         // Animate loader off screen
         $("#loading").fadeOut("slow");;
+    });
+
+    $('.progressBar').hide();
+
+    var div = $('#header');
+    var start = $(div).offset().top;
+
+    $.event.add(window, "scroll", function() {
+        var p = $(window).scrollTop();
+        $(div).css('position',((p)>start) ? 'fixed' : 'static');
+        $(div).css('top',((p)>start) ? '0px' : '');
+    });
+    var alt = $('#alt');
+    var startAlt = $(alt).offset().top;
+
+    $.event.add(window, "scroll", function() {
+        var p = $(window).scrollTop();
+        $(alt).css('position',((p)>startAlt) ? 'static' : 'static');
+        $(alt).css('top',((p)>startAlt) ? '0px' : '');
     });
 });
 

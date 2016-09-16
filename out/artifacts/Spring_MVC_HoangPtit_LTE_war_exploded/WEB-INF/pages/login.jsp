@@ -1,6 +1,9 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+
+
 <div class="login-box">
     <div class="login-logo">
         <a href="/index.html"><b>Admin</b>LTE</a>
@@ -21,13 +24,13 @@
                     <div class="checkbox icheck">
                         <label>
                             <c:if test="${empty loginUpdate}">
-                                <input type="checkbox" name="remember-me"> Remember Me
+                                <input type="checkbox" name="remember-me"> <spring:message code = "body.remember"/>
                             </c:if>
                         </label>
                     </div>
                 </div><!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Log In</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat"><spring:message code  = "body.btnLogin"/></button>
                 </div><!-- /.col -->
             </div>
             <input type="hidden" name="${_csrf.parameterName}"
@@ -38,13 +41,17 @@
         <div class="social-auth-links text-center">
             <p>
                 <c:if test="${not empty error}">
-            <div class="error">${error}</div>
+            <div class="error"><spring:message code="body.errorLogin"/></div>
             </c:if>
             <c:if test="${not empty logout}">
                 <div class="success">${logout}</div>
             </c:if>
             </p>
             <p>- OR -</p>
+            <select class="selectpicker">
+                <option><a href="?language=en"><spring:message code="body.english"/></a>dsadsadsa</option>
+                <option><a href="?language=vi"><spring:message code="body.vietnam"/></a></option>
+            </select>
             <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in
                 using Facebook</a>
             <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in

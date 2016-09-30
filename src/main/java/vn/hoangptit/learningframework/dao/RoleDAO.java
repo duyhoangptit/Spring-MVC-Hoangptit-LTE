@@ -1,7 +1,7 @@
 package vn.hoangptit.learningframework.dao;
 
 
-import vn.hoangptit.learningframework.entities.Role;
+import vn.hoangptit.learningframework.dto.RoleDto;
 
 import java.util.List;
 
@@ -9,11 +9,9 @@ import java.util.List;
  * author Hoangptit
  * Date 8/7/2016
  */
-public interface RoleDAO {
+public interface RoleDAO extends CrudDAO<RoleDto>{
 
-    Role saveRole(Role role);
+    RoleDto findByName(String name);
 
-    Role findByName(String name);
-
-    List<Role> findAll();
+    List<RoleDto> findAll();
 }

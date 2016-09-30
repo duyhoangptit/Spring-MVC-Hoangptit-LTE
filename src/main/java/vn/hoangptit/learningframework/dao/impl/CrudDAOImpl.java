@@ -1,15 +1,11 @@
 package vn.hoangptit.learningframework.dao.impl;
 
-import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.criterion.Projections;
 import vn.hoangptit.learningframework.dao.CrudDAO;
 
-import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
 import java.util.List;
 import java.util.Map;
 
@@ -28,13 +24,9 @@ public class CrudDAOImpl<T> implements CrudDAO<T> {
         this.clazz = clazz;
     }
 
-    private void openSession() {
+    public Session openSession() {
         this.session = sessionFactory.getCurrentSession();
-    }
-
-    @Override
-    public List<T> findAll() {
-        return null;
+        return this.session;
     }
 
     @Override
@@ -54,15 +46,16 @@ public class CrudDAOImpl<T> implements CrudDAO<T> {
     }
 
     @Override
-    public void delete(Object id) {
+    public void delete(T t) {
         openSession();
-        session.delete(id);
+        session.delete(t);
     }
 
     @Override
-    public T findOne(Object id) {
+    public T findOne(Integer id) {
         openSession();
-        return session.find(clazz, id);
+        T t = session.get(clazz,id);
+        return t;
     }
 
     @Override

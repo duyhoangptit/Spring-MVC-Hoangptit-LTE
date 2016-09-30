@@ -1,11 +1,13 @@
 package vn.hoangptit.learningframework.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Collection;
 
 /**
- * @author hoangtd
- *         26/09/2016
+ * author Hoangptit
+ * Date 9/26/2016
  */
 @Entity
 @Table(name = "entertain", schema = "adminlte", catalog = "")
@@ -83,7 +85,8 @@ public class EntertainDto {
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "CustomerID", referencedColumnName = "ID", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "CustomerID", referencedColumnName = "ID", insertable = false, updatable = false)
+    @JsonIgnore
     public CustomerDto getCustomer() {
         return customer;
     }

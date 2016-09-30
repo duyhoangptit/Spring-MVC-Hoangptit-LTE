@@ -57,9 +57,46 @@
             <ref bean="sessionFactory"/>
         </constructor-arg>
     </bean>
-    <!--Bean Serice Contructor-->
-    <bean id="accountService" class="vn.hoangptit.learningframework.service.impl.AccountServiceImpl">
+
+    <bean id="categoryDAO" class="vn.hoangptit.learningframework.dao.impl.CategoryDAOImpl">
+        <constructor-arg>
+            <ref bean="sessionFactory"/>
+        </constructor-arg>
     </bean>
-    <bean id="customerService" class="vn.hoangptit.learningframework.service.impl.CustomerServiceImpl"></bean>
+    <bean id="friendDAO" class="vn.hoangptit.learningframework.dao.impl.FriendDAOImpl">
+        <constructor-arg>
+            <ref bean="sessionFactory"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="learningDAO" class="vn.hoangptit.learningframework.dao.impl.LearningDAOImpl">
+        <constructor-arg>
+            <ref bean="sessionFactory"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="objectiveDAO" class="vn.hoangptit.learningframework.dao.impl.ObjectiveDAOImpl">
+        <constructor-arg>
+            <ref bean="sessionFactory"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="planDAO" class="vn.hoangptit.learningframework.dao.impl.PlanDAOImpl">
+        <constructor-arg>
+            <ref bean="sessionFactory"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="targetDAO" class="vn.hoangptit.learningframework.dao.impl.TargetDAOImpl">
+        <constructor-arg>
+            <ref bean="sessionFactory"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="tutorialDAO" class="vn.hoangptit.learningframework.dao.impl.TutorialDAOImpl">
+        <constructor-arg>
+            <ref bean="sessionFactory"/>
+        </constructor-arg>
+    </bean>
 
 </beans>

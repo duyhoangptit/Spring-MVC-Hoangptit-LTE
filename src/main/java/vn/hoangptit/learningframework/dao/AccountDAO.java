@@ -1,7 +1,8 @@
 package vn.hoangptit.learningframework.dao;
 
 
-import vn.hoangptit.learningframework.entities.Account;
+
+import vn.hoangptit.learningframework.dto.AccountDto;
 
 import java.util.List;
 
@@ -11,16 +12,12 @@ import java.util.List;
  */
 
 
-public interface AccountDAO extends CrudDAO<Account> {
+public interface AccountDAO extends CrudDAO<AccountDto> {
 
-    Account findByUsername(String username);
+    AccountDto findByUsername(String username);
 
-    Account saveUser(Account account, String role);
+    AccountDto saveUser(AccountDto account);
 
-    Account updateUser(Account account);
-
-    List<Account> findAll();
-
-    void delete(int id);
+    List<AccountDto> findAll();
 
 }

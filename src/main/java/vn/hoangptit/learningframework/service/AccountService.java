@@ -1,10 +1,7 @@
 package vn.hoangptit.learningframework.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-import vn.hoangptit.learningframework.dao.AccountDAO;
-import vn.hoangptit.learningframework.entities.Account;
+import vn.hoangptit.learningframework.dao.CrudDAO;
+import vn.hoangptit.learningframework.dto.AccountDto;
 
 import java.util.List;
 
@@ -13,14 +10,12 @@ import java.util.List;
  * Date 8/23/2016
  */
 
-public interface AccountService {
+public interface AccountService{
 
-    Account findByUsername(String username);
+    AccountDto findByUsername(String username);
 
-    Account saveUser(Account account, String role);
+    AccountDto saveUser(AccountDto account, String role);
 
-    Account updateUser(Account account);
-
-    List<Account> findAll();
+    List<AccountDto> getAllAccounts();
 
 }

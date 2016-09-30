@@ -1,14 +1,16 @@
 package vn.hoangptit.learningframework.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Collection;
 
 /**
- * @author hoangtd
- *         26/09/2016
+ * author Hoangptit
+ * Date 9/26/2016
  */
 @Entity
-@Table(name = "category", schema = "adminlte", catalog = "")
+@Table(name = "category", schema = "adminlte")
 public class CategoryDto {
     private Integer id;
     private Integer learningId;
@@ -83,7 +85,8 @@ public class CategoryDto {
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "LearningID", referencedColumnName = "ID", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "LearningID", referencedColumnName = "ID", insertable = false, updatable = false)
+    @JsonIgnore
     public LearningDto getLearning() {
         return learning;
     }
@@ -92,7 +95,7 @@ public class CategoryDto {
         this.learning = learning;
     }
 
-    @OneToMany(mappedBy = "categoryByCategoryId")
+    @OneToMany(mappedBy = "category")
     public Collection<TutorialDto> getTutorials() {
         return tutorials;
     }

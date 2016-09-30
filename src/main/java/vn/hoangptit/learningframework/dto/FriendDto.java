@@ -1,24 +1,28 @@
 package vn.hoangptit.learningframework.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.sql.Date;
 
 /**
- * @author hoangtd
- *         26/09/2016
+ * author Hoangptit
+ * Date 9/26/2016
  */
 @Entity
-@Table(name = "friend", schema = "adminlte", catalog = "")
+@Table(name = "friend", schema = "adminlte")
 public class FriendDto {
     private Integer id;
     private Integer customerId;
     private String fullName;
     private String phone;
-    private String sdt;
+    private String email;
     private String facebook;
     private String skyper;
     private Date birthday;
     private String description;
+    private String avatar;
+    private Byte sex;
     private CustomerDto customer;
 
     @Id
@@ -63,13 +67,13 @@ public class FriendDto {
     }
 
     @Basic
-    @Column(name = "Sdt")
-    public String getSdt() {
-        return sdt;
+    @Column(name = "Email")
+    public String getEmail() {
+        return email;
     }
 
-    public void setSdt(String sdt) {
-        this.sdt = sdt;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Basic
@@ -112,6 +116,26 @@ public class FriendDto {
         this.description = description;
     }
 
+    @Basic
+    @Column(name = "Avatar")
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    @Basic
+    @Column(name = "Sex")
+    public Byte getSex() {
+        return sex;
+    }
+
+    public void setSex(Byte sex) {
+        this.sex = sex;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -123,12 +147,14 @@ public class FriendDto {
         if (customerId != null ? !customerId.equals(friendDto.customerId) : friendDto.customerId != null) return false;
         if (fullName != null ? !fullName.equals(friendDto.fullName) : friendDto.fullName != null) return false;
         if (phone != null ? !phone.equals(friendDto.phone) : friendDto.phone != null) return false;
-        if (sdt != null ? !sdt.equals(friendDto.sdt) : friendDto.sdt != null) return false;
+        if (email != null ? !email.equals(friendDto.email) : friendDto.email != null) return false;
         if (facebook != null ? !facebook.equals(friendDto.facebook) : friendDto.facebook != null) return false;
         if (skyper != null ? !skyper.equals(friendDto.skyper) : friendDto.skyper != null) return false;
         if (birthday != null ? !birthday.equals(friendDto.birthday) : friendDto.birthday != null) return false;
         if (description != null ? !description.equals(friendDto.description) : friendDto.description != null)
             return false;
+        if (avatar != null ? !avatar.equals(friendDto.avatar) : friendDto.avatar != null) return false;
+        if (sex != null ? !sex.equals(friendDto.sex) : friendDto.sex != null) return false;
 
         return true;
     }
@@ -139,16 +165,19 @@ public class FriendDto {
         result = 31 * result + (customerId != null ? customerId.hashCode() : 0);
         result = 31 * result + (fullName != null ? fullName.hashCode() : 0);
         result = 31 * result + (phone != null ? phone.hashCode() : 0);
-        result = 31 * result + (sdt != null ? sdt.hashCode() : 0);
+        result = 31 * result + (email != null ? email.hashCode() : 0);
         result = 31 * result + (facebook != null ? facebook.hashCode() : 0);
         result = 31 * result + (skyper != null ? skyper.hashCode() : 0);
         result = 31 * result + (birthday != null ? birthday.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);
+        result = 31 * result + (avatar != null ? avatar.hashCode() : 0);
+        result = 31 * result + (sex != null ? sex.hashCode() : 0);
         return result;
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "CustomerID", referencedColumnName = "ID", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "CustomerID", referencedColumnName = "ID", insertable = false, updatable = false)
+    @JsonIgnore
     public CustomerDto getCustomer() {
         return customer;
     }

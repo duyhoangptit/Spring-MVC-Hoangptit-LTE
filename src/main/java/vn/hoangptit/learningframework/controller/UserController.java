@@ -10,7 +10,9 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import vn.hoangptit.learningframework.dao.AccountDAO;
 import vn.hoangptit.learningframework.dao.RoleDAO;
+import vn.hoangptit.learningframework.dto.AccountDto;
 import vn.hoangptit.learningframework.entities.Account;
+import vn.hoangptit.learningframework.service.AccountService;
 import vn.hoangptit.learningframework.utils.ConfigUntil;
 
 import javax.servlet.http.HttpServletRequest;
@@ -26,10 +28,7 @@ import java.security.Principal;
 public class UserController {
 
     @Autowired
-    private AccountDAO accountDAO;
-
-    @Autowired
-    private RoleDAO roleDAO;
+    private AccountService accountService;
 
     @RequestMapping(value = "logout", method = RequestMethod.POST)
     public String logout(HttpSession session) {
@@ -84,7 +83,7 @@ public class UserController {
     @ResponseBody
     public String checkUsername(HttpServletRequest request) {
         String username = request.getParameter("username");
-        Account account = accountDAO.findByUsername(username);
+        AccountDto account = accountService.findByUsername(username);
         if (account != null) {
             return "error";
         }
@@ -108,7 +107,7 @@ public class UserController {
         account.setImage("user_hoang.jpg");
         account.setEnabled(true);
         try {
-            account = accountDAO.saveUser(account, ConfigUntil.ROLE_ADMIN);
+            account = null;
         } catch (Exception e) {
             System.out.println(e);
             return "error";

@@ -1,14 +1,16 @@
 package vn.hoangptit.learningframework.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.sql.Date;
 
 /**
- * @author hoangtd
- *         26/09/2016
+ * author Hoangptit
+ * Date 9/26/2016
  */
 @Entity
-@Table(name = "tutorial", schema = "adminlte", catalog = "")
+@Table(name = "tutorial", schema = "adminlte")
 public class TutorialDto {
     private Integer id;
     private Integer categoryId;
@@ -17,7 +19,7 @@ public class TutorialDto {
     private String description;
     private String author;
     private Date tutorialDate;
-    private CategoryDto categoryByCategoryId;
+    private CategoryDto category;
 
     @Id
     @Column(name = "ID")
@@ -121,12 +123,13 @@ public class TutorialDto {
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "CategoryID", referencedColumnName = "ID", nullable = false, insertable = false, updatable = false)
-    public CategoryDto getCategoryByCategoryId() {
-        return categoryByCategoryId;
+    @JoinColumn(name = "CategoryID", referencedColumnName = "ID", insertable = false, updatable = false)
+    @JsonIgnore
+    public CategoryDto getCategory() {
+        return category;
     }
 
-    public void setCategoryByCategoryId(CategoryDto categoryByCategoryId) {
-        this.categoryByCategoryId = categoryByCategoryId;
+    public void setCategory(CategoryDto category) {
+        this.category = category;
     }
 }

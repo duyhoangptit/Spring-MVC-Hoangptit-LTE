@@ -5,6 +5,11 @@ import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import vn.hoangptit.learningframework.dao.CustomerDAO;
+import vn.hoangptit.learningframework.dto.CustomerDto;
+
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 
 /**
  * author Hoangptit
@@ -12,17 +17,23 @@ import vn.hoangptit.learningframework.dao.CustomerDAO;
  */
 @Transactional
 @Repository
-public class CustomerDAOImpl implements CustomerDAO {
+public class CustomerDAOImpl extends CrudDAOImpl<CustomerDto> implements CustomerDAO {
 
     private Session session;
-    private SessionFactory sessionFactory;
 
     public CustomerDAOImpl(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
+        super(sessionFactory, CustomerDto.class);
     }
 
-    public void openSession(){
-        this.session = this.sessionFactory.getCurrentSession();
+    @Override
+    public CustomerDto getCustomer(int accountId) {
+        this.session  = openSession();
+        CriteriaBuilder cb = session.getCriteriaBuilder();
+        CriteriaQuery<CustomerDto> cq = cb.createQuery(CustomerDto.class);
+        Root<CustomerDto> from = cq.from(CustomerDto.class);
+        cq.select(from);
+        cq.where(cb.equal(from.get("AccountID"), accountId));
+        return session.createQuery(cq).getResultList().get(0);
     }
 
 }

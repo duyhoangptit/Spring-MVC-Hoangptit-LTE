@@ -1,12 +1,14 @@
 package vn.hoangptit.learningframework.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.Collection;
 
 /**
- * @author hoangtd
- *         26/09/2016
+ * author Hoangptit
+ * Date 9/26/2016
  */
 @Entity
 @Table(name = "plan", schema = "adminlte", catalog = "")
@@ -106,7 +108,8 @@ public class PlanDto {
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "EntertainID", referencedColumnName = "ID", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "EntertainID", referencedColumnName = "ID", insertable = false, updatable = false)
+    @JsonIgnore
     public EntertainDto getEntertain() {
         return entertain;
     }

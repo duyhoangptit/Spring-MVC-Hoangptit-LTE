@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import vn.hoangptit.learningframework.dao.AccountDAO;
+import vn.hoangptit.learningframework.dto.AccountDto;
 import vn.hoangptit.learningframework.entities.Account;
 import vn.hoangptit.learningframework.service.AccountService;
 
@@ -68,7 +69,7 @@ public class HomeController {
             modelMap.put("title", "Login | LTE");
             return "login";
         }
-        Account account = accountService.findByUsername(username);
+        AccountDto account = accountService.findByUsername(username);
         session.setAttribute("isLogin", account);
         return "index";
     }
@@ -98,7 +99,7 @@ public class HomeController {
     public String dataTable(ModelMap modelMap, HttpSession session) {
         session.setAttribute("page", "datatable");
         modelMap.put("title", "Data Table | LTE");
-        List<Account> accounts = accountService.findAll();
+        List<Account> accounts = null;
         modelMap.put("accounts", accounts);
         return "datatable";
     }
@@ -117,7 +118,7 @@ public class HomeController {
     @RequestMapping(value = "findData", method = RequestMethod.GET)
     @ResponseBody
     public List<Account> findData() {
-        List<Account> accounts = accountService.findAll();
+        List<Account> accounts = null;
         return accounts;
     }
 

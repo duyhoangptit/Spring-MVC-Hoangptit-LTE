@@ -1,6 +1,9 @@
-# Created by .ignore support plugin (hsz.mobi)
 .gitignore
-.idea/dataSources/bbc53b37-1191-432d-bc90-624d5d547278.xml
 out/artifacts/Spring_MVC_HoangPtit_LTE_war_exploded/WEB-INF/classes/com/
-target/classes/com/
+out/artifacts/Spring_MVC_HoangPtit_LTE_war_exploded/WEB-INF/classes/vn/
+src/main/java/vn/hoangptit/learningframework/json/
+src/main/webapp/upload/
+src/test/
+target/classes/vn/
 target/generated-sources/
+.class

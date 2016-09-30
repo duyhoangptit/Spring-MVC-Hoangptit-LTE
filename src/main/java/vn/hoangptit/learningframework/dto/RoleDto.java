@@ -2,17 +2,19 @@ package vn.hoangptit.learningframework.dto;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.List;
 
 /**
- * @author hoangtd
- *         26/09/2016
+ * author Hoangptit
+ * Date 9/26/2016
  */
 @Entity
 @Table(name = "role", schema = "adminlte", catalog = "")
 public class RoleDto {
     private Integer id;
     private String role;
-    private Collection<RoleAccountDto> roleAccounts;
+
+    private List<AccountDto> accounts;
 
     @Id
     @Column(name = "ID")
@@ -55,12 +57,12 @@ public class RoleDto {
         return result;
     }
 
-    @OneToMany(mappedBy = "role")
-    public Collection<RoleAccountDto> getRoleAccounts() {
-        return roleAccounts;
+    @ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
+    public List<AccountDto> getAccounts() {
+        return accounts;
     }
 
-    public void setRoleAccounts(Collection<RoleAccountDto> roleAccounts) {
-        this.roleAccounts = roleAccounts;
+    public void setAccounts(List<AccountDto> accounts) {
+        this.accounts = accounts;
     }
 }

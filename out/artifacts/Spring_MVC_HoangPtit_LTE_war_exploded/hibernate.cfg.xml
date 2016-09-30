@@ -10,20 +10,24 @@
         </property>
         <property name="hbm2ddl.auto">update</property>
         <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
         <!-- List Class Mapping -->
 
-        <mapping class="vn.hoangptit.learningframework.entities.Account"/>
-        <mapping class="vn.hoangptit.learningframework.entities.Role"/>
-        <!--<mapping class="vn.hoangptit.learningframework.dto.Category"/>-->
-        <!--<mapping class="vn.hoangptit.learningframework.dto.Customer"/>-->
-        <!--<mapping class="vn.hoangptit.learningframework.dto.Entertain"/>-->
-        <!--<mapping class="vn.hoangptit.learningframework.dto.Image"/>-->
-        <!--<mapping class="vn.hoangptit.learningframework.dto.Job"/>-->
-        <!--<mapping class="vn.hoangptit.learningframework.dto.Learning"/>-->
-        <!--<mapping class="vn.hoangptit.learningframework.dto.Objective"/>-->
-        <!--<mapping class="vn.hoangptit.learningframework.dto.Plan"/>-->
-        <!--<mapping class="vn.hoangptit.learningframework.dto.Target"/>-->
-        <!--<mapping class="vn.hoangptit.learningframework.dto.Tutorial"/>-->
+        <!--<mapping class="vn.hoangptit.learningframework.entities.Account"/>-->
+        <!--<mapping class="vn.hoangptit.learningframework.entities.Role"/>-->
+        <mapping class="vn.hoangptit.learningframework.dto.AccountDto"/>
+        <mapping class="vn.hoangptit.learningframework.dto.RoleDto"/>
+        <mapping class="vn.hoangptit.learningframework.dto.FriendDto"/>
+        <mapping class="vn.hoangptit.learningframework.dto.CategoryDto"/>
+        <mapping class="vn.hoangptit.learningframework.dto.CustomerDto"/>
+        <mapping class="vn.hoangptit.learningframework.dto.EntertainDto"/>
+        <mapping class="vn.hoangptit.learningframework.dto.ImageDto"/>
+        <mapping class="vn.hoangptit.learningframework.dto.JobDto"/>
+        <mapping class="vn.hoangptit.learningframework.dto.LearningDto"/>
+        <mapping class="vn.hoangptit.learningframework.dto.ObjectiveDto"/>
+        <mapping class="vn.hoangptit.learningframework.dto.PlanDto"/>
+        <mapping class="vn.hoangptit.learningframework.dto.TargetDto"/>
+        <mapping class="vn.hoangptit.learningframework.dto.TutorialDto"/>
 
 
         <!-- List of XML mapping files -->

@@ -5,19 +5,19 @@ import java.sql.Date;
 import java.util.Collection;
 
 /**
- * @author hoangtd
- *         26/09/2016
+ * author Hoangptit
+ * Date 9/26/2016
  */
 @Entity
-@Table(name = "customer", schema = "adminlte", catalog = "")
+@Table(name = "customer", schema = "adminlte")
 public class CustomerDto {
     private Integer id;
     private String fullName;
-    private String avatar;
     private Date birthday;
     private Byte sex;
     private String description;
-    private Collection<AccountDto> account;
+    private String avatar;
+    private Collection<AccountDto> accounts;
     private Collection<EntertainDto> entertains;
     private Collection<FriendDto> friends;
     private Collection<LearningDto> learnings;
@@ -42,16 +42,6 @@ public class CustomerDto {
 
     public void setFullName(String fullName) {
         this.fullName = fullName;
-    }
-
-    @Basic
-    @Column(name = "Avatar")
-    public String getAvatar() {
-        return avatar;
-    }
-
-    public void setAvatar(String avatar) {
-        this.avatar = avatar;
     }
 
     @Basic
@@ -84,6 +74,16 @@ public class CustomerDto {
         this.description = description;
     }
 
+    @Basic
+    @Column(name = "Avatar")
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -93,10 +93,10 @@ public class CustomerDto {
 
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (fullName != null ? !fullName.equals(that.fullName) : that.fullName != null) return false;
-        if (avatar != null ? !avatar.equals(that.avatar) : that.avatar != null) return false;
         if (birthday != null ? !birthday.equals(that.birthday) : that.birthday != null) return false;
         if (sex != null ? !sex.equals(that.sex) : that.sex != null) return false;
         if (description != null ? !description.equals(that.description) : that.description != null) return false;
+        if (avatar != null ? !avatar.equals(that.avatar) : that.avatar != null) return false;
 
         return true;
     }
@@ -105,20 +105,20 @@ public class CustomerDto {
     public int hashCode() {
         int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (fullName != null ? fullName.hashCode() : 0);
-        result = 31 * result + (avatar != null ? avatar.hashCode() : 0);
         result = 31 * result + (birthday != null ? birthday.hashCode() : 0);
         result = 31 * result + (sex != null ? sex.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);
+        result = 31 * result + (avatar != null ? avatar.hashCode() : 0);
         return result;
     }
 
     @OneToMany(mappedBy = "customer")
-    public Collection<AccountDto> getAccount() {
-        return account;
+    public Collection<AccountDto> getAccounts() {
+        return accounts;
     }
 
-    public void setAccount(Collection<AccountDto> account) {
-        this.account = account;
+    public void setAccounts(Collection<AccountDto> accounts) {
+        this.accounts = accounts;
     }
 
     @OneToMany(mappedBy = "customer")

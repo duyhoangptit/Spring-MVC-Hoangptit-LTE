@@ -41,11 +41,11 @@
             <password-encoder hash="bcrypt" />
 
             <jdbc-user-service data-source-ref="dataSource"
-                               authorities-by-username-query="select account.username, role.nameRole from account
-											   join account_role on account.username = account_role.accounts_username
-											   join role on account_role.roles_roleId = role.roleId
+                               authorities-by-username-query="select account.ID, account.username, role.role, role.ID from account
+											   join account_role on account.ID = account_role.accounts_ID
+											   join role on account_role.roles_ID = role.ID
 											   where account.username = ?"
-                               users-by-username-query="select username,password,enabled from account where username = ?" />
+                               users-by-username-query="select ID,username,password,enabled from account where username = ?" />
         </authentication-provider>
 
 

@@ -8,15 +8,14 @@ import java.util.Map;
  * Date 9/14/2016
  */
 public interface CrudDAO<T> {
-    List<T> findAll();
 
     long countAll(Map<String, Object> params);
 
     T create(T t);
 
-    void delete(Object id);
+    void delete(T t);
 
-    T findOne(Object id);
+    T findOne(Integer id);
 
     T update(T t);
 }

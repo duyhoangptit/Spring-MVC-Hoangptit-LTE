@@ -27,7 +27,7 @@
         <property name="hibernateProperties">
             <props>
                 <prop key="hibernate.connection.url">jdbc:mysql://localhost:3306/adminlte</prop>
-                <prop key="hibernate.connection.driver_class">${db.driver}</prop>
+                <prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>
             </props>
         </property>
     </bean>

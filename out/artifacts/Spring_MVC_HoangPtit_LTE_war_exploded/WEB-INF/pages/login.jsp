@@ -49,7 +49,7 @@
             </p>
             <p>- OR -</p>
             <select class="selectpicker">
-                <option><a href="?language=en"><spring:message code="body.english"/></a>dsadsadsa</option>
+                <option><a href="?language=en"><spring:message code="body.english"/></a></option>
                 <option><a href="?language=vi"><spring:message code="body.vietnam"/></a></option>
             </select>
             <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in

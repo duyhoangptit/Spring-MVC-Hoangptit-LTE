@@ -39,9 +39,4 @@ public class AccountServiceImpl implements AccountService {
         return accountDAO.findAll();
     }
 
-    @Override
-    public Account findOneWithBlogs(String username) {
-        return accountDAO.findOneWithBlogs(username);
-    }
-
 }

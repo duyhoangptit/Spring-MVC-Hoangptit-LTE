@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
-import vn.hoangptit.learningframework.dto.Account;
+import vn.hoangptit.learningframework.dto.AccountDto;
 
 /**
  * author Hoangptit
@@ -19,12 +19,12 @@ public class UserFormValidate implements Validator {
     EmailValidator emailValidator;
     @Override
     public boolean supports(Class<?> clazz) {
-        return Account.class.equals(clazz);
+        return AccountDto.class.equals(clazz);
     }
 
     @Override
     public void validate(Object o, Errors errors) {
-        Account account = (Account)o;
+        AccountDto account = (AccountDto)o;
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "NotEmpty.userForm.name");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "email", "NotEmpty.userForm.email");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "address", "NotEmpty.userForm.address");

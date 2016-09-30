@@ -23,5 +23,4 @@ public interface AccountService {
 
     List<Account> findAll();
 
-    Account findOneWithBlogs(String username);
 }

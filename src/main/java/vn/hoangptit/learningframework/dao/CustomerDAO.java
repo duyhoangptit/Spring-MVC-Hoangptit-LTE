@@ -1,6 +1,5 @@
 package vn.hoangptit.learningframework.dao;
 
-import vn.hoangptit.learningframework.dto.Customer;
 
 /**
  * author Hoangptit
@@ -8,9 +7,4 @@ import vn.hoangptit.learningframework.dto.Customer;
  */
 public interface CustomerDAO {
 
-    Customer save(Customer customer);
-
-    Customer getCustomer(String username);
-
-    Customer update(Customer customer);
 }

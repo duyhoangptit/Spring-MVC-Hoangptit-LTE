@@ -20,6 +20,7 @@
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/spring-security.xml</file>
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/titles.xml</file>
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/spring-pdf-views.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-mail.xml</file>
         </fileset>
       </configuration>
     </facet>
@@ -146,5 +147,8 @@
     <orderEntry type="library" name="Maven: org.apache.poi:poi:3.6" level="project" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.13" level="project" />
     <orderEntry type="library" name="Maven: taglibs:standard:1.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context-support:4.1.6.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: javax.mail:mail:1.4.7" level="project" />
+    <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
   </component>
 </module>

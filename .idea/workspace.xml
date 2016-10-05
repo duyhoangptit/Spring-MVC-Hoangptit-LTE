@@ -2,9 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03699166-c417-4e8f-a728-03bf5ea3d68a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dbadminlte.sql" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/service/CustomerService.java" afterPath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/service/CustomerService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/service/impl/AccountServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/service/impl/AccountServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_4_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_1_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/configs/SendMail.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/controller/SendMailController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/spring-mail.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/vn/hoangptit/learningframework/controller/HomeController.class" afterPath="$PROJECT_DIR$/target/classes/vn/hoangptit/learningframework/controller/HomeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/vn/hoangptit/learningframework/service/CustomerService.class" afterPath="$PROJECT_DIR$/target/classes/vn/hoangptit/learningframework/service/CustomerService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/vn/hoangptit/learningframework/service/impl/CustomerServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/vn/hoangptit/learningframework/service/impl/CustomerServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Spring_MVC_HoangPtit_LTE_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Spring_MVC_HoangPtit_LTE_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Spring MVC HoangPtit LTE.iml" afterPath="$PROJECT_DIR$/Spring MVC HoangPtit LTE.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/configdatabase.properties" afterPath="$PROJECT_DIR$/src/main/resources/configdatabase.properties" />
     </list>
     <ignored path="Spring MVC HoangPtit LTE.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +46,55 @@
     <favorites_list name="Spring MVC HoangPtit LTE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="SendMailController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/controller/SendMailController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SendMail.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/configs/SendMail.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spring-mail.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mail.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+              <folding>
+                <element signature="e#787#806#0" expanded="true" />
+                <element signature="e#849#868#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="configdatabase.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/configdatabase.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -67,14 +127,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/RoleAccount.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/adminPage.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/popup_notify.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/datatable.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts/homeicl.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/controller/RevenueReportController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/include/menu.jsp" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/configs/ExcelRevenueReportView.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jspage/index.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts/pageicl.jsp" />
@@ -100,7 +158,6 @@
         <option value="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/validator/UserFormValidate.java" />
         <option value="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dao/CustomerDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dao/impl/CustomerDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/configdatabase.properties" />
         <option value="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/caches/AccountCache.java" />
         <option value="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/FriendDto.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
@@ -118,6 +175,9 @@
         <option value="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/controller/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/service/impl/AccountServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/service/CustomerService.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/controller/SendMailController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/configdatabase.properties" />
       </list>
     </option>
   </component>
@@ -201,8 +261,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -266,10 +326,6 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -289,107 +345,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Spring-MVC-Hoangptit-LTE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Spring-MVC-Hoangptit-LTE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upload" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Spring-MVC-Hoangptit-LTE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Spring-MVC-Hoangptit-LTE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jspage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Spring-MVC-Hoangptit-LTE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Spring-MVC-Hoangptit-LTE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Spring-MVC-Hoangptit-LTE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Spring-MVC-Hoangptit-LTE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -419,9 +375,69 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Spring-MVC-Hoangptit-LTE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Spring-MVC-Hoangptit-LTE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="learningframework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Spring-MVC-Hoangptit-LTE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Spring-MVC-Hoangptit-LTE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="learningframework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="configs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -457,24 +473,6 @@
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="vn.hoangptit.learningframework.dao.impl" />
-      <recent name="vn.hoangptit.learningframework.caches" />
-      <recent name="com.springlte.dao" />
-      <recent name="com.springlte.impl" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\OneDrive\Spring\WorkspaceSpring\Spring-MVC-Hoangptit-LTE\src\main\java\vn\hoangptit\learningframework" />
-      <recent name="G:\OneDrive\Spring\WorkspaceSpring\Spring-MVC-Hoangptit-LTE\src\main\java\vn\hoangptit\learningframework\service" />
-      <recent name="G:\OneDrive\Spring\WorkspaceSpring\Spring-MVC-Hoangptit-LTE\src\main\java\vn\hoangptit\learningframework\validator" />
-      <recent name="G:\OneDrive\Spring\WorkspaceSpring\Spring-MVC-Hoangptit-LTE\src\main\java\vn\hoangptit\learningframework\dto" />
-      <recent name="G:\OneDrive\Spring\WorkspaceSpring\Spring-MVC-Hoangptit-LTE\src\main\java\vn\hoangptit\learningframework\dao" />
-    </key>
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="vn.hoangptit.learningframework.dto" />
-      <recent name="vn.hoangptit.learningframework.entities" />
-      <recent name="dto" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\OneDrive\Spring\WorkspaceSpring\Spring-MVC-Hoangptit-LTE\src\main\webapp\WEB-INF\pages" />
       <recent name="G:\OneDrive\Spring\WorkspaceSpring\Spring-MVC-Hoangptit-LTE\src\main\webapp\WEB-INF\include" />
@@ -482,8 +480,26 @@
       <recent name="G:\OneDrive\Spring\WorkspaceSpring\Spring-MVC-Hoangptit-LTE\src\main\webapp\jspage" />
       <recent name="F:\WEB\FrameWork\Spring\WorkspaceSpring\Spring MVC HoangPtit LTE\src\main\webapp\WEB-INF\pages" />
     </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="vn.hoangptit.learningframework.dto" />
+      <recent name="vn.hoangptit.learningframework.entities" />
+      <recent name="dto" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="vn.hoangptit.learningframework.dao.impl" />
+      <recent name="vn.hoangptit.learningframework.caches" />
+      <recent name="com.springlte.dao" />
+      <recent name="com.springlte.impl" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\OneDrive\Spring\WorkspaceSpring\Spring-MVC-Hoangptit-LTE\src\main\resources" />
+      <recent name="G:\OneDrive\Spring\WorkspaceSpring\Spring-MVC-Hoangptit-LTE\src\main\java\vn\hoangptit\learningframework\configs" />
+      <recent name="G:\OneDrive\Spring\WorkspaceSpring\Spring-MVC-Hoangptit-LTE\src\main\java\vn\hoangptit\learningframework\controller" />
+      <recent name="G:\OneDrive\Spring\WorkspaceSpring\Spring-MVC-Hoangptit-LTE\src\main\java\vn\hoangptit\learningframework" />
+      <recent name="G:\OneDrive\Spring\WorkspaceSpring\Spring-MVC-Hoangptit-LTE\src\main\java\vn\hoangptit\learningframework\service" />
+    </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Unnamed">
+  <component name="RunManager" selected="Application.SendMailController">
     <configuration default="false" name="TestHibernate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -543,6 +559,26 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="SendMailController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="vn.hoangptit.learningframework.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="vn.hoangptit.learningframework.controller.SendMailController" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Spring MVC HoangPtit LTE" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
@@ -1016,17 +1052,19 @@
         </option>
       </method>
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Unnamed" />
       <item index="1" class="java.lang.String" itemvalue="Application.TestHibernate" />
       <item index="2" class="java.lang.String" itemvalue="Application.Demo" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.All in Spring MVC HoangPtit LTE" />
+      <item index="4" class="java.lang.String" itemvalue="Application.SendMailController" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Application.Demo" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TestHibernate" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.All in Spring MVC HoangPtit LTE" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Application.SendMailController" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Demo" />
+        <item index="2" class="java.lang.String" itemvalue="Application.TestHibernate" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.All in Spring MVC HoangPtit LTE" />
       </list>
     </recent_temporary>
   </component>
@@ -1137,6 +1175,7 @@
       <workItem from="1475498112239" duration="6122000" />
       <workItem from="1475588646566" duration="7760000" />
       <workItem from="1475670846263" duration="4831000" />
+      <workItem from="1475682658631" duration="1300000" />
     </task>
     <task id="LOCAL-00001" summary="commit lazy loading data">
       <created>1470042482798</created>
@@ -1161,7 +1200,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="432412000" />
+    <option name="totallyTimeSpent" value="433712000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -1174,7 +1213,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1612" height="876" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34896553" sideWeight="0.5025873" order="7" side_tool="true" content_ui="tabs" />
@@ -1189,16 +1228,16 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882273" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3098782" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30852503" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07310345" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6924138" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.014884979" sideWeight="0.49741268" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13125846" sideWeight="0.49741268" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2534943" sideWeight="0.33039647" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26675257" sideWeight="0.5983146" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26675257" sideWeight="0.5983146" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20231959" sideWeight="0.4016854" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="JavaEE:App" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20990312" sideWeight="0.40838853" order="8" side_tool="true" content_ui="tabs" />
@@ -1273,35 +1312,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/JobDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/LearningDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/ObjectiveDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/PlanDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/RoleAccountDto.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/dto/TargetDto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
@@ -1390,13 +1400,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/configdatabase.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1497,7 +1500,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1513,7 +1515,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-250">
           <caret line="2260" column="6" selection-start-line="2260" selection-start-column="6" selection-end-line="2260" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1541,10 +1542,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="40" column="42" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="42" />
-          <folding>
-            <marker date="1475680188600" expanded="true" signature="2140:2400" ph="select accou... account" />
-            <marker date="1475680188600" expanded="true" signature="2465:2531" ph="select id,us... account" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1576,7 +1574,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1005">
           <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1646,6 +1643,61 @@
         <state relative-caret-position="359">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.2.RELEASE/spring-context-4.3.2.RELEASE.jar!/org/springframework/context/support/PostProcessorRegistrationDelegate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="304" column="50" selection-start-line="304" selection-start-column="50" selection-end-line="304" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/configdatabase.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mail.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+          <folding>
+            <element signature="e#787#806#0" expanded="true" />
+            <element signature="e#849#868#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/configs/SendMail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/vn/hoangptit/learningframework/controller/SendMailController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

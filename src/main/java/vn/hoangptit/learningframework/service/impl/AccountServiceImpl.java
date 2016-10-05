@@ -23,7 +23,7 @@ import java.util.Set;
  */
 @Service
 @Transactional
-public class AccountServiceImpl  implements AccountService {
+public class AccountServiceImpl implements AccountService {
     @Autowired
     private AccountDAO accountDAO;
 

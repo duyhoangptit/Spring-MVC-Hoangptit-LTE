@@ -17,11 +17,17 @@ public class CustomerDto {
     private Byte sex;
     private String description;
     private String avatar;
+    private String email;
     private Collection<AccountDto> accounts;
     private Collection<EntertainDto> entertains;
     private Collection<FriendDto> friends;
     private Collection<LearningDto> learnings;
     private Collection<ObjectiveDto> objectives;
+
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     @Id
     @Column(name = "ID")
@@ -84,32 +90,10 @@ public class CustomerDto {
         this.avatar = avatar;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        CustomerDto that = (CustomerDto) o;
-
-        if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        if (fullName != null ? !fullName.equals(that.fullName) : that.fullName != null) return false;
-        if (birthday != null ? !birthday.equals(that.birthday) : that.birthday != null) return false;
-        if (sex != null ? !sex.equals(that.sex) : that.sex != null) return false;
-        if (description != null ? !description.equals(that.description) : that.description != null) return false;
-        if (avatar != null ? !avatar.equals(that.avatar) : that.avatar != null) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (fullName != null ? fullName.hashCode() : 0);
-        result = 31 * result + (birthday != null ? birthday.hashCode() : 0);
-        result = 31 * result + (sex != null ? sex.hashCode() : 0);
-        result = 31 * result + (description != null ? description.hashCode() : 0);
-        result = 31 * result + (avatar != null ? avatar.hashCode() : 0);
-        return result;
+    @Basic
+    @Column(name = "email", nullable = true)
+    public String getEmail() {
+        return email;
     }
 
     @OneToMany(mappedBy = "customer")

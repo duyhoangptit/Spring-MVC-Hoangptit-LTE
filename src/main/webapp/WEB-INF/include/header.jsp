@@ -31,7 +31,7 @@
                                 <li><!-- start message -->
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="/dist/img/${isLogin.image}" class="img-circle" alt="User Image">
+                                            <img src="/dist/img/${isLogin.customer.avatar}" class="img-circle" alt="User avatar">
                                         </div>
                                         <h4>
                                             Support Team
@@ -43,7 +43,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                            <img src="/dist/img/user3-128x128.jpg" class="img-circle" alt="User avatar">
                                         </div>
                                         <h4>
                                             AdminLTE Design Team
@@ -55,7 +55,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                            <img src="/dist/img/user4-128x128.jpg" class="img-circle" alt="User avatar">
                                         </div>
                                         <h4>
                                             Developers
@@ -67,7 +67,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                            <img src="/dist/img/user3-128x128.jpg" class="img-circle" alt="User avatar">
                                         </div>
                                         <h4>
                                             Sales Department
@@ -79,7 +79,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                            <img src="/dist/img/user4-128x128.jpg" class="img-circle" alt="User avatar">
                                         </div>
                                         <h4>
                                             Reviewers
@@ -216,15 +216,15 @@
                 <!-- User Account: style can be found in dropdown.less -->
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="/dist/img/${isLogin.image}" class="user-image" alt="User Image">
-                        <span class="hidden-xs">${isLogin.fullName}</span>
+                        <img src="/dist/img/${isLogin.customer.avatar}" class="user-image" alt="User avatar">
+                        <span class="hidden-xs">${isLogin.customer.fullName}</span>
                     </a>
                     <ul class="dropdown-menu">
-                        <!-- User image -->
+                        <!-- User avatar -->
                         <li class="user-header">
-                            <img src="/dist/img/${isLogin.image}" class="img-circle" alt="User Image">
+                            <img src="/dist/img/${isLogin.customer.avatar}" class="img-circle" alt="User avatar">
                             <p>
-                                ${isLogin.fullName} - Developer
+                                ${isLogin.customer.fullName} - Developer
 
                                 <small>Convert Web 2016</small>
                             </p>

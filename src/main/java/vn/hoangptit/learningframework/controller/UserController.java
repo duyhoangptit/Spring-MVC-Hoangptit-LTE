@@ -40,7 +40,7 @@ public class UserController {
 
     @RequestMapping(value = "profileUser", method = RequestMethod.GET)
     public String profileUser(HttpSession session, ModelMap modelMap) {
-        Account account = (Account) session.getAttribute("isLogin");
+        AccountDto account = (AccountDto) session.getAttribute("isLogin");
         modelMap.addAttribute("user", account);
         session.setAttribute("page", "profile");
         return "profile_user";
@@ -48,7 +48,7 @@ public class UserController {
 
     @RequestMapping(value = "deleteUser/username", method = RequestMethod.GET)
     public String deleteUser(@PathVariable(value = "username") String username, ModelMap modelMap) {
-        //deleteUserByUsername
+        // enable account
         return "redirect:/home/dataTable.html";
     }
 
@@ -60,6 +60,7 @@ public class UserController {
     @RequestMapping(value = "updateUser/{username}", method = RequestMethod.GET)
     public String updateUser(@PathVariable(value = "username") String username, HttpSession session, ModelMap modelMap) {
         // findByUsername
+        // update User
         return "redirect:/home/dataTable.html";
     }
 
@@ -100,12 +101,9 @@ public class UserController {
         String password = request.getParameter("password");
         String fullname = request.getParameter("fullname");
 
-        Account account = new Account();
+        AccountDto account = new AccountDto();
         account.setUsername(username);
         account.setPassword(password);
-        account.setFullName(fullname);
-        account.setImage("user_hoang.jpg");
-        account.setEnabled(true);
         try {
             account = null;
         } catch (Exception e) {

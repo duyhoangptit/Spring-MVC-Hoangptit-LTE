@@ -25,7 +25,7 @@ public class AdminController {
     @ResponseBody
     public RoleDto addRole() {
         RoleDto role = new RoleDto();
-        role.setRole("ROLE_ADMIN");
+        role.setNameRole("ROLE_ADMIN");
         role = roleService.saveRole(role);
         return role;
     }

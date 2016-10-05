@@ -36,15 +36,15 @@
                             </div>
                             <div class="form-group">
                                 <label for="inputName">Họ tên:</label>
-                                <input type="text" class="form-control" id="inputName" placeholder="Họ tên" value="${isLogin.fullName}">
+                                <input type="text" class="form-control" id="inputName" placeholder="Họ tên" value="${isLogin.customer.fullName}">
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail">Email:</label>
-                                <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="${isLogin.email}">
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="${isLogin.customer.email}">
                             </div>
                             <div class="form-group">
                                 <label for="inputImage">Ảnh đại diện:</label>
-                                <img class="profile-user-img img-responsive img-circle" src="/dist/img/${isLogin.image}" alt="User profile picture" id = "inputImage">
+                                <img class="profile-user-img img-responsive img-circle" src="/dist/img/${isLogin.customer.avatar}" alt="User profile picture" id = "inputImage">
                             </div>
                             <div class="form-group">
                                 <label for="inputFile">File input</label>
@@ -54,7 +54,7 @@
                             </div>
                             <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="enabled"> Check me out
+                                <input type="checkbox" name="enabled"> Enabled
                             </label>
                         </div>
                         </div><!-- /.box-body -->

@@ -39,11 +39,10 @@ public class HomeController {
         return "admin";
     }
 
-
     @RequestMapping(value = {"login", "/"}, method = RequestMethod.GET)
     public String login(ModelMap modelMap) {
         modelMap.put("title", "Login | LTE");
-        modelMap.put("user", new Account());
+        modelMap.put("user", new AccountDto());
         return "login";
     }
 
@@ -61,7 +60,7 @@ public class HomeController {
     }
 
     @RequestMapping(value = "homePage", method = RequestMethod.GET)
-    public String checkLogin(ModelMap modelMap,HttpSession session, Principal principal){
+    public String checkLogin(ModelMap modelMap, HttpSession session, Principal principal) {
         String username = "";
         try {
             username = principal.getName();
@@ -99,7 +98,7 @@ public class HomeController {
     public String dataTable(ModelMap modelMap, HttpSession session) {
         session.setAttribute("page", "datatable");
         modelMap.put("title", "Data Table | LTE");
-        List<Account> accounts = null;
+        List<AccountDto> accounts = null;
         modelMap.put("accounts", accounts);
         return "datatable";
     }
@@ -117,12 +116,10 @@ public class HomeController {
 
     @RequestMapping(value = "findData", method = RequestMethod.GET)
     @ResponseBody
-    public List<Account> findData() {
-        List<Account> accounts = null;
+    public List<AccountDto> findData() {
+        List<AccountDto> accounts = null;
         return accounts;
     }
-
-
 
 
 }

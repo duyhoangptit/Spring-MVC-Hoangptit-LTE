@@ -3,8 +3,10 @@ package vn.hoangptit.learningframework.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import vn.hoangptit.learningframework.dao.AccountDAO;
 import vn.hoangptit.learningframework.dao.CustomerDAO;
 import vn.hoangptit.learningframework.dao.FriendDAO;
+import vn.hoangptit.learningframework.dto.AccountDto;
 import vn.hoangptit.learningframework.dto.FriendDto;
 import vn.hoangptit.learningframework.service.CustomerService;
 
@@ -17,9 +19,8 @@ import java.util.List;
 @Service
 @Transactional
 public class CustomerServiceImpl implements CustomerService {
-
     @Autowired
-    private CustomerDAO customerDAO;
+    private AccountDAO accountDAO;
 
     @Autowired
     private FriendDAO friendDAO;
@@ -29,5 +30,9 @@ public class CustomerServiceImpl implements CustomerService {
         return friends;
     }
 
+    public AccountDto updateAccount(AccountDto accountDto) {
+        accountDto = accountDAO.update(accountDto);
+        return accountDto;
+    }
 
 }

@@ -9,10 +9,10 @@ import java.util.List;
  * Date 9/26/2016
  */
 @Entity
-@Table(name = "role", schema = "adminlte", catalog = "")
+@Table(name = "role", schema = "adminlte")
 public class RoleDto {
     private Integer id;
-    private String role;
+    private String nameRole ;
 
     private List<AccountDto> accounts;
 
@@ -28,33 +28,13 @@ public class RoleDto {
     }
 
     @Basic
-    @Column(name = "Role")
-    public String getRole() {
-        return role;
+    @Column(name = "nameRole")
+    public String getNameRole() {
+        return nameRole;
     }
 
-    public void setRole(String role) {
-        this.role = role;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        RoleDto roleDto = (RoleDto) o;
-
-        if (id != null ? !id.equals(roleDto.id) : roleDto.id != null) return false;
-        if (role != null ? !role.equals(roleDto.role) : roleDto.role != null) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (role != null ? role.hashCode() : 0);
-        return result;
+    public void setNameRole(String nameRole) {
+        this.nameRole = nameRole;
     }
 
     @ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)

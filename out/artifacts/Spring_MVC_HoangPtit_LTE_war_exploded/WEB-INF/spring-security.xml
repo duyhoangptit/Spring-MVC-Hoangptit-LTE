@@ -41,7 +41,7 @@
             <password-encoder hash="bcrypt" />
 
             <user-service>
-            <user name="admin" password="$2a$10$ioyBUv9gJCSoMZdf83d5g.Ce2jtPcUon/w5MPsk30pN02Rk9qKVie" authorities="ROLE_ADMIN" />
+                <user name="admin" password="$2a$10$ioyBUv9gJCSoMZdf83d5g.Ce2jtPcUon/w5MPsk30pN02Rk9qKVie" authorities="ROLE_ADMIN" />
             </user-service>
 
             <!--<jdbc-user-service data-source-ref="dataSource"-->

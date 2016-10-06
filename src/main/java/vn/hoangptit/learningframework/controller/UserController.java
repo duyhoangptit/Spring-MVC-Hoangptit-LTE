@@ -8,16 +8,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import vn.hoangptit.learningframework.dao.AccountDAO;
-import vn.hoangptit.learningframework.dao.RoleDAO;
 import vn.hoangptit.learningframework.dto.AccountDto;
-import vn.hoangptit.learningframework.entities.Account;
 import vn.hoangptit.learningframework.service.AccountService;
-import vn.hoangptit.learningframework.utils.ConfigUntil;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.security.Principal;
 
 /**
  * author Hoangptit

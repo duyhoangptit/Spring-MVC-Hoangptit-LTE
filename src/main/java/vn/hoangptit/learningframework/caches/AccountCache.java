@@ -2,7 +2,7 @@ package vn.hoangptit.learningframework.caches;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import vn.hoangptit.learningframework.dao.AccountDAO;
-import vn.hoangptit.learningframework.entities.Account;
+import vn.hoangptit.learningframework.dto.AccountDto;
 
 import javax.inject.Singleton;
 import java.util.HashMap;
@@ -19,18 +19,18 @@ public class AccountCache {
     @Autowired
     private static AccountDAO accountDAO;
 
-    private static Map<String, Account> accountMap;
+    private static Map<String, AccountDto> accountMap;
 
     public static void loadAccount() {
         accountMap = new HashMap<>();
 
-        List<Account> accounts = null;
-        for (Account ac : accounts) {
+        List<AccountDto> accounts = null;
+        for (AccountDto ac : accounts) {
             accountMap.put(ac.getUsername(), ac);
         }
     }
 
-    public Map<String, Account> getAccountMap() {
+    public Map<String, AccountDto> getAccountMap() {
         return accountMap;
     }
 

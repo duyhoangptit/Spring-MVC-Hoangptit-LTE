@@ -22,7 +22,6 @@ import java.util.Set;
  * Date 9/7/2016
  */
 @Service
-@Transactional
 public class AccountServiceImpl implements AccountService {
     @Autowired
     private AccountDAO accountDAO;
@@ -33,12 +32,12 @@ public class AccountServiceImpl implements AccountService {
     @Autowired
     private RoleDAO roleDAO;
 
-    @Override
+    @Transactional
     public AccountDto findByUsername(String username) {
         return accountDAO.findByUsername(username);
     }
 
-    @Override
+    @Transactional
     public AccountDto saveUser(AccountDto account, String roleName) {
         // get Role
         Set<RoleDto> roles = new HashSet<>();
@@ -51,7 +50,7 @@ public class AccountServiceImpl implements AccountService {
         return accountDAO.saveUser(account);
     }
 
-    @Override
+    @Transactional
     public List<AccountDto> getAllAccounts() {
         return accountDAO.findAll();
     }

@@ -40,7 +40,7 @@
                                     <td class="data-view">${i.index + 1}</td>
                                     <td class="data-view">${account.username}</td>
                                     <td class="data-view">${account.password}</td>
-                                    <td class="data-view">${account.image}</td>
+                                    <td class="data-view">${account.customer.avatar}</td>
                                     <td class="data-view">
                                         <a href="/user/updateUser.html?userId=${account.username}"><img
                                                 src="/images/details-icon.png" class="size-img"></a>

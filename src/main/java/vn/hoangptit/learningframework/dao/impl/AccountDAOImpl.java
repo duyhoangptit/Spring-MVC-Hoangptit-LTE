@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import vn.hoangptit.learningframework.dao.AccountDAO;
 import vn.hoangptit.learningframework.dao.RoleDAO;
 import vn.hoangptit.learningframework.dto.AccountDto;
+import vn.hoangptit.learningframework.dto.CustomerDto;
 import vn.hoangptit.learningframework.dto.RoleDto;
 
 import java.util.HashSet;
@@ -18,11 +19,7 @@ import java.util.Set;
  * author Hoangptit
  * Date 7/28/2016
  */
-@Transactional
 public class AccountDAOImpl extends CrudDAOImpl<AccountDto> implements AccountDAO {
-
-    @Autowired
-    private RoleDAO roleDAO;
 
     private Session session;
 
@@ -30,7 +27,7 @@ public class AccountDAOImpl extends CrudDAOImpl<AccountDto> implements AccountDA
         super(sessionFactory, AccountDto.class);
     }
 
-    @Override
+    @Transactional
     public AccountDto findByUsername(String username) {
         session = openSession();
 
@@ -47,7 +44,7 @@ public class AccountDAOImpl extends CrudDAOImpl<AccountDto> implements AccountDA
         return null;
     }
 
-    @Override
+    @Transactional
     public AccountDto saveUser(AccountDto account) {
         session = openSession();
 
@@ -59,9 +56,17 @@ public class AccountDAOImpl extends CrudDAOImpl<AccountDto> implements AccountDA
         return account;
     }
 
-    @Override
+    // get all list account
+    @Transactional
     public List<AccountDto> findAll() {
-        return null;
+        session = openSession();
+        List<AccountDto> accounts;
+        try {
+            accounts = session.createQuery("SELECT  account from  AccountDto account", AccountDto.class).getResultList();
+            return accounts;
+        } catch (Exception e) {
+            return null;
+        }
     }
 
 }

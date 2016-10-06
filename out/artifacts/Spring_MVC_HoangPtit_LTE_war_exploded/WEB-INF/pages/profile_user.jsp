@@ -54,7 +54,7 @@
                             </div>
                             <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="enabled"> Check me out
+                                <input type="checkbox" name="enabled"> Enabled
                             </label>
                         </div>
                         </div><!-- /.box-body -->

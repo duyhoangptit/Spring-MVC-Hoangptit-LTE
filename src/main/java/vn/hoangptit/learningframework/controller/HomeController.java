@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import vn.hoangptit.learningframework.dao.AccountDAO;
 import vn.hoangptit.learningframework.dto.AccountDto;
-import vn.hoangptit.learningframework.entities.Account;
 import vn.hoangptit.learningframework.service.AccountService;
 
 import javax.servlet.http.HttpSession;
@@ -98,7 +97,7 @@ public class HomeController {
     public String dataTable(ModelMap modelMap, HttpSession session) {
         session.setAttribute("page", "datatable");
         modelMap.put("title", "Data Table | LTE");
-        List<AccountDto> accounts = null;
+        List<AccountDto> accounts = accountService.getAllAccounts();
         modelMap.put("accounts", accounts);
         return "datatable";
     }

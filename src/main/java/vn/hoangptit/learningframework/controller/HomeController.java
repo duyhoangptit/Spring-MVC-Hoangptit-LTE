@@ -38,6 +38,13 @@ public class HomeController {
         return "admin";
     }
 
+    @RequestMapping(value = "ckeditor", method = RequestMethod.GET)
+    public String ckeditor(ModelMap modelMap) {
+        // Cấu hình đường dẫn admin
+        modelMap.addAttribute("title", "Spring Ckeditor Page Admin");
+        return "ckeditor";
+    }
+
     @RequestMapping(value = {"login", "/"}, method = RequestMethod.GET)
     public String login(ModelMap modelMap) {
         modelMap.put("title", "Login | LTE");

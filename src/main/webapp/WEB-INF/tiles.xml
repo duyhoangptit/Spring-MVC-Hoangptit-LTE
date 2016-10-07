@@ -62,14 +62,22 @@
     <definition name="exportPDF" extends="base.definition">
         <put-attribute name="title" value=""/>
         <put-attribute name="body" value="/WEB-INF/pages/exportPDF.jsp"/>
-        <put-attribute name="current" value="uploadFile" />
+        <put-attribute name="current" value="exportPDF" />
     </definition>
 
-    <!-- Upload file User -->
+    <!-- Ckeditor -->
+    <definition name="ckeditor" extends="base.definition">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="body" value="/WEB-INF/pages/ckeditor-page.jsp"/>
+        <put-attribute name="current" value="ckeditor" />
+    </definition>
+
+
+    <!-- Upload file User-->
     <definition name="exportExcel" extends="base.definition">
         <put-attribute name="title" value=""/>
         <put-attribute name="body" value="/WEB-INF/pages/exportExcel.jsp"/>
-        <put-attribute name="current" value="uploadFile" />
+        <put-attribute name="current" value="exportExcel" />
     </definition>
 
     <!-- Profile User -->

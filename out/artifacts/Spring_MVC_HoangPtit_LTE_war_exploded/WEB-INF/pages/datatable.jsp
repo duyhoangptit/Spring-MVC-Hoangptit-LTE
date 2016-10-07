@@ -21,7 +21,10 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Hover Data Table</h3>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                            Add New
+                        </button>
                     </div><!-- /.box-header -->
                     <div class="box-body">
                         <table id="tblData" class="table table-bordered table-striped">
@@ -42,12 +45,9 @@
                                     <td class="data-view">${account.password}</td>
                                     <td class="data-view">${account.customer.avatar}</td>
                                     <td class="data-view">
-                                        <a href="/user/updateUser.html?userId=${account.username}"><img
-                                                src="/images/details-icon.png" class="size-img"></a>
-                                        <a href="/user/updateUser.html?userId=${account.username}"><img
-                                                src="/images/delete-icon.png" class="size-img"></a>
-                                        <a href="/user/deleteUser.html?userId=${account.username}"><img
-                                                src="/images/edit-icon.png" class="size-img"></a>
+                                        <img src="/images/details-icon.png" class="size-img" data-toggle="modal" data-target="#myModal" onclick="detailUser('${account}')">
+                                        <img src="/images/edit-icon.png" class="size-img" data-toggle="modal" data-target="#myModal" onclick="updateUser('${account.username}')">
+                                        <img src="/images/delete-icon.png" class="size-img" onclick="deleteUser('${account.id}')">
                                     </td>
                                 </tr>
                             </c:forEach>
@@ -69,4 +69,26 @@
     </section><!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Title popup</h4>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal" id="btnClose">Close
+                </button>
+
+                <button type="button" class="btn btn-primary" id="btnSave">Save changes
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 

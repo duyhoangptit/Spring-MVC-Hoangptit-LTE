@@ -49,6 +49,10 @@
     <!-- Lib upload file drag and drop -->
     <link rel="stylesheet" type="text/css" href="/css/dropzone.css"/>
 
+    <link rel="stylesheet" href="/css/samples.css">
+    <link rel="stylesheet" href="/css/neo.css">
+
+
     <!-- Lazy load-->
     <style>
         #loading {
@@ -158,5 +162,14 @@
 <script src="/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE drag and drop Upload file -->
 <script type="text/javascript" src="/js/dropzone.js"></script>
+
+<script src="/plugins/ckeditor/ckeditor.js"></script>
+
+</textarea>
+<script>
+    // Replace the <textarea id="editor1"> with a CKEditor
+    // instance, using default configuration.
+    CKEDITOR.replace( 'editor1' );
+</script>
 </body>
 </html>

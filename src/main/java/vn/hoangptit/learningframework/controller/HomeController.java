@@ -102,6 +102,13 @@ public class HomeController {
         return "datatable";
     }
 
+    @RequestMapping(value = "ckeditor", method = RequestMethod.GET)
+    public String ckeditor(ModelMap modelMap, HttpSession session) {
+        session.setAttribute("page", "ckeditor");
+        modelMap.put("title", "Ckeditor Page| LTE");
+        return "ckeditor";
+    }
+
     @RequestMapping(value = "403", method = RequestMethod.GET)
     public String accesssDenied(ModelMap modelMap) {
         //check if user is login

@@ -72,6 +72,13 @@
         <put-attribute name="current" value="uploadFile" />
     </definition>
 
+    <!-- Ckeditor page -->
+    <definition name="ckeditor" extends="base.definition">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="body" value="/WEB-INF/pages/ckeditor-page.jsp"/>
+        <put-attribute name="current" value="ckeditor" />
+    </definition>
+
     <!-- Profile User -->
     <definition name="404" extends="base.definition">
         <put-attribute name="title" value="Error: 404"/>

@@ -32,6 +32,7 @@
                     <i class="fa fa-dashboard"></i> <span>Công nghệ</span> <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
+                    <li  class="${page=='ckeditor'?'active':''}"><a href="/home/ckeditor.html"><i class="fa fa-circle-o"></i> Ckeditor</a></li>
                     <li  class="${page=='datatable'?'active':''}"><a href="/home/dataTable.html"><i class="fa fa-circle-o"></i> Data Table</a></li>
                     <li  class="${page=='popup_notify'?'active':''}"><a href="/home/popup.html"><i class="fa fa-circle-o"></i> Popup Notify</a></li>
                     <li  class="${page=='lazy_load'?'active':''}"><a href="/home/lazyLoad.html"><i class="fa fa-circle-o"></i> Lazy Load </a></li>

@@ -158,5 +158,12 @@
 <script src="/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE drag and drop Upload file -->
 <script type="text/javascript" src="/js/dropzone.js"></script>
+<!-- Ckeditor -->
+<script type="text/javascript" src="/plugins/ckeditor/ckeditor.js"></script>
+<script>
+    // Replace the <textarea id="editor1"> with a CKEditor
+    // instance, using default configuration.
+    CKEDITOR.replace('editor1');
+</script>
 </body>
 </html>

@@ -25,6 +25,10 @@
                   id="my-awesome-dropzone">
             </form:form>
         </div>
+        <audio controls>
+            <source src="/upload/don_coi.mp3" type="audio/mpeg">
+        </audio>
+
     </section><!-- /.content -->
 </div>
 <!-- /.content-wrapper -->

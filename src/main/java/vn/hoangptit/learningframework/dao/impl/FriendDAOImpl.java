@@ -21,6 +21,16 @@ public class FriendDAOImpl extends CrudDAOImpl<FriendDto> implements FriendDAO {
 
     @Override
     public List<FriendDto> findFriendsById(Integer customerId) {
+        session = openSession();
+        List<FriendDto> friends = null;
+        try {
+            friends = session.createQuery("select friend FROM FriendDto friend where customerId=:customerId", FriendDto.class)
+                    .setParameter("customerId", customerId)
+                    .getResultList();
+            return friends;
+        } catch (Exception e) {
+
+        }
         return null;
     }
 }

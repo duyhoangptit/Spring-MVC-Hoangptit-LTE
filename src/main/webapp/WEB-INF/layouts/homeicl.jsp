@@ -158,6 +158,7 @@
 <script src="/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE drag and drop Upload file -->
 <script type="text/javascript" src="/js/dropzone.js"></script>
+<script type="text/javascript" src="/jspage/uploadFile.js"></script>
 <!-- Ckeditor -->
 <script type="text/javascript" src="/plugins/ckeditor/ckeditor.js"></script>
 <script>
@@ -165,5 +166,8 @@
     // instance, using default configuration.
     CKEDITOR.replace('editor1');
 </script>
+
+
+
 </body>
 </html>

@@ -27,9 +27,18 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
             <li class="header">Admin LTE</li>
-            <li class="active treeview">
+            <li class="${category=='admin'?'active':''} treeview">
+                <a href="#"><i class="fa fa-dashboard"></i> <span>Quản trị</span></a>
+                <ul class="treeview-menu">
+                    <li ><a href="/home/dataTable.html"><i class="fa fa-circle-o"></i> Công việc</a></li>
+                    <li ><a href="/home/popup.html"><i class="fa fa-circle-o"></i> Plan </a></li>
+                    <li ><a href="/home/lazyLoad.html"><i class="fa fa-circle-o"></i> Quyền sử dụng </a></li>
+                </ul>
+            </li>
+
+            <li class="${category=='technology'?'active':''} treeview">
                 <a href="#">
-                    <i class="fa fa-dashboard"></i> <span>Công nghệ</span> <i class="fa fa-angle-left pull-right"></i>
+                    <i class="fa fa-laptop"></i> <span>Công nghệ</span> <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
                     <li  class="${page=='ckeditor'?'active':''}"><a href="/home/ckeditor.html"><i class="fa fa-circle-o"></i> Ckeditor</a></li>
@@ -42,16 +51,13 @@
                 </ul>
             </li>
 
-            <li>
-                <a href="#"><i class="fa fa-circle-o text-red"></i> <span>Quản trị</span></a>
-                <ul class="treeview-menu">
-                    <li ><a href="/home/dataTable.html"><i class="fa fa-circle-o"></i> Công việc</a></li>
-                    <li ><a href="/home/popup.html"><i class="fa fa-circle-o"></i> Plan </a></li>
-                    <li ><a href="/home/lazyLoad.html"><i class="fa fa-circle-o"></i> Quyền sử dụng </a></li>
-                </ul>
+            <li class="${category=='learn'?'active':''} treeview">
+                <a href="#"><i class="fa fa-mortar-board"></i><span>Học tập</span></a>
             </li>
-            <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Học tập</span></a></li>
-            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Giải trí</span></a></li>
+
+            <li class="${category=='entertain'?'active':''} treeview">
+                <a href="#"><i class="fa fa-sellsy"></i><span>Giải trí</span></a>
+            </li>
         </ul>
     </section>
     <!-- /.sidebar -->

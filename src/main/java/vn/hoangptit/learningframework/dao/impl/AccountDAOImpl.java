@@ -44,18 +44,6 @@ public class AccountDAOImpl extends CrudDAOImpl<AccountDto> implements AccountDA
         return null;
     }
 
-    @Transactional
-    public AccountDto saveUser(AccountDto account) {
-        session = openSession();
-
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        account.setPassword(encoder.encode(account.getPassword()));
-//        account.setRoles(roles);
-
-        session.save(account);
-        return account;
-    }
-
     // get all list account
     @Transactional
     public List<AccountDto> findAll() {

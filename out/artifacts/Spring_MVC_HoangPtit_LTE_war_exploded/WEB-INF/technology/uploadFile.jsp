@@ -10,8 +10,8 @@
 
     <!-- Main content -->
     <section class="content">
-        <br>
-        <br>
+        <div id="fileuploader">Upload</div>
+
         <form:form method="POST" enctype="multipart/form-data" action="/upload/singleSave.html?${_csrf.parameterName}=${_csrf.token}">
             Upload File: <input type="file" name="file">
             <br /><br />
@@ -28,7 +28,6 @@
         <audio controls>
             <source src="/upload/don_coi.mp3" type="audio/mpeg">
         </audio>
-        Try it Yourself »
 
     </section><!-- /.content -->
 </div>

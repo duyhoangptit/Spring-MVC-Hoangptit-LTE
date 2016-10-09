@@ -18,4 +18,7 @@ public interface CustomerService {
     List<FriendDto> findAllFriends(Integer customerId);
 
     AccountDto updateAccount(AccountDto accountDto);
+
+    FriendDto addFriend(FriendDto friendDto);
+
 }

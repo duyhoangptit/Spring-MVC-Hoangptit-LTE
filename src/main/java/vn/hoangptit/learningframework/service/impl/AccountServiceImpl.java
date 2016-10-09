@@ -12,6 +12,7 @@ import vn.hoangptit.learningframework.dto.AccountDto;
 import vn.hoangptit.learningframework.dto.CustomerDto;
 import vn.hoangptit.learningframework.dto.RoleDto;
 import vn.hoangptit.learningframework.service.AccountService;
+import vn.hoangptit.learningframework.utils.ConfigUntil;
 
 import java.util.HashSet;
 import java.util.List;
@@ -46,8 +47,9 @@ public class AccountServiceImpl implements AccountService {
         // Insert customer return customerId
         CustomerDto customer = customerDAO.create(account.getCustomer());
         account.setCustomerId(customer.getId());
+        account.setPassword(ConfigUntil.encode(account.getPassword()));
         // Insert Account return accountDto
-        return accountDAO.saveUser(account);
+        return accountDAO.create(account);
     }
 
     @Transactional

@@ -1,4 +1,5 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %><!-- Content Wrapper. Contains page content -->
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -24,39 +25,42 @@
                         <h3 class="box-title">Quản lý tài khoản người dùng</h3>
                     </div><!-- /.box-header -->
                     <!-- form start -->
-                    <form role="form" enctype="multipart/form-data" method="post">
+                    <form role="form" enctype="multipart/form-data" method="post"
+                          action="/profile/updateProfile.html?${_csrf.parameterName}=${_csrf.token}">
                         <div class="box-body">
                             <div class="form-group">
                                 <label for="inputUser">Tên tài khoản:</label>
-                                <input type="email" class="form-control" id="inputUser" placeholder="Enter email" value="${isLogin.username}">
+                                <input type="email" class="form-control" id="inputUser" name="username"
+                                       placeholder="Enter email" value="${isLogin.username}" disabled>
                             </div>
                             <div class="form-group">
                                 <label for="inputPassword">Mật khẩu:</label>
-                                <input type="password" class="form-control" id="inputPassword" placeholder="Password" value="${isLogin.password}">
+                                <input type="password" class="form-control" id="inputPassword" name="password"
+                                       placeholder="Password" value="${isLogin.password}">
                             </div>
                             <div class="form-group">
                                 <label for="inputName">Họ tên:</label>
-                                <input type="text" class="form-control" id="inputName" placeholder="Họ tên" value="${isLogin.customer.fullName}">
+                                <input type="text" class="form-control" id="inputName" name="fullName"
+                                       placeholder="Họ tên" value="${isLogin.customer.fullName}">
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail">Email:</label>
-                                <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="${isLogin.customer.email}">
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Email"
+                                       name="email" value="${isLogin.customer.email}">
                             </div>
                             <div class="form-group">
                                 <label for="inputImage">Ảnh đại diện:</label>
-                                <img class="profile-user-img img-responsive img-circle" src="/dist/img/${isLogin.customer.avatar}" alt="User profile picture" id = "inputImage">
+                                <img class="profile-user-img img-responsive img-circle"
+                                     src="/dist/img/${isLogin.customer.avatar}"  alt="User profile picture"
+                                     id="inputImage">
                             </div>
                             <div class="form-group">
                                 <label for="inputFile">File input</label>
-                                <input type="file" id="inputFile">
+                                <input type="file" id="inputFile" name="avatar">
                                 <p class="help-block progressBar">Example block-level help text here.</p>
-                                <progress id = "progressBar" class = "progressBar" value="0" max="100" style="width: 200px;"></progress>
+                                <progress id="progressBar" class="progressBar" value="0" max="100"
+                                          style="width: 200px;"></progress>
                             </div>
-                            <div class="checkbox">
-                            <label>
-                                <input type="checkbox" name="enabled"> Enabled
-                            </label>
-                        </div>
                         </div><!-- /.box-body -->
 
                         <div class="box-footer">
@@ -69,4 +73,5 @@
         </div><!-- /.row -->
 
     </section><!-- /.content -->
-</div><!-- /.content-wrapper -->
+</div>
+<!-- /.content-wrapper -->

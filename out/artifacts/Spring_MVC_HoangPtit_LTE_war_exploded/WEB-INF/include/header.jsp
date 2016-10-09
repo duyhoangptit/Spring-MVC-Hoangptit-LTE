@@ -238,7 +238,7 @@
                                 <a href="?language=en"><spring:message code="body.english"/></a>
                             </div>
                             <div class="col-xs-4 text-center">
-                                <a href="#"><spring:message code="body.friend"/></a>
+                                <a href="/home/friend.html"><spring:message code="body.friend"/></a>
                             </div>
                         </li>
                         <!-- Menu Footer-->

@@ -19,64 +19,70 @@
     <definition name="index" extends="base.definition">
         <put-attribute name="title" value=""/>
         <put-attribute name="body" value="/WEB-INF/pages/content.jsp"/>
-        <put-attribute name="current" value="index" />
+        <put-attribute name="current" value="index"/>
     </definition>
 
     <!-- DATA TABLE -->
     <definition name="datatable" extends="base.definition">
         <put-attribute name="title" value=""/>
-        <put-attribute name="body" value="/WEB-INF/pages/datatable.jsp"/>
-        <put-attribute name="current" value="datatable" />
+        <put-attribute name="body" value="/WEB-INF/technology/datatable.jsp"/>
+        <put-attribute name="current" value="datatable"/>
     </definition>
 
     <!-- NOTIFY -->
     <definition name="popup_notify" extends="base.definition">
         <put-attribute name="title" value=""/>
-        <put-attribute name="body" value="/WEB-INF/pages/popup_notify.jsp"/>
-        <put-attribute name="current" value="popup_notify" />
+        <put-attribute name="body" value="/WEB-INF/technology/popup_notify.jsp"/>
+        <put-attribute name="current" value="popup_notify"/>
     </definition>
 
     <!-- LAZY LOAD -->
     <definition name="lazy_load" extends="base.definition">
         <put-attribute name="title" value=""/>
-        <put-attribute name="body" value="/WEB-INF/pages/lazy_load.jsp"/>
-        <put-attribute name="current" value="lazy_load" />
+        <put-attribute name="body" value="/WEB-INF/technology/lazy_load.jsp"/>
+        <put-attribute name="current" value="lazy_load"/>
     </definition>
-
 
     <!-- Profile User -->
     <definition name="profile_user" extends="base.definition">
         <put-attribute name="title" value=""/>
-        <put-attribute name="body" value="/WEB-INF/pages/profile_user.jsp"/>
-        <put-attribute name="current" value="profile_user" />
+        <put-attribute name="body" value="/WEB-INF/technology/profile_user.jsp"/>
+        <put-attribute name="current" value="profile_user"/>
     </definition>
 
     <!-- Upload file User -->
     <definition name="uploadFile" extends="base.definition">
         <put-attribute name="title" value=""/>
-        <put-attribute name="body" value="/WEB-INF/pages/uploadFile.jsp"/>
-        <put-attribute name="current" value="uploadFile" />
+        <put-attribute name="body" value="/WEB-INF/technology/uploadFile.jsp"/>
+        <put-attribute name="current" value="uploadFile"/>
     </definition>
 
     <!-- Upload file User -->
     <definition name="exportPDF" extends="base.definition">
         <put-attribute name="title" value=""/>
-        <put-attribute name="body" value="/WEB-INF/pages/exportPDF.jsp"/>
-        <put-attribute name="current" value="uploadFile" />
+        <put-attribute name="body" value="/WEB-INF/technology/exportPDF.jsp"/>
+        <put-attribute name="current" value="uploadFile"/>
     </definition>
 
     <!-- Upload file User -->
     <definition name="exportExcel" extends="base.definition">
         <put-attribute name="title" value=""/>
-        <put-attribute name="body" value="/WEB-INF/pages/exportExcel.jsp"/>
-        <put-attribute name="current" value="uploadFile" />
+        <put-attribute name="body" value="/WEB-INF/technology/exportExcel.jsp"/>
+        <put-attribute name="current" value="uploadFile"/>
     </definition>
 
     <!-- Ckeditor page -->
     <definition name="ckeditor" extends="base.definition">
         <put-attribute name="title" value=""/>
-        <put-attribute name="body" value="/WEB-INF/pages/ckeditor-page.jsp"/>
-        <put-attribute name="current" value="ckeditor" />
+        <put-attribute name="body" value="/WEB-INF/technology/ckeditor-page.jsp"/>
+        <put-attribute name="current" value="ckeditor"/>
+    </definition>
+
+    <!-- Friends page -->
+    <definition name="friend" extends="base.definition">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="body" value="/WEB-INF/pages/friend-page.jsp"/>
+        <put-attribute name="current" value="friend"/>
     </definition>
 
     <!-- Profile User -->
@@ -90,6 +96,7 @@
         <put-attribute name="title" value="Error: 504"/>
         <put-attribute name="body" value="/WEB-INF/pages/504.jsp"/>
     </definition>
+
 
     <!-- Config include page register and login-->
     <definition name="base.pageicl"

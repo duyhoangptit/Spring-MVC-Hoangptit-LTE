@@ -9,7 +9,10 @@ import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import vn.hoangptit.learningframework.dto.AccountDto;
+import vn.hoangptit.learningframework.dto.CustomerDto;
 import vn.hoangptit.learningframework.service.AccountService;
+import vn.hoangptit.learningframework.utils.ConfigUntil;
+import vn.hoangptit.learningframework.utils.Role;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -48,13 +51,14 @@ public class UserController {
     }
 
     /**
-     * deleteUser
-     * Delete User Where userId
+     * Update User By username
+     * @return update dataTable
      */
-
     @RequestMapping(value = "updateUser/{username}", method = RequestMethod.GET)
     public String updateUser(@PathVariable(value = "username") String username, HttpSession session, ModelMap modelMap) {
         // findByUsername
+        AccountDto account = accountService.findByUsername(username);
+
         // update User
         return "redirect:/home/dataTable.html";
     }
@@ -99,13 +103,16 @@ public class UserController {
         AccountDto account = new AccountDto();
         account.setUsername(username);
         account.setPassword(password);
+        CustomerDto customer = new CustomerDto();
+        customer.setFullName(fullname);
+        account.setCustomer(customer);
         try {
-            account = null;
+            account = accountService.saveUser(account, ConfigUntil.ROLE_USER);
+            return "success";
         } catch (Exception e) {
             System.out.println(e);
             return "error";
         }
-        return "success";
     }
 
     /**

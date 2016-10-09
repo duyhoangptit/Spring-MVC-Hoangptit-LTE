@@ -16,8 +16,6 @@ public interface AccountDAO extends CrudDAO<AccountDto> {
 
     AccountDto findByUsername(String username);
 
-    AccountDto saveUser(AccountDto account);
-
     List<AccountDto> findAll();
 
 }

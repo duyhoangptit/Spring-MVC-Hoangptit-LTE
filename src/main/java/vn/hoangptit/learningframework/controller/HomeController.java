@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import vn.hoangptit.learningframework.dao.AccountDAO;
 import vn.hoangptit.learningframework.dto.AccountDto;
+import vn.hoangptit.learningframework.dto.FriendDto;
 import vn.hoangptit.learningframework.service.AccountService;
+import vn.hoangptit.learningframework.service.CustomerService;
 
 import javax.servlet.http.HttpSession;
 import java.security.Principal;
@@ -29,6 +31,9 @@ public class HomeController {
 
     @Autowired
     private AccountService accountService;
+
+    @Autowired
+    private CustomerService customerService;
 
     @RequestMapping(value = "/admin**", method = RequestMethod.GET)
     public String adminPage(ModelMap modelMap) {
@@ -76,6 +81,7 @@ public class HomeController {
     public String popup(ModelMap modelMap, HttpSession session) {
         modelMap.put("title", "SweetAlert for Bootstrap");
         session.setAttribute("page", "popup_notify");
+        session.setAttribute("category", "technology");
         return "popup_notify";
     }
 
@@ -83,6 +89,7 @@ public class HomeController {
     public String lazyLoad(ModelMap modelMap, HttpSession session) {
         modelMap.put("title", "Lazy load data");
         session.setAttribute("page", "lazy_load");
+        session.setAttribute("category", "technology");
         return "lazy_load";
     }
 
@@ -90,12 +97,14 @@ public class HomeController {
     public String uploadFile(ModelMap modelMap, HttpSession session) {
         modelMap.put("title", "Upload Drag And Drop");
         session.setAttribute("page", "uploadFile");
+        session.setAttribute("category", "technology");
         return "uploadFile";
     }
 
     @RequestMapping(value = "dataTable", method = RequestMethod.GET)
     public String dataTable(ModelMap modelMap, HttpSession session) {
         session.setAttribute("page", "datatable");
+        session.setAttribute("category", "technology");
         modelMap.put("title", "Data Table | LTE");
         List<AccountDto> accounts = accountService.getAllAccounts();
         modelMap.put("accounts", accounts);
@@ -105,8 +114,27 @@ public class HomeController {
     @RequestMapping(value = "ckeditor", method = RequestMethod.GET)
     public String ckeditor(ModelMap modelMap, HttpSession session) {
         session.setAttribute("page", "ckeditor");
+        session.setAttribute("category", "technology");
         modelMap.put("title", "Ckeditor Page| LTE");
         return "ckeditor";
+    }
+
+    @RequestMapping(value = "friend", method = RequestMethod.GET)
+    public String friend(ModelMap modelMap, HttpSession session) {
+        modelMap.put("title", "Friend User | LTE");
+        // get list friends
+        modelMap.put("friend", new FriendDto());
+        // put object friend
+        AccountDto account;
+        try {
+            account = (AccountDto) session.getAttribute("isLogin");
+        } catch (Exception e) {
+            modelMap.put("title", "Login | LTE");
+            return "login";
+        }
+        List<FriendDto> friends = customerService.findAllFriends(account.getCustomerId());
+        modelMap.put("friends", friends);
+        return "friend";
     }
 
     @RequestMapping(value = "403", method = RequestMethod.GET)

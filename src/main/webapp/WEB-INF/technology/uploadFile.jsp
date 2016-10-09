@@ -10,8 +10,8 @@
 
     <!-- Main content -->
     <section class="content">
-        <br>
-        <br>
+        <div id="fileuploader">Upload</div>
+
         <form:form method="POST" enctype="multipart/form-data" action="/upload/singleSave.html?${_csrf.parameterName}=${_csrf.token}">
             Upload File: <input type="file" name="file">
             <br /><br />

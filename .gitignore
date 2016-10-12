@@ -4,3 +4,5 @@
 out/artifacts/Spring_MVC_HoangPtit_LTE_war_exploded/WEB-INF/classes/com/
 target/classes/com/
 target/generated-sources/
+.class/
+src/

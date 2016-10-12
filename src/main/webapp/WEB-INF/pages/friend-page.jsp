@@ -40,6 +40,7 @@
                                 <th class="data-view">Phone</th>
                                 <th class="data-view">Sex</th>
                                 <th class="data-view">Description</th>
+                                <th class="data-view">Action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -79,6 +80,7 @@
                                 <th class="data-view">Phone</th>
                                 <th class="data-view">Sex</th>
                                 <th class="data-view">Description</th>
+                                <th class="data-view">Action</th>
                             </tr>
                             </tfoot>
                         </table>

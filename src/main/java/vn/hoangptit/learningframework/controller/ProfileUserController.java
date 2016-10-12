@@ -74,7 +74,6 @@ public class ProfileUserController {
     public String addFriends(@RequestParam("file") MultipartFile file, ModelMap modelMap,
                              @ModelAttribute(value = "friend") FriendDto friend) {
         String fileName = null;
-
         if (!file.isEmpty()) {
             try {
                 fileName = file.getOriginalFilename();

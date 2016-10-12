@@ -10,14 +10,16 @@
             </div>
             <div class="pull-left info">
                 <p>${isLogin.username}</p>
-                <a href="#"><i class="fa fa-circle text-success"></i> <O></O>nline</a>
+                <a href="#"><i class="fa fa-circle text-success"></i>
+                    <O></O>
+                    nline</a>
             </div>
         </div>
         <!-- search form -->
         <form action="#" method="get" class="sidebar-form">
             <div class="input-group">
                 <input type="text" name="q" class="form-control" placeholder="Search...">
-              <span class="input-group-btn">
+                <span class="input-group-btn">
                 <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i
                         class="fa fa-search"></i></button>
               </span>
@@ -28,11 +30,11 @@
         <ul class="sidebar-menu">
             <li class="header">Admin LTE</li>
             <li class="${category=='admin'?'active':''} treeview">
-                <a href="#"><i class="fa fa-dashboard"></i> <span>Quản trị</span></a>
+                <a href="#"><i class="fa fa-dashboard"></i> <span>Quản trị</span><i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li ><a href="/home/dataTable.html"><i class="fa fa-circle-o"></i> Công việc</a></li>
-                    <li ><a href="/home/popup.html"><i class="fa fa-circle-o"></i> Plan </a></li>
-                    <li ><a href="/home/lazyLoad.html"><i class="fa fa-circle-o"></i> Quyền sử dụng </a></li>
+                    <li><a href="/home/dataTable.html"><i class="fa fa-circle-o text-yellow"></i> Công việc</a></li>
+                    <li><a href="/home/popup.html"><i class="fa fa-circle-o text-black"></i> Plan </a></li>
+                    <li><a href="/home/lazyLoad.html"><i class="fa fa-circle-o text-blue"></i> Quyền sử dụng </a></li>
                 </ul>
             </li>
 
@@ -41,22 +43,41 @@
                     <i class="fa fa-laptop"></i> <span>Công nghệ</span> <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li  class="${page=='ckeditor'?'active':''}"><a href="/home/ckeditor.html"><i class="fa fa-circle-o"></i> Ckeditor</a></li>
-                    <li  class="${page=='datatable'?'active':''}"><a href="/home/dataTable.html"><i class="fa fa-circle-o"></i> Data Table</a></li>
-                    <li  class="${page=='popup_notify'?'active':''}"><a href="/home/popup.html"><i class="fa fa-circle-o"></i> Popup Notify</a></li>
-                    <li  class="${page=='lazy_load'?'active':''}"><a href="/home/lazyLoad.html"><i class="fa fa-circle-o"></i> Lazy Load </a></li>
-                    <li  class="${page=='uploadFile'?'active':''}"><a href="/home/uploadFile.html"><i class="fa fa-circle-o"></i> Upload file </a></li>
-                    <li  class="${page=='exportPDF'?'active':''}"><a href="/exportFile.html?output=pdf"><i class="fa fa-circle-o"></i> Export PDF </a></li>
-                    <li  class="${page=='exportExcel'?'active':''}"><a href="/exportFile.html?output=excel"><i class="fa fa-circle-o"></i> Export Excel </a></li>
+                    <li class="${page=='ckeditor'?'active':''}"><a href="/home/ckeditor.html"><i
+                            class="fa fa-circle-o text-yellow"></i> Ckeditor</a></li>
+                    <li class="${page=='datatable'?'active':''}"><a href="/home/dataTable.html"><i
+                            class="fa fa-circle-o text-red"></i> Data Table</a></li>
+                    <li class="${page=='popup_notify'?'active':''}"><a href="/home/popup.html"><i
+                            class="fa fa-circle-o text-black"></i> Popup Notify</a></li>
+                    <li class="${page=='lazy_load'?'active':''}"><a href="/home/lazyLoad.html"><i
+                            class="fa fa-circle-o text-white"></i> Lazy Load </a></li>
+                    <li class="${page=='uploadFile'?'active':''}"><a href="/home/uploadFile.html"><i
+                            class="fa fa-circle-o text-black"></i> Upload file </a></li>
+                    <li class="${page=='exportPDF'?'active':''}"><a href="/exportFile.html?output=pdf"><i
+                            class="fa fa-circle-o text-yellow"></i> Export PDF </a></li>
+                    <li class="${page=='exportExcel'?'active':''}"><a href="/exportFile.html?output=excel"><i
+                            class="fa fa-circle-o text-blue"></i> Export Excel </a></li>
                 </ul>
             </li>
 
             <li class="${category=='learn'?'active':''} treeview">
-                <a href="#"><i class="fa fa-mortar-board"></i><span>Học tập</span></a>
+                <a href="#"><i class="fa fa-mortar-board"></i><span>Học tập</span><i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li class="${page=='ckeditor'?'active':''}"><a href="/home/ckeditor.html"><i
+                            class="fa fa-circle-o text-blue"></i> Ckeditor</a></li>
+                    <li class="${page=='datatable'?'active':''}"><a href="/home/dataTable.html"><i
+                            class="fa fa-circle-o text-warning"></i> Data Table</a></li>
+                </ul>
             </li>
 
             <li class="${category=='entertain'?'active':''} treeview">
-                <a href="#"><i class="fa fa-sellsy"></i><span>Giải trí</span></a>
+                <a href="#"><i class="fa fa-sellsy"></i><span>Giải trí</span><i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li class="${page=='ckeditor'?'active':''}"><a href="/home/ckeditor.html"><i
+                            class="fa fa-circle-o text-yellow"></i> Ckeditor</a></li>
+                    <li class="${page=='datatable'?'active':''}"><a href="/home/dataTable.html"><i
+                            class="fa fa-circle-o text-red"></i> Data Table</a></li>
+                </ul>
             </li>
         </ul>
     </section>

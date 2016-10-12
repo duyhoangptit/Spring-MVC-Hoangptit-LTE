@@ -166,8 +166,5 @@
     // instance, using default configuration.
     CKEDITOR.replace('editor1');
 </script>
-
-
-
 </body>
 </html>

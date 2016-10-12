@@ -24,7 +24,7 @@ public class AccountCache {
     public static void loadAccount() {
         accountMap = new HashMap<>();
 
-        List<AccountDto> accounts = null;
+        List<AccountDto> accounts = accountDAO.findAll();
         for (AccountDto ac : accounts) {
             accountMap.put(ac.getUsername(), ac);
         }

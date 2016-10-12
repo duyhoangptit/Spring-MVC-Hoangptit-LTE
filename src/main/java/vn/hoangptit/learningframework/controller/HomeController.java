@@ -148,12 +148,4 @@ public class HomeController {
         return "404";
     }
 
-    @RequestMapping(value = "findData", method = RequestMethod.GET)
-    @ResponseBody
-    public List<AccountDto> findData() {
-        List<AccountDto> accounts = null;
-        return accounts;
-    }
-
-
 }

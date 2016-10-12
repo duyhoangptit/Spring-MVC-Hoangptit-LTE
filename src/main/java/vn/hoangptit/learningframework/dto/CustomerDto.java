@@ -18,16 +18,15 @@ public class CustomerDto {
     private String description;
     private String avatar;
     private String email;
+    private String avatarpage;
+    private int products;
+    private int followers;
+    private int ratings;
     private Collection<AccountDto> accounts;
     private Collection<EntertainDto> entertains;
     private Collection<FriendDto> friends;
     private Collection<LearningDto> learnings;
     private Collection<ObjectiveDto> objectives;
-
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
     @Id
     @Column(name = "ID")
@@ -94,6 +93,50 @@ public class CustomerDto {
     @Column(name = "email", nullable = true)
     public String getEmail() {
         return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @Basic
+    @Column(name = "avatarpage", nullable = true)
+    public String getAvatarpage() {
+        return avatarpage;
+    }
+
+    public void setAvatarpage(String avatarpage) {
+        this.avatarpage = avatarpage;
+    }
+
+    @Basic
+    @Column(name = "products", nullable = true)
+    public int getProducts() {
+        return products;
+    }
+
+    public void setProducts(int products) {
+        this.products = products;
+    }
+
+    @Basic
+    @Column(name = "followers", nullable = true)
+    public int getFollowers() {
+        return followers;
+    }
+
+    public void setFollowers(int followers) {
+        this.followers = followers;
+    }
+
+    @Basic
+    @Column(name = "ratings", nullable = true)
+    public int getRatings() {
+        return ratings;
+    }
+
+    public void setRatings(int ratings) {
+        this.ratings = ratings;
     }
 
     @OneToMany(mappedBy = "customer")

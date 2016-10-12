@@ -42,12 +42,8 @@
                                     <td class="data-view">${account.password}</td>
                                     <td class="data-view">${account.customer.avatar}</td>
                                     <td class="data-view">
-                                        <a href="/user/updateUser.html?userId=${account.id}"><img
-                                                src="/images/details-icon.png" class="size-img"></a>
-                                        <a href="/user/updateUser.html?userId=${account.id}"><img
-                                                src="/images/delete-icon.png" class="size-img"></a>
-                                        <a href="/user/deleteUser.html?userId=${account.id}"><img
-                                                src="/images/edit-icon.png" class="size-img"></a>
+                                        <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="" data-original-title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                        <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="" data-original-title="Remove Client"><i class="fa fa-times"></i></button>
                                     </td>
                                 </tr>
                             </c:forEach>

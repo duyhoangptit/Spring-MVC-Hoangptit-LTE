@@ -4,7 +4,6 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <div class="content-wrapper">
 
-
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>

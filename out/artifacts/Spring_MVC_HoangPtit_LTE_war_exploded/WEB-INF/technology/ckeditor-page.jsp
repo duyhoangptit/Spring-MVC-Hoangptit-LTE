@@ -4,16 +4,12 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <div class="content-wrapper">
 
-
     <!-- Content Header (Page header) -->
     <section class="content-header">
 
          <textarea name="editor" id="editor1" rows="10" cols="80">
          </textarea>
-
-
     </section>
-
 
 </div>
 <!-- /.content-wrapper -->

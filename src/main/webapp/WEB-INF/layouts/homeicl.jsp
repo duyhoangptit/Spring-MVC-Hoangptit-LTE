@@ -146,8 +146,7 @@
 <!-- Index js -->
 <script src="/jspage/index.js"></script>
 <!-- JS notify -->
-<script src="/notify/notify.js"></script>
-<script src="/notify/notify.min.js"></script>
+<script src="/js/notify/notify.min.js"></script>
 <!-- AdminLTE for data table -->
 <script src="/jspage/datatable.js"></script>
 <!-- AdminLTE for Popup and Notify -->

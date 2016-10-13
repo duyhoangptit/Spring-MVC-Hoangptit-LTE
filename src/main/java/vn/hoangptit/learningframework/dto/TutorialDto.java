@@ -19,6 +19,8 @@ public class TutorialDto {
     private String description;
     private String author;
     private Date tutorialDate;
+    private int view;
+    private int like;
     private CategoryDto category;
 
     @Id
@@ -90,6 +92,26 @@ public class TutorialDto {
 
     public void setTutorialDate(Date tutorialDate) {
         this.tutorialDate = tutorialDate;
+    }
+
+    @Basic
+    @Column(name = "view")
+    public int getView() {
+        return view;
+    }
+
+    public void setView(int view) {
+        this.view = view;
+    }
+
+    @Basic
+    @Column(name = "like")
+    public int getLike() {
+        return like;
+    }
+
+    public void setLike(int like) {
+        this.like = like;
     }
 
     @Override

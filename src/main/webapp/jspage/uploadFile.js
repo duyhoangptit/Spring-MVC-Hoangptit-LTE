@@ -14,8 +14,4 @@ $(document).ready(function () {
     //     dragDrop:true,
     //     fileName:fileName
     // });
-    $("#fileuploader").uploadFile({
-        url:"/upload/singleSave.html?"+ header + "=" + token,
-        fileName:"myfile"
-    });
 });

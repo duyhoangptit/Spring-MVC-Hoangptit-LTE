@@ -2,8 +2,6 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-
-
 <div class="login-box">
     <div class="login-logo">
         <a href="/index.html"><b>Admin</b>LTE</a>

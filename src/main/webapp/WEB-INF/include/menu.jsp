@@ -28,9 +28,12 @@
         <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
-            <li class="header">Admin LTE</li>
+            <li class="header">Admin LTE
+                <small class="label pull-right bg-red" id="picker"></small>
+            </li>
             <li class="${category=='admin'?'active':''} treeview">
-                <a href="#"><i class="fa fa-dashboard"></i> <span>Quản trị</span><i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><i class="fa fa-dashboard"></i> <span>Quản trị</span><i
+                        class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="/home/dataTable.html"><i class="fa fa-circle-o text-yellow"></i> Công việc</a></li>
                     <li><a href="/home/popup.html"><i class="fa fa-circle-o text-black"></i> Plan </a></li>
@@ -61,7 +64,8 @@
             </li>
 
             <li class="${category=='learn'?'active':''} treeview">
-                <a href="#"><i class="fa fa-mortar-board"></i><span>Học tập</span><i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><i class="fa fa-mortar-board"></i><span>Học tập</span><i
+                        class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li class="${page=='ckeditor'?'active':''}"><a href="/home/ckeditor.html"><i
                             class="fa fa-circle-o text-blue"></i> Ckeditor</a></li>

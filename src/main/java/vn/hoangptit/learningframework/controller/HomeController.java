@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import vn.hoangptit.learningframework.dao.AccountDAO;
 import vn.hoangptit.learningframework.dto.AccountDto;
 import vn.hoangptit.learningframework.dto.FriendDto;
+import vn.hoangptit.learningframework.model.EmailModel;
 import vn.hoangptit.learningframework.service.AccountService;
 import vn.hoangptit.learningframework.service.CustomerService;
 
@@ -73,6 +74,7 @@ public class HomeController {
             return "login";
         }
         AccountDto account = accountService.findByUsername(username);
+        modelMap.put("mail", new EmailModel());
         session.setAttribute("isLogin", account);
         return "index";
     }

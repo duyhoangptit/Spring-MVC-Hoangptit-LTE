@@ -1,5 +1,7 @@
 package vn.hoangptit.learningframework.dto;
 
+import org.joda.time.DateTime;
+
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.Collection;
@@ -10,10 +12,10 @@ import java.util.Collection;
  */
 @Entity
 @Table(name = "customer", schema = "adminlte")
-public class CustomerDto {
+public class CustomerDto extends BaseDto{
     private Integer id;
     private String fullName;
-    private Date birthday;
+    private DateTime birthday;
     private Byte sex;
     private String description;
     private String avatar;
@@ -28,17 +30,6 @@ public class CustomerDto {
     private Collection<LearningDto> learnings;
     private Collection<ObjectiveDto> objectives;
 
-    @Id
-    @Column(name = "ID")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
     @Basic
     @Column(name = "FullName")
     public String getFullName() {
@@ -51,11 +42,11 @@ public class CustomerDto {
 
     @Basic
     @Column(name = "Birthday")
-    public Date getBirthday() {
+    public DateTime getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(DateTime birthday) {
         this.birthday = birthday;
     }
 

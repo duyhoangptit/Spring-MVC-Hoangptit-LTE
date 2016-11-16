@@ -90,6 +90,10 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.1.6.RELEASE" />
           <element id="library" level="project" name="Maven: javax.mail:mail:1.4.7" />
           <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
+          <element id="library" level="project" name="Maven: joda-time:joda-time:2.9.6" />
+          <element id="library" level="project" name="Maven: org.jadira.usertype:usertype.core:3.0.0.CR1" />
+          <element id="library" level="project" name="Maven: org.joda:joda-money:0.6" />
+          <element id="library" level="project" name="Maven: org.jadira.usertype:usertype.spi:3.0.0.CR1" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="Spring MVC HoangPtit LTE/web/Web" />

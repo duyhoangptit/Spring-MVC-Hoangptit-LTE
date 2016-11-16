@@ -10,25 +10,13 @@ import java.util.Collection;
  * Date 9/26/2016
  */
 @Entity
-@Table(name = "entertain", schema = "adminlte", catalog = "")
-public class EntertainDto {
-    private Integer id;
+@Table(name = "entertain", schema = "adminlte")
+public class EntertainDto extends BaseDto{
     private Integer customerId;
     private String name;
     private String description;
     private CustomerDto customer;
     private Collection<PlanDto> plans;
-
-    @Id
-    @Column(name = "ID")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     @Basic
     @Column(name = "CustomerID")
@@ -58,30 +46,6 @@ public class EntertainDto {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        EntertainDto that = (EntertainDto) o;
-
-        if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        if (customerId != null ? !customerId.equals(that.customerId) : that.customerId != null) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        if (description != null ? !description.equals(that.description) : that.description != null) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (customerId != null ? customerId.hashCode() : 0);
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (description != null ? description.hashCode() : 0);
-        return result;
     }
 
     @ManyToOne(fetch = FetchType.LAZY)

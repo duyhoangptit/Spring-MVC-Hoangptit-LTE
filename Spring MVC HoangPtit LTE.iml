@@ -150,5 +150,9 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-context-support:4.1.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: javax.mail:mail:1.4.7" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
+    <orderEntry type="library" name="Maven: joda-time:joda-time:2.9.6" level="project" />
+    <orderEntry type="library" name="Maven: org.jadira.usertype:usertype.core:3.0.0.CR1" level="project" />
+    <orderEntry type="library" name="Maven: org.joda:joda-money:0.6" level="project" />
+    <orderEntry type="library" name="Maven: org.jadira.usertype:usertype.spi:3.0.0.CR1" level="project" />
   </component>
 </module>

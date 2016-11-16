@@ -286,7 +286,7 @@
                                     title="Remove"><i class="fa fa-times"></i></button>
                         </div><!-- /. tools -->
                     </div>
-                    <s:form action="/email/sendmail.html" method="post" commandName="mail">
+                    <s:form action="/email/sendMail.html" method="post" commandName="mail">
                         <div class="box-body">
                             <div class="form-group">
                                 <s:input class="form-control" type="email" path="to" placeholder="Email to:"/>
@@ -299,7 +299,7 @@
                                             style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"
                                             rows="5" cols="30"></s:textarea>
                             </div>
-
+                            <div>${message}</div>
                         </div>
                         <div class="box-footer clearfix">
                             <button type="submit" class="pull-right btn btn-default" id="sendEmail">Send <i

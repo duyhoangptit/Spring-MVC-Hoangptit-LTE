@@ -6,15 +6,13 @@
     <session-factory>
         <!-- Dialect-->
         <property name="hibernate.dialect">
-            <!--eg.--> org.hibernate.dialect.MySQL5Dialect
+            org.hibernate.dialect.MySQL5Dialect
         </property>
         <property name="hbm2ddl.auto">update</property>
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
         <!-- List Class Mapping -->
 
-        <!--<mapping class="vn.hoangptit.learningframework.entities.Account"/>-->
-        <!--<mapping class="vn.hoangptit.learningframework.entities.Role"/>-->
         <mapping class="vn.hoangptit.learningframework.dto.AccountDto"/>
         <mapping class="vn.hoangptit.learningframework.dto.RoleDto"/>
         <mapping class="vn.hoangptit.learningframework.dto.FriendDto"/>
@@ -28,7 +26,6 @@
         <mapping class="vn.hoangptit.learningframework.dto.PlanDto"/>
         <mapping class="vn.hoangptit.learningframework.dto.TargetDto"/>
         <mapping class="vn.hoangptit.learningframework.dto.TutorialDto"/>
-
 
         <!-- List of XML mapping files -->
     </session-factory>

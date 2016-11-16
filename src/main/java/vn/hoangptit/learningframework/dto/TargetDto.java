@@ -11,9 +11,8 @@ import java.util.Collection;
  * Date 9/26/2016
  */
 @Entity
-@Table(name = "target", schema = "adminlte", catalog = "")
-public class TargetDto {
-    private Integer id;
+@Table(name = "target", schema = "adminlte")
+public class TargetDto extends BaseDto{
     private Integer objectiveId;
     private String title;
     private Date timeTarget;
@@ -22,17 +21,6 @@ public class TargetDto {
     private Double sumTarg;
     private Collection<JobDto> jobs;
     private ObjectiveDto objective;
-
-    @Id
-    @Column(name = "ID")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     @Basic
     @Column(name = "ObjectiveID")
@@ -92,37 +80,6 @@ public class TargetDto {
 
     public void setSumTarg(Double sumTarg) {
         this.sumTarg = sumTarg;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        TargetDto targetDto = (TargetDto) o;
-
-        if (id != null ? !id.equals(targetDto.id) : targetDto.id != null) return false;
-        if (objectiveId != null ? !objectiveId.equals(targetDto.objectiveId) : targetDto.objectiveId != null)
-            return false;
-        if (title != null ? !title.equals(targetDto.title) : targetDto.title != null) return false;
-        if (timeTarget != null ? !timeTarget.equals(targetDto.timeTarget) : targetDto.timeTarget != null) return false;
-        if (mission != null ? !mission.equals(targetDto.mission) : targetDto.mission != null) return false;
-        if (comment != null ? !comment.equals(targetDto.comment) : targetDto.comment != null) return false;
-        if (sumTarg != null ? !sumTarg.equals(targetDto.sumTarg) : targetDto.sumTarg != null) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (objectiveId != null ? objectiveId.hashCode() : 0);
-        result = 31 * result + (title != null ? title.hashCode() : 0);
-        result = 31 * result + (timeTarget != null ? timeTarget.hashCode() : 0);
-        result = 31 * result + (mission != null ? mission.hashCode() : 0);
-        result = 31 * result + (comment != null ? comment.hashCode() : 0);
-        result = 31 * result + (sumTarg != null ? sumTarg.hashCode() : 0);
-        return result;
     }
 
     @OneToMany(mappedBy = "target")

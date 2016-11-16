@@ -11,9 +11,8 @@ import java.util.Collection;
  * Date 9/26/2016
  */
 @Entity
-@Table(name = "objective", schema = "adminlte", catalog = "")
-public class ObjectiveDto {
-    private Integer id;
+@Table(name = "objective", schema = "adminlte")
+public class ObjectiveDto extends BaseDto{
     private Integer customerId;
     private String title;
     private Date timeObj;
@@ -22,17 +21,6 @@ public class ObjectiveDto {
     private Double sumObj;
     private CustomerDto customer;
     private Collection<TargetDto> targets;
-
-    @Id
-    @Column(name = "ID")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     @Basic
     @Column(name = "CustomerID")
@@ -92,36 +80,6 @@ public class ObjectiveDto {
 
     public void setSumObj(Double sumObj) {
         this.sumObj = sumObj;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        ObjectiveDto that = (ObjectiveDto) o;
-
-        if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        if (customerId != null ? !customerId.equals(that.customerId) : that.customerId != null) return false;
-        if (title != null ? !title.equals(that.title) : that.title != null) return false;
-        if (timeObj != null ? !timeObj.equals(that.timeObj) : that.timeObj != null) return false;
-        if (description != null ? !description.equals(that.description) : that.description != null) return false;
-        if (comment != null ? !comment.equals(that.comment) : that.comment != null) return false;
-        if (sumObj != null ? !sumObj.equals(that.sumObj) : that.sumObj != null) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (customerId != null ? customerId.hashCode() : 0);
-        result = 31 * result + (title != null ? title.hashCode() : 0);
-        result = 31 * result + (timeObj != null ? timeObj.hashCode() : 0);
-        result = 31 * result + (description != null ? description.hashCode() : 0);
-        result = 31 * result + (comment != null ? comment.hashCode() : 0);
-        result = 31 * result + (sumObj != null ? sumObj.hashCode() : 0);
-        return result;
     }
 
     @ManyToOne(fetch = FetchType.LAZY)

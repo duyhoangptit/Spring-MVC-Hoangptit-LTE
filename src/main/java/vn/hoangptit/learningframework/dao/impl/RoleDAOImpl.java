@@ -28,7 +28,7 @@ public class RoleDAOImpl extends CrudDAOImpl<RoleDto> implements RoleDAO {
     @Override
     public RoleDto findByName(String name) {
         session = openSession();
-        String hql = "FROM RoleDto role WHERE role.role=:name";
+        String hql = "FROM RoleDto role WHERE role.nameRole=:name";
         Query query = session.createQuery(hql);
         query.setParameter("name", name);
         List<RoleDto> roles = (List<RoleDto>) query.list();

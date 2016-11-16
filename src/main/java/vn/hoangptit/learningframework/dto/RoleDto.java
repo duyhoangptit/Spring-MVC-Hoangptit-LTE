@@ -10,22 +10,10 @@ import java.util.List;
  */
 @Entity
 @Table(name = "role", schema = "adminlte")
-public class RoleDto {
-    private Integer id;
+public class RoleDto extends BaseDto{
     private String nameRole ;
 
     private List<AccountDto> accounts;
-
-    @Id
-    @Column(name = "ID")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     @Basic
     @Column(name = "nameRole")

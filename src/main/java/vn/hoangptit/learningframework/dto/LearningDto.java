@@ -11,26 +11,14 @@ import java.util.Collection;
  * Date 9/26/2016
  */
 @Entity
-@Table(name = "learning", schema = "adminlte", catalog = "")
-public class LearningDto {
-    private Integer id;
+@Table(name = "learning", schema = "adminlte")
+public class LearningDto extends BaseDto{
     private Integer customerId;
     private String name;
     private String description;
     private Date dateLearn;
     private Collection<CategoryDto> categories;
     private CustomerDto customer;
-
-    @Id
-    @Column(name = "ID")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     @Basic
     @Column(name = "CustomerID")
@@ -70,32 +58,6 @@ public class LearningDto {
 
     public void setDateLearn(Date dateLearn) {
         this.dateLearn = dateLearn;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        LearningDto that = (LearningDto) o;
-
-        if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        if (customerId != null ? !customerId.equals(that.customerId) : that.customerId != null) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        if (description != null ? !description.equals(that.description) : that.description != null) return false;
-        if (dateLearn != null ? !dateLearn.equals(that.dateLearn) : that.dateLearn != null) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (customerId != null ? customerId.hashCode() : 0);
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (description != null ? description.hashCode() : 0);
-        result = 31 * result + (dateLearn != null ? dateLearn.hashCode() : 0);
-        return result;
     }
 
     @OneToMany(mappedBy = "learning")
